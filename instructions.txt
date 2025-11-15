@@ -1,0 +1,323 @@
+[INSTRUCTIONS FOR CLAUDE CODE – BUILD IYANBARRY.COM]
+
+You are an expert full-stack developer inside Claude Code.
+
+Your job: **build a complete, production-ready personal website for iyanbarry.com** based on the specs in this file.
+
+I will run your changes in a fresh repo, so please:
+- Create all necessary files and folders.
+- Use clear, modern, and minimal design.
+- Add real copy from the details below (not lorem ipsum).
+- Assume I’ll deploy this on a typical modern host (e.g. Vercel/Netlify).
+
+--------------------------------------------------
+1. TECH STACK & GENERAL REQUIREMENTS
+--------------------------------------------------
+
+Use this stack:
+
+- Framework: **Next.js (App Router) with TypeScript**
+- Styling: **Tailwind CSS**
+- Content: 
+  - **Markdown/MDX** files for blog posts in a `/content/blog` directory
+  - A simple **TypeScript config file** or JSON for projects/links
+- Icons: `lucide-react`
+- Fonts: use default system fonts (no complex font setup)
+- Theme: clean, minimal, friendly. Light mode by default, simple dark mode toggle if easy to add.
+
+General requirements:
+
+1. Fully responsive (mobile-first, then tablet, then desktop).
+2. Good basic SEO:
+   - Title, description, open graph tags.
+   - Page titles should be meaningful (e.g. “About – Iyan Barry”).
+3. Clear navigation:
+   - Top navbar with: **Home, About, Projects, Blog, Contact**.
+4. Simple color palette:
+   - Light background, dark text, accent color for buttons/links.
+5. No backend required beyond what Next.js needs.
+6. Use functional components and modern React patterns.
+
+--------------------------------------------------
+2. SITE PURPOSE & POSITIONING
+--------------------------------------------------
+
+The site is a personal hub for **Iyan Barry**:
+
+- Location: Brisbane, Australia.
+- Current role: **General Manager – Information Technology / CIO-level leader**.
+- Focus areas:
+  - IT leadership & strategy
+  - Cybersecurity & governance (ISO 27001, Essential Eight, Microsoft Secure Score uplift)
+  - AI tools & automation
+  - Forex/algorithmic trading experiments
+  - Side projects & ventures
+- Goals of the site:
+  - Brief, clear **bio** and positioning as a senior technology leader.
+  - Showcase **projects**/experiments and things he has built or is building.
+  - Host a **blog** (2-3 posts per week planned) on leadership, AI, tech, and experiments.
+  - Provide **contact** options for speaking, consulting, or networking.
+
+Tone of the content: 
+- Straightforward, practical, conversational.
+- Avoid corporate fluff and buzzword soup.
+- Slightly informal but still professional.
+
+--------------------------------------------------
+3. PAGES & CONTENT STRUCTURE
+--------------------------------------------------
+
+Create these top-level pages:
+
+- `/`         → Home
+- `/about`    → About Iyan
+- `/projects` → Projects / things I’ve built
+- `/blog`     → Blog listing
+- `/blog/[slug]` → Individual blog posts
+- `/contact`  → Contact
+
+--------------------------------
+3.1 HOME PAGE
+--------------------------------
+
+Sections on the home page (in this order):
+
+1. **Hero section**
+   - Big heading with name and role:
+     - Example: “Hi, I’m Iyan Barry – IT leader, builder, and experimenter.”
+   - Short subheading (2–3 sentences) capturing:
+     - Senior IT leader based in Brisbane.
+     - Experience transforming IT teams, uplifting cybersecurity, and using AI to automate boring work.
+     - Always building small experiments in AI, trading, and tooling.
+   - Two primary buttons:
+     - “Read the blog” → `/blog`
+     - “View projects” → `/projects`
+   - One secondary link:
+     - “Connect on LinkedIn” → external link to `https://www.linkedin.com/in/iyanbarry/`
+
+2. **Highlights / What I do**
+   - A three-column (stacked on mobile) grid summarising:
+     - “IT Leadership” – Turning under-resourced IT teams into proactive, strategic partners.
+     - “Cybersecurity & Governance” – ISO 27001 work, Microsoft Secure Score uplift, Essential Eight.
+     - “AI & Experiments” – Building AI-driven workflows, Forex bots, and small side projects.
+
+3. **Featured Projects preview**
+   - Show 3 cards linking to `/projects`.
+   - Each card: name, short description, tags, “View project” link.
+
+4. **Recent blog posts**
+   - Show 3 most recent posts from the blog.
+   - Each: title, date, short excerpt, “Read more” link.
+
+5. **Call to action**
+   - Simple closing block:
+     - Message like: “If you’re interested in IT strategy, AI, or just want to swap ideas, reach out.”
+     - Button → `/contact`.
+
+--------------------------------
+3.2 ABOUT PAGE
+--------------------------------
+
+Create an `/about` page with:
+
+- A primary intro section with:
+  - Headline: “About Iyan”
+  - 3–5 paragraph narrative bio, using the following key points:
+    - Based in Brisbane, Australia.
+    - General Manager – Information Technology (CIO-equivalent).
+    - Took an IT team from reactive and under-resourced to structured, proactive, and aligned to business strategy.
+    - Led cybersecurity uplift: improved Microsoft Secure Score significantly, aligned controls to ISO 27001 and Essential Eight, implemented governance and risk frameworks.
+    - Values: psychological safety, clarity of purpose, practical delivery, “think big, start small, scale fast”.
+    - Deep interest in AI, automation, and algorithmic trading – especially using AI tools to build practical solutions.
+    - Enjoys experimenting with side projects: AI internal tools, donation platforms, affiliate systems, 3D printing ideas, etc.
+- A short **timeline** section:
+  - Show 3–5 items (e.g. “2021 – Took on General Manager – IT role”, “2023 – Started serious AI tooling experiments”, etc.).
+- A section “What I’m working on now”:
+  - Bullet-style or short paragraphs:
+    - Continuing to uplift IT maturity and cybersecurity.
+    - Experimenting with AI-powered workflows and bots.
+    - Writing about leadership, AI, and experimentation on the blog.
+
+--------------------------------
+3.3 PROJECTS PAGE
+--------------------------------
+
+Create `/projects` that reads from a simple TypeScript data file, e.g. `data/projects.ts`.
+
+Each project should have:
+- `title`
+- `slug`
+- `description`
+- `tags` (string array)
+- Optional: `link` (if external) or `status` (“Active”, “In progress”, “Experiment”)
+
+Seed it with 5–7 example projects, using copy like (rewrite in your own words but keep meaning):
+
+1. **Safe Places IT Transformation**
+   - Description: Multi-year program leading the IT function from reactive support to a proactive, strategic capability. Included redesigning structure, implementing Freshservice, uplifting cybersecurity, and aligning to ISO 27001.
+   - Tags: `["IT leadership", "Cybersecurity", "Governance"]`
+
+2. **Internal AI Assistant (Safe Places)**
+   - Description: Early work on an internal AI assistant for staff using open-source LLMs and company knowledge, focused on secure, private use cases.
+   - Tags: `["AI", "Internal tools", "Productivity"]`
+
+3. **KindlyScan / KindQR (QR-based donation concept)**
+   - Description: A prototype concept for a QR code-based donation platform that lets people donate to individuals or causes by scanning a code and reading their story.
+   - Tags: `["Product design", "Fintech", "Social impact"]`
+
+4. **Forex Trading Bots & AI Research**
+   - Description: Ongoing experiments building algorithmic trading systems and AI-assisted trading logic, including backtesting, automation, and risk management ideas.
+   - Tags: `["Trading", "AI", "Experiments"]`
+
+5. **ThinkTryGrow**
+   - Description: A blog concept focused on summarising YouTube content, breaking down ideas, and turning them into actionable steps using automation.
+   - Tags: `["Content", "Automation", "Learning"]`
+
+6. **3D Printing Experiments (Bris3D)**
+   - Description: Exploring small-scale consumer 3D printing services and prototypes, focusing on simple gadgets and promotional pieces.
+   - Tags: `["3D printing", "Prototype", "Side project"]`
+
+Projects page requirements:
+- List view of cards (grid on desktop, stacked on mobile).
+- Filter by tag (simple client-side filter or buttons at the top).
+- Clicking a project can either:
+  - Go to an external link (if provided), OR
+  - Open a simple `/projects/[slug]` page (optional). If you create detail pages, seed them with basic content.
+
+--------------------------------
+3.4 BLOG PAGES
+--------------------------------
+
+Blog structure:
+
+- Store blog posts in `/content/blog` as **Markdown** (or MDX) with frontmatter fields:
+  - `title`
+  - `date`
+  - `summary`
+  - `tags` (array, e.g. ["Leadership", "AI"])
+  - `published` (boolean)
+
+Create a simple blog engine that:
+- Reads all posts at build time.
+- Lists them on `/blog` sorted by date (newest first).
+- Supports filtering by tag (optional but nice).
+- Each post has its own page at `/blog/[slug]`, generated from filename.
+
+Create 3–4 **example posts** with short but real content (not lorem ipsum). Example topics (rewrite nicely):
+
+1. `leading-it-teams-in-the-real-world.md`
+   - Tags: `["Leadership", "IT"]`
+   - Summary: Reflect on taking an IT team from “reactive and overwhelmed” to structured and proactive.
+   - Include ideas like:
+     - Getting clear on priorities.
+     - Building trust with the business.
+     - Small wins and fast feedback loops.
+
+2. `using-ai-as-an-it-leader.md`
+   - Tags: `["AI", "Leadership"]`
+   - Summary: How I see AI as an enabler, not a magic solution, and how I’m using it to remove friction for myself and my team.
+   - Include mention of:
+     - Using tools like ChatGPT/Claude for drafting docs, exploring ideas.
+     - Automating small tasks to free up time for meaningful work.
+     - The mindset of experimentation (try, learn, adjust).
+
+3. `side-projects-as-a-leadership-lab.md`
+   - Tags: `["Side projects", "Leadership", "Experiments"]`
+   - Summary: Why small experiments (apps, bots, tools) are a good sandbox for learning that feeds back into the day job.
+
+4. `why-i-started-iyanbarry-dot-com.md`
+   - Tags: `["Personal", "Meta"]`
+   - Summary: Short story of why the site exists: a central place to share work, ideas, and experiments.
+
+Keep the writing style:
+- Clear, conversational, practical.
+- First person (“I”).
+- No over-the-top self-promotion.
+
+--------------------------------
+3.5 CONTACT PAGE
+--------------------------------
+
+Create `/contact` with:
+
+- Short intro paragraph: “If you’d like to connect about IT leadership, AI, or just compare notes on side projects, reach out.”
+- Options:
+  - Mailto link: `iyanbarry@gmail.com`
+  - Button or link to LinkedIn profile: `https://www.linkedin.com/in/iyanbarry/`
+- A simple contact form is optional, but if you add it, just make it a front-end only form for now (no backend wiring required, maybe just a placeholder “This form is not wired up yet.” message).
+
+--------------------------------------------------
+4. LAYOUT, COMPONENTS & DESIGN
+--------------------------------------------------
+
+Create reusable components, at minimum:
+
+- `components/Layout.tsx`
+  - Wraps all pages with header, main, footer.
+- `components/Header.tsx`
+  - Site logo (just text “Iyan Barry”).
+  - Navigation links.
+  - Optional theme toggle (light/dark).
+- `components/Footer.tsx`
+  - Simple footer with © year and small note.
+- `components/ProjectCard.tsx`
+- `components/PostCard.tsx`
+- `components/TagBadge.tsx` (for tags on projects/posts, optional but nice)
+
+Design guidelines:
+- Use generous white space.
+- Clear typography hierarchy:
+  - Larger font for hero headline.
+  - Reasonable line length for reading blog posts.
+- Links and buttons should look like they belong together stylistically.
+
+--------------------------------------------------
+5. SEO & METADATA
+--------------------------------------------------
+
+Set up a basic metadata system:
+
+- Default site title: `“Iyan Barry – IT Leader & Builder”`
+- Default description: something like:
+  - “Personal site of Iyan Barry, an IT leader based in Brisbane, Australia. Sharing work, experiments, and thoughts on leadership, cybersecurity, AI, and building things.”
+- For blog posts:
+  - Title from post frontmatter.
+  - Description from `summary`.
+
+Include a simple `sitemap.xml` and `robots.txt` if straightforward to add.
+
+--------------------------------------------------
+6. IMPLEMENTATION CHECKLIST FOR YOU (CLAUDE)
+--------------------------------------------------
+
+1. Initialize a Next.js + TypeScript + Tailwind project structure (no need to show `npm` commands, just create files as if the repo already exists).
+2. Set up Tailwind config and global styles.
+3. Implement layout, header, footer, and navigation components.
+4. Implement each page:
+   - `app/page.tsx` (Home)
+   - `app/about/page.tsx`
+   - `app/projects/page.tsx`
+   - `app/blog/page.tsx`
+   - `app/blog/[slug]/page.tsx`
+   - `app/contact/page.tsx`
+5. Create `data/projects.ts` with the initial project list.
+6. Create `/content/blog` folder and add the example Markdown posts with frontmatter.
+7. Add helper utilities to:
+   - Read blog posts from the filesystem.
+   - Parse frontmatter.
+8. Wire up the blog listing and individual post pages.
+9. Make sure the project builds conceptually (no obvious TypeScript or import errors).
+10. Avoid placeholder “TODO” where you can reasonably add actual content.
+
+--------------------------------------------------
+7. OUTPUT FORMAT
+--------------------------------------------------
+
+In your reply in Claude Code, please:
+
+- Provide the full file and folder structure (tree).
+- Provide the full contents of each new/modified file in clearly marked code blocks.
+- Do not include explanatory prose between every line of code; keep explanations short and focused.
+- Assume I will copy these files into a repo and run `npm install` / `npm run dev` myself.
+
+End of instructions.
