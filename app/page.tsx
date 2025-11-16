@@ -1,13 +1,10 @@
 import Link from 'next/link'
 import { ArrowRight, ExternalLink } from 'lucide-react'
 import Layout from '@/components/Layout'
-import ProjectCard from '@/components/ProjectCard'
 import PostCard from '@/components/PostCard'
-import { projects } from '@/data/projects'
 import { getSortedPostsData } from '@/lib/blog'
 
 export default function Home() {
-  const featuredProjects = projects.slice(0, 3)
   const recentPosts = getSortedPostsData().slice(0, 3)
 
   return (
@@ -17,10 +14,10 @@ export default function Home() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto">
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl">
-              Hi, I'm Iyan Barry – IT leader, builder, and experimenter.
+              Hi, I'm Iyan Barry – IT leader and builder.
             </h1>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-2xl mx-auto">
-              Senior IT leader based in Brisbane, with experience transforming IT teams, uplifting cybersecurity, and using AI to automate boring work. Always building small experiments in AI, trading, and tooling.
+              Senior IT leader based in Brisbane, with experience transforming IT teams, uplifting cybersecurity, and using AI to automate workflows and solve real business problems.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
@@ -30,10 +27,10 @@ export default function Home() {
                 Read the blog
               </Link>
               <Link
-                href="/projects"
+                href="/about"
                 className="rounded-md border border-border px-6 py-3 text-sm font-semibold text-foreground shadow-sm hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-colors"
               >
-                View projects
+                Learn more
               </Link>
             </div>
             <div className="mt-6">
@@ -80,38 +77,16 @@ export default function Home() {
 
             <div className="text-center">
               <h3 className="text-xl font-semibold text-foreground mb-4">
-                AI & Experiments
+                AI & Automation
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Building AI-driven workflows, forex bots, and small side projects. Always experimenting with new tools and approaches that might solve real problems.
+                Building AI-driven workflows and automation solutions. Focused on practical applications that remove friction from daily work and solve real business problems.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Projects Section */}
-      <section className="py-24 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-12">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground">
-              Featured Projects
-            </h2>
-            <Link
-              href="/projects"
-              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-            >
-              View all projects <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.slug} {...project} />
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Recent Blog Posts Section */}
       <section className="py-24 sm:py-32 bg-muted/30">

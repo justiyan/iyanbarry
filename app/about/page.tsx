@@ -40,7 +40,7 @@ export default function About() {
               </p>
 
               <p>
-                Beyond the day job, I have a deep interest in AI, automation, and algorithmic trading. I'm particularly fascinated by using AI tools to build practical solutions that solve real problems. I'm constantly experimenting with side projects—AI internal tools, donation platforms, affiliate systems, 3D printing ideas—because building things teaches you lessons that you can't learn any other way.
+                Beyond the day job, I have a deep interest in AI and automation. I'm particularly fascinated by using AI tools to build practical solutions that solve real problems, both for internal productivity and business value. I believe that hands-on building experience teaches lessons that you can't learn any other way.
               </p>
             </div>
           </div>
@@ -77,8 +77,8 @@ export default function About() {
                 <div className="flex items-center mb-2">
                   <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2023</span>
                 </div>
-                <h3 className="font-semibold text-foreground mb-1">Launched multiple side projects</h3>
-                <p className="text-muted-foreground">Started building trading bots, donation platforms, and other experimental tools.</p>
+                <h3 className="font-semibold text-foreground mb-1">Expanded AI and automation focus</h3>
+                <p className="text-muted-foreground">Deepened expertise in AI-driven solutions and automated workflow development for business value.</p>
               </div>
 
               <div className="border-l-2 border-primary/20 pl-6">
@@ -117,9 +117,9 @@ export default function About() {
               </div>
 
               <div className="bg-muted/50 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Side Project Experiments</h3>
+                <h3 className="font-semibold text-foreground mb-3">Continuous Learning</h3>
                 <p className="text-muted-foreground">
-                  Building small experiments in trading, fintech, and productivity tools—each one teaching new lessons about technology and user behavior.
+                  Staying current with emerging technologies and methodologies, focusing on practical applications that can drive business value and improve team effectiveness.
                 </p>
               </div>
             </div>
