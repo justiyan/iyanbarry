@@ -1,22 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
   --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
-  --primary-foreground: 210 40% 98%;
+  --foreground: 0 0% 8%;
+  --primary: 230 100% 68%;
+  --primary-foreground: 0 0% 100%;
   --muted: 210 40% 96%;
   --muted-foreground: 215.4 16.3% 46.9%;
   --border: 214.3 31.8% 91.4%;
 }
 
 .dark {
-  --background: 222.2 84% 4.9%;
-  --foreground: 210 40% 98%;
-  --primary: 210 40% 98%;
-  --primary-foreground: 222.2 47.4% 11.2%;
+  --background: 0 0% 8%;
+  --foreground: 0 0% 100%;
+  --primary: 230 100% 68%;
+  --primary-foreground: 0 0% 100%;
   --muted: 217.2 32.6% 17.5%;
   --muted-foreground: 215 20.2% 65.1%;
   --border: 217.2 32.6% 17.5%;
@@ -24,11 +26,79 @@
 
 * {
   border-color: hsl(var(--border));
+  box-sizing: border-box;
 }
 
 body {
-  color: hsl(var(--foreground));
+  font-family: 'Manrope', sans-serif;
+  color: #666666;
   background: hsl(var(--background));
+  line-height: 1.875;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  line-height: 1.181;
+  color: #141414;
+  margin-top: 0;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: #ffffff;
+}
+
+.dark body {
+  color: #ffffff;
+}
+
+/* Line patterns for decoration */
+.line-pattern {
+  position: relative;
+}
+
+.line-pattern::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+
+.line-pattern-dark::before {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Service card hover effects */
+.service-card {
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Button styles */
+.btn-primary {
+  background: #5B73FF;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary:hover {
+  background: #4A63E8;
+  transform: translateY(-2px);
 }
 
 .prose {
