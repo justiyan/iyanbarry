@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
+import { Shell, Section, SectionHead, Card } from '@/components/ui'
 
 export const metadata: Metadata = {
   title: 'Speaking',
@@ -9,224 +10,111 @@ export const metadata: Metadata = {
 }
 
 const topics = [
-  {
-    title: 'Deploying AI when your users are vulnerable',
-    audience: 'Care, health, education, government-adjacent',
-    body:
-      'What changes about AI adoption when the people in your data cannot consent in any meaningful way, and two different regulators are watching. Practical governance, not theory.',
-  },
-  {
-    title: 'Essential Eight on a not-for-profit budget',
-    audience: 'CIOs, IT managers, boards',
-    body:
-      'Lifting cyber maturity when there is no dedicated security team and no enterprise budget. What to do first, what to defer, and how to evidence it to a board.',
-  },
-  {
-    title: 'Running IT across two regulators',
-    audience: 'Executives operating internationally',
-    body:
-      'Data residency, cross-border access and jurisdictional complexity when the same organisation operates under Australian and UK regimes at once.',
-  },
-  {
-    title: 'From firefighting to strategic: rebuilding an IT function',
-    audience: 'IT leaders, executive teams',
-    body:
-      'Taking a reactive, under-resourced team and restructuring it into distinct delivery streams — including the part where you discover you are the bottleneck.',
-  },
-  {
-    title: 'The CIO as an AI translator',
-    audience: 'Boards and executive teams',
-    body:
-      'How to ask better questions about AI proposals, separate genuine capability from vendor narrative, and make decisions you can defend in twelve months.',
-  },
+  { title: 'Deploying AI when your users are vulnerable', audience: 'Care, health, education, government-adjacent',
+    body: 'What changes about AI adoption when the people in your data cannot consent in any meaningful way, and two different regulators are watching. Practical governance, not theory.' },
+  { title: 'Essential Eight on a not-for-profit budget', audience: 'CIOs, IT managers, boards',
+    body: 'Lifting cyber maturity when there is no dedicated security team and no enterprise budget. What to do first, what to defer, and how to evidence it to a board.' },
+  { title: 'Running IT across two regulators', audience: 'Executives operating internationally',
+    body: 'Data residency, cross-border access and jurisdictional complexity when the same organisation operates under Australian and UK regimes at once.' },
+  { title: 'From firefighting to strategic', audience: 'IT leaders, executive teams',
+    body: 'Taking a reactive, under-resourced team and restructuring it into distinct delivery streams \u2014 including the part where you discover you are the bottleneck.' },
+  { title: 'The CIO as an AI translator', audience: 'Boards and executive teams',
+    body: 'How to ask better questions about AI proposals, separate genuine capability from vendor narrative, and make decisions you can defend in twelve months.' },
 ]
 
 const formats = [
-  'Conference keynote (20–45 min)',
+  'Conference keynote (20\u201345 min)',
   'Panel discussion and moderation',
-  'Executive or board briefing (45–90 min)',
+  'Executive or board briefing (45\u201390 min)',
   'Workshop (half or full day)',
   'Podcast and interview',
+]
+
+const bios = [
+  { len: 'Short \u2014 one line', text: 'Iyan Barry is a Brisbane-based Chief Information Officer working at the intersection of AI, cybersecurity and child-safeguarding technology.' },
+  { len: 'Medium \u2014 60 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. With three decades in technology, he focuses on making AI and security work in environments where the stakes are people rather than uptime. He writes and speaks on practical AI governance for regulated organisations.' },
+  { len: 'Long \u2014 120 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, a not-for-profit providing intensive therapeutic care to young people at risk. He leads technology, information, data, cybersecurity and digital enablement across Australian operations and a UK arm regulated by Ofsted \u2014 an environment where data protection is a child-safety matter, not a compliance exercise. His career in technology began at sixteen and spans three decades across Australian organisations. He has rebuilt an IT function from reactive to strategic, implemented the ACSC Essential Eight and ISO 27001-aligned controls, and deployed AI and automation into day-to-day operations. He advises Australian mid-market executive teams and writes on IT leadership at iyanbarry.com.' },
 ]
 
 export default function Speaking() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="bg-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute left-1/4 top-0 w-px h-full bg-white"></div>
-          <div className="absolute left-2/4 top-0 w-px h-full bg-white"></div>
-          <div className="absolute left-3/4 top-0 w-px h-full bg-white"></div>
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
-          <div className="grid lg:grid-cols-3 gap-12 items-center">
-            <div className="lg:col-span-2">
-              <h1 className="text-4xl lg:text-6xl font-medium text-white font-outfit leading-tight mb-6">
-                <span className="text-light-muted">Speaking &</span><br />
-                media
+      <div className="border-b border-hairline">
+        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
+          <div className="grid grid-cols-[1fr_300px] items-center gap-s6 max-lg:grid-cols-1 max-lg:gap-s5">
+            <div className="max-lg:order-2">
+              <h1 className="mb-s4 max-w-[16ch] text-[clamp(34px,4.2vw,52px)] font-semibold">
+                Speaking &amp; media
               </h1>
-              <p className="text-lg text-light leading-relaxed max-w-2xl mb-8">
-                I speak about the parts of technology leadership that are hard to
-                talk about honestly — governing AI in environments where mistakes
-                harm people, lifting security without an enterprise budget, and
-                what actually happens when you restructure a team.
+              <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
+                I speak about the parts of technology leadership that are hard to talk about
+                honestly \u2014 governing AI where mistakes harm people, lifting security without an
+                enterprise budget, and what actually happens when you restructure a team.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all hover:bg-primary/90 hover:-translate-y-1"
-              >
+              <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
                 Enquire about an event
               </Link>
             </div>
-            <div className="text-center">
-              <img
-                src="/images/iyan-barry-cio.jpg"
-                alt="Iyan Barry, Chief Information Officer — speaker headshot"
-                width={512}
-                height={512}
-                className="w-56 h-56 lg:w-64 lg:h-64 rounded-full object-cover object-top bg-white mx-auto"
-              />
-            </div>
+            <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry \u2014 speaker headshot" width={600} height={670}
+              className="h-[375px] w-[300px] rounded-xl border border-hairline bg-surface-2 object-cover object-[50%_28%] max-lg:order-1 max-lg:h-[260px] max-lg:w-[210px]" />
           </div>
-        </div>
-      </section>
+        </Shell>
+      </div>
 
-      {/* Topics */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center mb-12">
-            <span className="text-2xl font-bold text-primary font-outfit">01</span>
-            <div className="flex-1 h-px bg-light/30 mx-4"></div>
-            <span className="text-light font-medium">Topics</span>
+      <Section>
+        <SectionHead num="01" title="Topics" />
+        <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
+          {topics.map((t) => (
+            <Card key={t.title}>
+              <h3 className="mb-s2 text-[17px] font-semibold">{t.title}</h3>
+              <p className="mb-s3 font-mono text-[11px] uppercase tracking-[0.03em] text-accent">{t.audience}</p>
+              <p className="text-[14.5px] leading-[1.62] text-ink-2">{t.body}</p>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead num="02" title="Formats &amp; media kit" />
+        <div className="grid grid-cols-[300px_1fr] gap-s6 max-lg:grid-cols-1">
+          <div>
+            <ul className="space-y-s2">
+              {formats.map((f) => (
+                <li key={f} className="flex gap-s3 text-[15px] text-ink-2">
+                  <span className="text-accent">\u2014</span><span>{f}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="mt-s5 text-[14.5px] leading-[1.62] text-ink-2">
+              Headshots available on request in high resolution, square and transparent-background formats.
+            </p>
+            <Link href="/contact" className="mt-s3 inline-block text-[14.5px] font-medium text-accent hover:underline">
+              Request the media kit \u2192
+            </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {topics.map((t) => (
-              <div
-                key={t.title}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-light/20"
-              >
-                <h3 className="text-xl font-bold text-dark font-outfit mb-2">
-                  {t.title}
-                </h3>
-                <p className="text-xs uppercase tracking-wide text-primary font-semibold mb-4">
-                  {t.audience}
-                </p>
-                <p className="text-light leading-relaxed">{t.body}</p>
+          <div className="space-y-s4">
+            {bios.map((b) => (
+              <div key={b.len}>
+                <p className="mb-s2 font-mono text-[11px] uppercase tracking-[0.03em] text-accent">{b.len}</p>
+                <p className="rounded-card border border-hairline bg-surface-2 p-s4 text-[15px] leading-[1.65] text-ink-2">{b.text}</p>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </Section>
 
-      {/* Formats + bios */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-3 gap-12">
-            <div>
-              <h2 className="text-2xl font-bold text-dark font-outfit mb-6">
-                Formats
-              </h2>
-              <ul className="space-y-3">
-                {formats.map((f) => (
-                  <li key={f} className="text-light flex gap-3">
-                    <span className="text-primary">—</span>
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <h2 className="text-2xl font-bold text-dark font-outfit mt-10 mb-4">
-                For organisers
-              </h2>
-              <p className="text-light leading-relaxed mb-4">
-                Headshots are available on request in high resolution, square and
-                transparent-background formats.
-              </p>
-              <Link
-                href="/contact"
-                className="text-primary font-semibold hover:underline"
-              >
-                Request the media kit →
-              </Link>
-            </div>
-
-            <div className="lg:col-span-2">
-              <h2 className="text-2xl font-bold text-dark font-outfit mb-6">
-                Biography
-              </h2>
-
-              <div className="mb-8">
-                <p className="text-xs uppercase tracking-wide text-primary font-semibold mb-2">
-                  Short — one line
-                </p>
-                <p className="text-dark leading-relaxed bg-white p-4 rounded-lg border border-light/20">
-                  Iyan Barry is a Brisbane-based Chief Information Officer
-                  working at the intersection of AI, cybersecurity and
-                  child-safeguarding technology.
-                </p>
-              </div>
-
-              <div className="mb-8">
-                <p className="text-xs uppercase tracking-wide text-primary font-semibold mb-2">
-                  Medium — 60 words
-                </p>
-                <p className="text-dark leading-relaxed bg-white p-4 rounded-lg border border-light/20">
-                  Iyan Barry is Chief Information Officer at Safe Places for
-                  Children, where he leads technology, data, cybersecurity and
-                  digital strategy across Australian and UK operations. With
-                  three decades in technology, he focuses on making AI and
-                  security work in environments where the stakes are people
-                  rather than uptime. He writes and speaks on practical AI
-                  governance for regulated organisations.
-                </p>
-              </div>
-
-              <div>
-                <p className="text-xs uppercase tracking-wide text-primary font-semibold mb-2">
-                  Long — 120 words
-                </p>
-                <p className="text-dark leading-relaxed bg-white p-4 rounded-lg border border-light/20">
-                  Iyan Barry is Chief Information Officer at Safe Places for
-                  Children, a not-for-profit providing intensive therapeutic care
-                  to young people at risk. He leads technology, information,
-                  data, cybersecurity and digital enablement across Australian
-                  operations and a UK arm regulated by Ofsted — an environment
-                  where data protection is a child-safety matter, not a
-                  compliance exercise.
-                  <br />
-                  <br />
-                  His career in technology began at sixteen and spans three
-                  decades across Australian organisations. He has rebuilt an IT
-                  function from reactive to strategic, implemented the ACSC
-                  Essential Eight and ISO 27001-aligned controls, and deployed AI
-                  and automation into day-to-day operations. He advises
-                  Australian mid-market executive teams and writes on IT
-                  leadership at iyanbarry.com.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white font-outfit mb-6">
-            Planning an event?
-          </h2>
-          <p className="text-light mb-8 max-w-2xl mx-auto">
-            Tell me the audience, the date and what you want them to walk away
-            with. I will tell you honestly whether I am the right speaker for it.
+      <Section className="!border-b-0">
+        <div className="max-w-[62ch]">
+          <h2 className="mb-s3 text-[30px] font-semibold">Planning an event?</h2>
+          <p className="mb-s5 text-[17px] text-ink-2">
+            Tell me the audience, the date and what you want them to walk away with. I will tell
+            you honestly whether I am the right speaker for it.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all hover:bg-primary/90 hover:-translate-y-1"
-          >
+          <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
             Enquire about speaking
           </Link>
         </div>
-      </section>
+      </Section>
     </Layout>
   )
 }

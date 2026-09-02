@@ -1,118 +1,89 @@
 'use client'
 
+import Link from 'next/link'
 import { useState, useMemo } from 'react'
-import PostCard from '@/components/PostCard'
+import { Shell } from '@/components/ui'
 import { BlogPost } from '@/lib/blog'
 
-interface BlogClientProps {
-  posts: BlogPost[]
-}
+export default function BlogClient({ posts }: { posts: BlogPost[] }) {
+  const [tag, setTag] = useState<string | null>(null)
 
-export default function BlogClient({ posts }: BlogClientProps) {
-  const [selectedTag, setSelectedTag] = useState<string | null>(null)
-
-  // Get all unique tags
-  const allTags = useMemo(() => {
-    const tagSet = new Set<string>()
-    posts.forEach(post => {
-      post.tags.forEach(tag => tagSet.add(tag))
-    })
-    return Array.from(tagSet).sort()
+  const tags = useMemo(() => {
+    const s = new Set<string>()
+    posts.forEach((p) => p.tags.forEach((t) => s.add(t)))
+    return Array.from(s).sort()
   }, [posts])
 
-  // Filter posts based on selected tag
-  const filteredPosts = useMemo(() => {
-    if (!selectedTag) return posts
-    return posts.filter(post => post.tags.includes(selectedTag))
-  }, [posts, selectedTag])
+  const filtered = useMemo(
+    () => (tag ? posts.filter((p) => p.tags.includes(tag)) : posts),
+    [posts, tag]
+  )
 
   return (
-    <div className="bg-background py-24 sm:py-32">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-            Blog
-          </h1>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Thoughts on IT leadership, AI, cybersecurity, and the experiments that teach me something new.
+    <>
+      <div className="border-b border-hairline">
+        <Shell className="pb-s6 pt-s7 max-md:pt-s6">
+          <h1 className="mb-s4 max-w-[18ch] text-[clamp(34px,4.2vw,52px)] font-semibold">Writing</h1>
+          <p className="max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
+            Notes on IT leadership, AI governance, cybersecurity and the practical realities of
+            running technology in a regulated environment.
           </p>
-        </div>
+        </Shell>
+      </div>
 
-        {/* Filter Tags */}
-        {allTags.length > 0 && (
-          <div className="mb-12">
-            <h2 className="text-sm font-medium text-foreground mb-4">Filter by topic:</h2>
-            <div className="flex flex-wrap gap-2">
-              <button
-                onClick={() => setSelectedTag(null)}
-                className={`px-3 py-1 text-sm rounded-full border transition-colors ${
-                  selectedTag === null
-                    ? 'bg-primary text-primary-foreground border-primary'
-                    : 'bg-background text-muted-foreground border-border hover:bg-muted'
-                }`}
-              >
-                All
-              </button>
-              {allTags.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setSelectedTag(tag)}
-                  className={`px-3 py-1 text-sm rounded-full border transition-colors ${
-                    selectedTag === tag
-                      ? 'bg-primary text-primary-foreground border-primary'
-                      : 'bg-background text-muted-foreground border-border hover:bg-muted'
-                  }`}
-                >
-                  {tag}
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Posts Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPosts.map((post) => (
-            <PostCard key={post.slug} {...post} />
+      <Shell className="py-s6">
+        <div className="mb-s5 flex flex-wrap gap-s2">
+          <button
+            onClick={() => setTag(null)}
+            className={`rounded-full border px-[13px] py-[5px] font-mono text-[11px] uppercase tracking-[0.03em] transition-colors ${
+              tag === null ? 'border-ink bg-ink text-white' : 'border-hairline text-ink-2 hover:border-ink-3'
+            }`}
+          >
+            All
+          </button>
+          {tags.map((t) => (
+            <button
+              key={t}
+              onClick={() => setTag(t)}
+              className={`rounded-full border px-[13px] py-[5px] font-mono text-[11px] uppercase tracking-[0.03em] transition-colors ${
+                tag === t ? 'border-ink bg-ink text-white' : 'border-hairline text-ink-2 hover:border-ink-3'
+              }`}
+            >
+              {t}
+            </button>
           ))}
         </div>
 
-        {/* No results message */}
-        {filteredPosts.length === 0 && posts.length > 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">
-              No posts found with the tag "{selectedTag}".
-            </p>
-            <button
-              onClick={() => setSelectedTag(null)}
-              className="mt-4 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+        <div>
+          {filtered.map((p) => (
+            <Link
+              key={p.slug}
+              href={`/blog/${p.slug}`}
+              className="group grid grid-cols-[120px_1fr] items-baseline gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1"
             >
-              Show all posts
-            </button>
-          </div>
+              <span className="font-mono text-[12.5px] text-ink-3">
+                {new Date(p.date).toLocaleDateString('en-AU', {
+                  day: '2-digit', month: 'short', year: 'numeric',
+                })}
+              </span>
+              <div>
+                <h2 className="mb-[4px] text-[17px] font-[550] transition-colors group-hover:text-accent">
+                  {p.title}
+                </h2>
+                <p className="text-[14.5px] text-ink-3">{p.summary}</p>
+              </div>
+            </Link>
+          ))}
+        </div>
+
+        {filtered.length === 0 && (
+          <p className="py-s6 text-[15px] text-ink-3">No posts with that tag yet.</p>
         )}
 
-        {/* No posts message */}
-        {posts.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground">
-              No blog posts available yet. Check back soon!
-            </p>
-          </div>
-        )}
-
-        {/* Results count */}
-        {posts.length > 0 && (
-          <div className="mt-12 text-center">
-            <p className="text-sm text-muted-foreground">
-              Showing {filteredPosts.length} of {posts.length} posts
-              {selectedTag && ` tagged with "${selectedTag}"`}
-            </p>
-          </div>
-        )}
-      </div>
-    </div>
+        <p className="mt-s5 font-mono text-[12px] text-ink-3">
+          {filtered.length} of {posts.length} posts
+        </p>
+      </Shell>
+    </>
   )
 }

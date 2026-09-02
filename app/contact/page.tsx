@@ -1,134 +1,58 @@
-import Link from 'next/link'
-import { Mail, Linkedin, MessageCircle } from 'lucide-react'
+import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
-import { generateMetadata as generateMeta } from '@/lib/metadata'
+import { Shell, Section, SectionHead } from '@/components/ui'
 
-export const metadata = generateMeta({
+export const metadata: Metadata = {
   title: 'Contact',
-  description: 'Get in touch with Iyan Barry to discuss IT leadership, AI, cybersecurity, or collaborative opportunities.',
-  path: '/contact',
-})
+  description:
+    'Get in touch with Iyan Barry about advisory engagements, speaking enquiries or IT leadership.',
+}
+
+const reasons = [
+  { t: 'Advisory', d: 'Assessments, cyber maturity uplift, fractional CIO or AI governance work.' },
+  { t: 'Speaking', d: 'Conferences, panels, executive briefings, workshops and podcasts.' },
+  { t: 'Media', d: 'Comment or background on AI governance, cyber and technology leadership.' },
+  { t: 'Comparing notes', d: 'Other IT leaders working on the same problems. Always happy to talk.' },
+]
 
 export default function Contact() {
   return (
     <Layout>
-      <div className="bg-background py-24 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              Let's Connect
-            </h1>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              If you'd like to connect about IT leadership, AI, cybersecurity, or just compare notes on side projects and experiments, reach out.
-            </p>
+      <div className="border-b border-hairline">
+        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
+          <h1 className="mb-s4 max-w-[16ch] text-[clamp(34px,4.2vw,52px)] font-semibold">
+            Get in touch
+          </h1>
+          <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
+            Tell me what you\u2019re dealing with. If it isn\u2019t something I can help with, I\u2019ll say so
+            and point you somewhere better.
+          </p>
+          <div className="flex flex-wrap items-center gap-s3">
+            <a href="mailto:ask@iyanbarry.com" className="rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
+              ask@iyanbarry.com
+            </a>
+            <a href="https://au.linkedin.com/in/iyanbarry" target="_blank" rel="noopener noreferrer"
+              className="rounded-btn border border-hairline px-s4 py-[11px] text-[14.5px] font-medium text-ink transition-colors hover:border-ink-3 hover:bg-surface-2">
+              LinkedIn
+            </a>
           </div>
-
-          {/* Contact Options */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-
-            {/* Email */}
-            <div className="bg-muted/50 rounded-lg p-8 text-center hover:bg-muted/70 transition-colors">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                <Mail className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">Email</h3>
-              <p className="text-muted-foreground mb-4">
-                Best for detailed discussions or collaboration opportunities
-              </p>
-              <Link
-                href="mailto:ask@iyanbarry.com"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                ask@iyanbarry.com
-              </Link>
-            </div>
-
-            {/* LinkedIn */}
-            <div className="bg-muted/50 rounded-lg p-8 text-center hover:bg-muted/70 transition-colors">
-              <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-primary/10 mb-4">
-                <Linkedin className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="text-xl font-semibold text-foreground mb-2">LinkedIn</h3>
-              <p className="text-muted-foreground mb-4">
-                Great for professional networking and quick conversations
-              </p>
-              <Link
-                href="https://www.linkedin.com/in/iyanbarry/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
-              >
-                Connect on LinkedIn
-              </Link>
-            </div>
-          </div>
-
-          {/* What to reach out about */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8 text-center">
-              What to reach out about
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              <div className="text-center">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">IT Leadership</h3>
-                <p className="text-sm text-muted-foreground">
-                  Team transformation, cybersecurity strategy, governance frameworks
-                </p>
-              </div>
-
-              <div className="text-center">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">AI & Automation</h3>
-                <p className="text-sm text-muted-foreground">
-                  Practical AI implementation, workflow automation, productivity tools
-                </p>
-              </div>
-
-              <div className="text-center">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Side Projects</h3>
-                <p className="text-sm text-muted-foreground">
-                  Building experiments, fintech ideas, trading systems
-                </p>
-              </div>
-
-              <div className="text-center">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Speaking</h3>
-                <p className="text-sm text-muted-foreground">
-                  Conference talks, workshops, panel discussions
-                </p>
-              </div>
-
-              <div className="text-center">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Consulting</h3>
-                <p className="text-sm text-muted-foreground">
-                  Strategic advice, cybersecurity assessments, team coaching
-                </p>
-              </div>
-
-              <div className="text-center">
-                <MessageCircle className="h-8 w-8 text-primary mx-auto mb-3" />
-                <h3 className="font-semibold text-foreground mb-2">Collaboration</h3>
-                <p className="text-sm text-muted-foreground">
-                  Joint projects, research, knowledge sharing
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Response time note */}
-          <div className="text-center bg-muted/30 rounded-lg p-6">
-            <p className="text-sm text-muted-foreground">
-              I typically respond within 24-48 hours. Looking forward to hearing from you!
-            </p>
-          </div>
-        </div>
+          <p className="mt-s5 text-[14px] text-ink-3">
+            Based in Brisbane, Australia (AEST). I usually reply within a couple of days.
+          </p>
+        </Shell>
       </div>
+
+      <Section className="!border-b-0">
+        <SectionHead num="01" title="What to reach out about" />
+        <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
+          {reasons.map((r) => (
+            <div key={r.t} className="rounded-card border border-hairline p-s5">
+              <h3 className="mb-s2 text-[16px] font-semibold">{r.t}</h3>
+              <p className="text-[14.5px] leading-[1.62] text-ink-2">{r.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
     </Layout>
   )
 }

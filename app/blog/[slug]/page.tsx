@@ -1,116 +1,65 @@
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { ArrowLeft, Calendar } from 'lucide-react'
 import Layout from '@/components/Layout'
-import TagBadge from '@/components/TagBadge'
+import { Shell } from '@/components/ui'
 import { getPostData, getAllPostSlugs } from '@/lib/blog'
 import { generateMetadata as generateMeta } from '@/lib/metadata'
 
-interface BlogPostProps {
-  params: {
-    slug: string
-  }
-}
+interface Props { params: { slug: string } }
 
 export async function generateStaticParams() {
-  const posts = getAllPostSlugs()
-  return posts.map((post) => ({
-    slug: post.params.slug,
-  }))
+  return getAllPostSlugs().map((p) => ({ slug: p.params.slug }))
 }
 
-export async function generateMetadata({ params }: BlogPostProps) {
+export async function generateMetadata({ params }: Props) {
   const post = await getPostData(params.slug)
-
-  if (!post) {
-    return generateMeta({
-      title: 'Post Not Found',
-    })
-  }
-
-  return generateMeta({
-    title: post.title,
-    description: post.summary,
-    path: `/blog/${params.slug}`,
-  })
+  if (!post) return generateMeta({ title: 'Post not found' })
+  return generateMeta({ title: post.title, description: post.summary, path: `/blog/${params.slug}` })
 }
 
-export default async function BlogPost({ params }: BlogPostProps) {
+export default async function BlogPostPage({ params }: Props) {
   const post = await getPostData(params.slug)
-
-  if (!post) {
-    notFound()
-  }
+  if (!post) notFound()
 
   return (
     <Layout>
-      <article className="bg-background py-24 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-
-          {/* Back link */}
-          <div className="mb-8">
-            <Link
-              href="/blog"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              <ArrowLeft className="h-4 w-4" />
-              Back to blog
+      <article>
+        <div className="border-b border-hairline">
+          <Shell className="pb-s6 pt-s6">
+            <Link href="/blog" className="mb-s5 inline-block font-mono text-[12px] text-ink-3 transition-colors hover:text-accent">
+              \u2190 All writing
             </Link>
-          </div>
-
-          {/* Post header */}
-          <header className="mb-12">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              {post.title}
-            </h1>
-
-            <div className="flex items-center gap-4 mb-6">
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <Calendar className="h-4 w-4" />
-                <time dateTime={post.date}>
-                  {new Date(post.date).toLocaleDateString('en-AU', {
-                    year: 'numeric',
-                    month: 'long',
-                    day: 'numeric'
-                  })}
-                </time>
-              </div>
+            <div className="mb-s3 flex flex-wrap items-center gap-s3">
+              <time className="font-mono text-[12.5px] text-ink-3">
+                {new Date(post.date).toLocaleDateString('en-AU', { day: '2-digit', month: 'long', year: 'numeric' })}
+              </time>
+              {post.tags.map((t) => (
+                <span key={t} className="font-mono text-[11px] uppercase tracking-[0.03em] text-accent">{t}</span>
+              ))}
             </div>
-
-            {post.tags.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {post.tags.map((tag) => (
-                  <TagBadge key={tag} tag={tag} />
-                ))}
-              </div>
+            <h1 className="max-w-[22ch] text-[clamp(30px,3.6vw,44px)] font-semibold">{post.title}</h1>
+            {post.summary && (
+              <p className="mt-s4 max-w-[62ch] text-[18px] leading-[1.6] text-ink-2">{post.summary}</p>
             )}
-          </header>
+          </Shell>
+        </div>
 
-          {/* Post content */}
-          <div
-            className="prose prose-lg max-w-none text-muted-foreground"
-            dangerouslySetInnerHTML={{ __html: post.content || '' }}
-          />
+        <Shell className="py-s6">
+          <div className="prose-article" dangerouslySetInnerHTML={{ __html: post.content || '' }} />
+        </Shell>
 
-          {/* Footer */}
-          <footer className="mt-16 pt-8 border-t border-border">
-            <div className="flex items-center justify-between">
-              <Link
-                href="/blog"
-                className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to all posts
-              </Link>
-
-              <Link
-                href="/contact"
-                className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
-              >
-                Discuss this post →
+        <div className="border-t border-hairline">
+          <Shell className="py-s6">
+            <div className="max-w-[62ch]">
+              <h2 className="mb-s3 text-[24px] font-semibold">Working on something similar?</h2>
+              <p className="mb-s4 text-[16px] text-ink-2">
+                I advise Australian mid-market executive teams on exactly these problems.
+              </p>
+              <Link href="/work-with-me" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
+                See how I work
               </Link>
             </div>
-          </footer>
+          </Shell>
         </div>
       </article>
     </Layout>

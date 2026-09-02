@@ -8,44 +8,57 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'manrope': ['Manrope', 'sans-serif'],
-        'outfit': ['Outfit', 'sans-serif'],
+        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
       },
       colors: {
-        background: 'hsl(var(--background))',
-        foreground: 'hsl(var(--foreground))',
-        primary: {
-          DEFAULT: '#5B73FF', // Rexon's primary blue
-          foreground: '#ffffff',
+        // Ink scale
+        ink: {
+          DEFAULT: '#0b0d0f',
+          2: '#3d444d',
+          3: '#6e7781',
+          4: '#a5acb4',
         },
-        dark: {
-          DEFAULT: '#141414', // Rexon's dark background
-          light: '#1a1a1a',
-        },
-        light: {
-          DEFAULT: '#666666', // Rexon's text gray
-          muted: '#999999',
-        },
-        muted: {
-          DEFAULT: 'hsl(var(--muted))',
-          foreground: 'hsl(var(--muted-foreground))',
-        },
-        border: 'hsl(var(--border))',
-        card: {
+        // Surfaces
+        surface: {
           DEFAULT: '#ffffff',
-          dark: '#1a1a1a',
-        }
+          2: '#f6f8fa',
+        },
+        hairline: {
+          DEFAULT: '#e4e8ec',
+          strong: '#d3d9df',
+        },
+        accent: {
+          DEFAULT: '#1f5fd0',
+          hover: '#1a51b3',
+          soft: '#eaf1fd',
+        },
+        live: '#2da44e',
       },
+      // 8pt spacing scale
       spacing: {
-        '18': '4.5rem',
-        '22': '5.5rem',
+        s1: '4px',
+        s2: '8px',
+        s3: '16px',
+        s4: '24px',
+        s5: '40px',
+        s6: '64px',
+        s7: '96px',
+        s8: '128px',
+      },
+      maxWidth: {
+        shell: '1120px',
+        prose: '68ch',
+      },
+      letterSpacing: {
+        display: '-0.032em',
+        tight2: '-0.022em',
       },
       borderRadius: {
-        '2xl': '1rem',
-        '3xl': '1.5rem',
+        card: '10px',
+        btn: '7px',
       },
     },
   },
   plugins: [],
-  darkMode: 'class',
 }

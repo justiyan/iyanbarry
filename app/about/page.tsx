@@ -1,131 +1,116 @@
+import Link from 'next/link'
+import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
-import { generateMetadata as generateMeta } from '@/lib/metadata'
+import { Shell, Section, SectionHead } from '@/components/ui'
 
-export const metadata = generateMeta({
+export const metadata: Metadata = {
   title: 'About',
-  description: 'Learn more about Iyan Barry, an IT leader based in Brisbane, Australia, focused on transforming technology teams and building practical solutions.',
-  path: '/about',
-})
+  description:
+    'Iyan Barry is Chief Information Officer at Safe Places for Children, leading technology, data and cybersecurity across Australian and UK operations.',
+}
+
+const timeline = [
+  { y: '1996', t: 'First job in IT, aged sixteen', d: 'The start of three decades across Australian organisations.' },
+  { y: '2021', t: 'Took on the IT leadership role', d: 'Began transforming an overwhelmed, reactive IT function into a strategic capability.' },
+  { y: '2022', t: 'Cybersecurity uplift programme', d: 'Microsoft Secure Score uplift, ISO 27001 alignment and Essential Eight implementation.' },
+  { y: '2023', t: 'Practical AI and automation', d: 'Deploying AI tooling into day-to-day operations, with the governance to support it.' },
+  { y: '2024', t: 'Restructured the team into three delivery streams', d: 'Service delivery, technical delivery and project delivery \u2014 same people, clearer focus.' },
+  { y: '2026', t: 'Appointed Chief Information Officer', d: 'Leading technology, data, cyber and digital enablement across AU and a UK arm regulated by Ofsted.' },
+]
+
+const values = [
+  { t: 'Psychological safety', d: 'People do their best work when they feel secure enough to say what they actually think.' },
+  { t: 'Clarity of purpose', d: 'Everyone should understand why their work matters and how it connects to the whole.' },
+  { t: 'Practical delivery', d: 'Perfect is the enemy of good. Ship something that works, then improve it.' },
+  { t: 'Think big, start small, scale fast', d: 'Ambitious vision, pragmatic execution.' },
+]
 
 export default function About() {
   return (
     <Layout>
-      <div className="bg-background py-24 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl mb-6">
-              About Iyan
-            </h1>
-          </div>
-
-          {/* Main Bio Section */}
-          <div className="prose prose-lg max-w-none mb-16">
-            <div className="text-muted-foreground space-y-6 leading-relaxed">
-              <p>
-                I'm based in Brisbane, Australia, where I serve as Chief Information Officer at Safe Places for Children — a not-for-profit providing intensive therapeutic care to young people at risk. I lead technology, information, data, cybersecurity and digital enablement across our Australian operations and our UK arm, which is regulated by Ofsted. My first job in IT was at sixteen; three decades later the work is less about the technology and more about judgement under constraint.
-              </p>
-
-              <p>
-                When I took on this role, I inherited an IT team that was reactive and under-resourced—constantly firefighting with little time for strategic thinking. Over the past few years, I've led the transformation of that team into a structured, proactive capability that's genuinely aligned to business strategy. This wasn't about implementing trendy frameworks; it was about building trust, establishing clear priorities, and creating systems that actually work.
-              </p>
-
-              <p>
-                A significant part of my work has focused on cybersecurity uplift. We've improved our Microsoft Secure Score substantially, aligned our security controls to ISO 27001 and the Essential Eight, and implemented governance and risk frameworks that protect the organization without creating bureaucratic overhead. The key has been making security practical and sustainable, not just compliant.
-              </p>
-
-              <p>
-                I'm guided by a few core values: psychological safety (people do their best work when they feel secure), clarity of purpose (everyone should understand why their work matters), practical delivery (perfect is the enemy of good), and "think big, start small, scale fast" (ambitious vision, pragmatic execution).
-              </p>
-
-              <p>
-                Beyond the day job, I have a deep interest in AI and automation. I'm particularly fascinated by using AI tools to build practical solutions that solve real problems, both for internal productivity and business value. I believe that hands-on building experience teaches lessons that you can't learn any other way.
-              </p>
-            </div>
-          </div>
-
-          {/* Timeline Section */}
-          <div className="mb-16">
-            <h2 className="text-2xl font-bold text-foreground mb-8">Timeline</h2>
-            <div className="space-y-6">
-              <div className="border-l-2 border-primary/20 pl-6">
-                <div className="flex items-center mb-2">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2021</span>
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">Took on the IT leadership role</h3>
-                <p className="text-muted-foreground">Started leading the transformation of an overwhelmed, reactive IT function into a strategic capability.</p>
-              </div>
-
-              <div className="border-l-2 border-primary/20 pl-6">
-                <div className="flex items-center mb-2">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2022</span>
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">Major cybersecurity uplift program</h3>
-                <p className="text-muted-foreground">Led comprehensive security improvements, ISO 27001 alignment, and Essential Eight implementation.</p>
-              </div>
-
-              <div className="border-l-2 border-primary/20 pl-6">
-                <div className="flex items-center mb-2">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2023</span>
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">Started serious AI tooling experiments</h3>
-                <p className="text-muted-foreground">Began exploring practical applications of AI for internal productivity and workflow automation.</p>
-              </div>
-
-              <div className="border-l-2 border-primary/20 pl-6">
-                <div className="flex items-center mb-2">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2023</span>
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">Expanded AI and automation focus</h3>
-                <p className="text-muted-foreground">Deepened expertise in AI-driven solutions and automated workflow development for business value.</p>
-              </div>
-
-              <div className="border-l-2 border-primary/20 pl-6">
-                <div className="flex items-center mb-2">
-                  <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2023</span>
-                </div>
-                <h3 className="font-semibold text-foreground mb-1">Started writing and sharing</h3>
-                <p className="text-muted-foreground">Launched this site to document and share learnings from leadership, technology, and experimentation.</p>
-              </div>
-            </div>
-          </div>
-
-          {/* What I'm Working On Now */}
-          <div>
-            <h2 className="text-2xl font-bold text-foreground mb-8">What I'm Working On Now</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-muted/50 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">IT & Security Maturity</h3>
-                <p className="text-muted-foreground">
-                  Continuing to uplift IT maturity and cybersecurity posture, focusing on sustainable improvements that enable business growth without compromising security.
+      <div className="border-b border-hairline">
+        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
+          <div className="grid grid-cols-[1fr_300px] items-start gap-s6 max-lg:grid-cols-1 max-lg:gap-s5">
+            <div className="max-lg:order-2">
+              <h1 className="mb-s5 max-w-[16ch] text-[clamp(34px,4.2vw,52px)] font-semibold">About</h1>
+              <div className="max-w-prose space-y-s4 text-[17.5px] leading-[1.72] text-ink-2">
+                <p>
+                  I\u2019m based in Brisbane, where I serve as Chief Information Officer at Safe Places
+                  for Children \u2014 a not-for-profit providing intensive therapeutic care to young
+                  people at risk. I lead technology, information, data, cybersecurity and digital
+                  enablement across our Australian operations and our UK arm, which is regulated by
+                  Ofsted.
                 </p>
-              </div>
-
-              <div className="bg-muted/50 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">AI-Powered Workflows</h3>
-                <p className="text-muted-foreground">
-                  Experimenting with AI-powered workflows and bots, exploring practical applications that remove friction from daily work.
+                <p>
+                  My first job in IT was at sixteen. Three decades later the work is less about the
+                  technology and more about judgement under constraint \u2014 deciding what matters,
+                  what can wait, and what you are willing to defend to a board.
                 </p>
-              </div>
-
-              <div className="bg-muted/50 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Writing & Sharing</h3>
-                <p className="text-muted-foreground">
-                  Documenting lessons learned through this blog, focusing on the practical reality of leadership, AI adoption, and building things.
+                <p>
+                  When I took on this role I inherited an IT team that was reactive and
+                  under-resourced, constantly firefighting with little time for strategic thinking.
+                  Turning that around was not about implementing trendy frameworks. It was about
+                  building trust, establishing clear priorities, and creating systems that actually
+                  work \u2014 including recognising, eventually, that I had become the bottleneck.
                 </p>
-              </div>
-
-              <div className="bg-muted/50 rounded-lg p-6">
-                <h3 className="font-semibold text-foreground mb-3">Continuous Learning</h3>
-                <p className="text-muted-foreground">
-                  Staying current with emerging technologies and methodologies, focusing on practical applications that can drive business value and improve team effectiveness.
+                <p>
+                  A significant part of my work has focused on cybersecurity uplift: improving our
+                  Microsoft Secure Score, aligning controls to ISO 27001 and the Essential Eight, and
+                  implementing governance and risk frameworks that protect the organisation without
+                  creating bureaucratic overhead. The key has been making security practical and
+                  sustainable, not merely compliant.
+                </p>
+                <p>
+                  Where our sector differs from most is the stakes. Data protection here is a
+                  child-safety matter, not a compliance exercise. That shapes how I think about AI:
+                  useful, but only with governance you can articulate and defend.
                 </p>
               </div>
             </div>
+            <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry, Chief Information Officer" width={600} height={670}
+              className="h-[375px] w-[300px] rounded-xl border border-hairline bg-surface-2 object-cover object-[50%_28%] max-lg:order-1 max-lg:h-[260px] max-lg:w-[210px]" />
           </div>
-        </div>
+        </Shell>
       </div>
+
+      <Section>
+        <SectionHead num="01" title="Timeline" />
+        <div className="max-w-[70ch]">
+          {timeline.map((i) => (
+            <div key={i.y} className="grid grid-cols-[90px_1fr] gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1">
+              <span className="font-mono text-[12.5px] text-accent">{i.y}</span>
+              <div>
+                <h3 className="mb-[3px] text-[16px] font-[550]">{i.t}</h3>
+                <p className="text-[14.5px] text-ink-3">{i.d}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead num="02" title="How I work" />
+        <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
+          {values.map((v) => (
+            <div key={v.t} className="rounded-card border border-hairline p-s5">
+              <h3 className="mb-s2 text-[16px] font-semibold">{v.t}</h3>
+              <p className="text-[14.5px] leading-[1.62] text-ink-2">{v.d}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section className="!border-b-0">
+        <div className="max-w-[62ch]">
+          <h2 className="mb-s3 text-[30px] font-semibold">Work with me</h2>
+          <p className="mb-s5 text-[17px] text-ink-2">
+            I advise a small number of Australian mid-market executive teams alongside the day job.
+          </p>
+          <Link href="/work-with-me" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
+            See engagements
+          </Link>
+        </div>
+      </Section>
     </Layout>
   )
 }

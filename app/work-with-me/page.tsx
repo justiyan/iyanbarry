@@ -1,49 +1,45 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
+import { Shell, Section, SectionHead, Card, Tag } from '@/components/ui'
 
 export const metadata: Metadata = {
-  title: 'Work with me',
+  title: 'Advisory',
   description:
-    'Advisory engagements for Australian mid-market executive teams: IT & AI readiness assessments, cyber maturity uplift (Essential Eight, ISO 27001), and fractional CIO support.',
+    'Advisory engagements for Australian mid-market executive teams: IT & AI readiness assessments, cyber maturity uplift (Essential Eight, ISO 27001), fractional CIO and AI governance.',
 }
 
 const engagements = [
   {
-    n: '01',
-    name: 'IT & AI Readiness Assessment',
-    price: 'Fixed fee · 2–3 weeks',
+    tag: 'Fixed fee \u00b7 2\u20133 weeks',
+    title: 'IT & AI Readiness Assessment',
     summary:
-      'A structured review of where your technology, security and data actually stand — and what to do about it in the next twelve months.',
+      'A structured review of where your technology, security and data actually stand \u2014 and what to do about it in the next twelve months.',
     includes: [
       'Executive interviews and a review of your current environment',
       'Cyber maturity scored against the ACSC Essential Eight',
-      'An honest read on where AI will and will not pay off for you',
+      'An honest read on where AI will and will not pay off',
       'A prioritised roadmap by effort and impact, costed at a high level',
       'A written report and a live session with your executive team or board',
     ],
-    outcome:
-      'You leave with a decision-ready plan you can take to a board — not a vendor pitch.',
+    outcome: 'You leave with a decision-ready plan you can take to a board \u2014 not a vendor pitch.',
   },
   {
-    n: '02',
-    name: 'Cyber Maturity Uplift',
-    price: 'Scoped per engagement',
+    tag: 'Scoped per engagement',
+    title: 'Cyber Maturity Uplift',
     summary:
-      'Getting a business from "we think we are probably fine" to a defensible, evidenced security position.',
+      'Getting a business from \u201cwe think we\u2019re probably fine\u201d to a defensible, evidenced security position.',
     includes: [
       'Essential Eight and ISO 27001 gap assessment',
       'A remediation plan sequenced by risk, not by product',
-      'Governance, risk and incident response frameworks that people will actually use',
+      'Governance, risk and incident response frameworks people will actually use',
       'Board-level reporting your directors can understand',
     ],
-    outcome:
-      'Security you can evidence to a client, an insurer, an auditor or a regulator.',
+    outcome: 'Security you can evidence to a client, an insurer, an auditor or a regulator.',
   },
   {
-    n: '03',
-    name: 'Fractional / Interim CIO',
-    price: 'Monthly retainer · limited availability',
+    tag: 'Monthly retainer \u00b7 limited availability',
+    title: 'Fractional / Interim CIO',
     summary:
       'Executive technology leadership for organisations that need the judgement of a CIO but not a full-time salary.',
     includes: [
@@ -52,209 +48,112 @@ const engagements = [
       'Vendor selection, contract review and negotiation support',
       'Coaching and structure for an existing IT team or manager',
     ],
-    outcome:
-      'A steady hand on technology decisions, without carrying another executive headcount.',
+    outcome: 'A steady hand on technology decisions, without another executive headcount.',
   },
   {
-    n: '04',
-    name: 'AI Governance for Regulated Environments',
-    price: 'Workshop or advisory',
+    tag: 'Workshop or advisory',
+    title: 'AI Governance for Regulated Environments',
     summary:
-      'For organisations handling sensitive data — care, health, education, government-adjacent — that want AI without creating a privacy or compliance problem.',
+      'For organisations handling sensitive data \u2014 care, health, education, government-adjacent \u2014 that want AI without creating a privacy or compliance problem.',
     includes: [
       'Acceptable-use and AI governance policy',
       'Data residency and cross-border transfer review',
       'Risk assessment for proposed AI use cases',
       'Staff guidance that is practical rather than prohibitive',
     ],
-    outcome:
-      'A position on AI you can defend to your board, your regulator and your clients.',
+    outcome: 'A position on AI you can defend to your board, your regulator and your clients.',
   },
+]
+
+const steps = [
+  { n: '1', t: 'A conversation', d: 'Thirty minutes, no charge, no pitch. You describe the problem; I tell you honestly whether I am the right person for it.' },
+  { n: '2', t: 'A written proposal', d: 'Scope, deliverables, timeframe and fixed price in writing before anything begins. No open-ended day rates.' },
+  { n: '3', t: 'The work', d: 'Delivered by me, to the agreed date, ending in a written report and a live session with your executive team.' },
 ]
 
 export default function WorkWithMe() {
   return (
     <Layout>
-      {/* Hero */}
-      <section className="bg-dark relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute left-1/4 top-0 w-px h-full bg-white"></div>
-          <div className="absolute left-2/4 top-0 w-px h-full bg-white"></div>
-          <div className="absolute left-3/4 top-0 w-px h-full bg-white"></div>
-        </div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32 relative z-10">
-          <h1 className="text-4xl lg:text-6xl font-medium text-white font-outfit leading-tight mb-6 max-w-3xl">
-            <span className="text-light-muted">Advisory for</span><br />
-            Australian mid-market<br />
-            executive teams.
+      <div className="border-b border-hairline">
+        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
+          <h1 className="mb-s4 max-w-[18ch] text-[clamp(34px,4.2vw,52px)] font-semibold">
+            Advisory for Australian mid-market teams.
           </h1>
-          <p className="text-lg text-light leading-relaxed max-w-2xl mb-8">
-            I work with a small number of organisations at a time, alongside my
-            executive role. Engagements are scoped, fixed in duration, and
-            delivered by me personally — there is no delivery team behind this.
+          <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
+            I work with a small number of organisations at a time, alongside my executive role.
+            Engagements are scoped, fixed in duration, and delivered by me personally \u2014 there is
+            no delivery team behind this.
           </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all hover:bg-primary/90 hover:-translate-y-1"
-          >
+          <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
             Start a conversation
           </Link>
-        </div>
-      </section>
+        </Shell>
+      </div>
 
-      {/* Who this is for */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <div>
-              <h2 className="text-3xl font-bold text-dark font-outfit mb-6">
-                Who this is for
-              </h2>
-              <ul className="space-y-3 text-light leading-relaxed">
-                <li>Australian businesses roughly 50–500 people.</li>
-                <li>
-                  Organisations with an IT manager or small team, but no CIO —
-                  and decisions that have outgrown the current structure.
-                </li>
-                <li>
-                  Executive teams being asked hard questions about cyber risk or
-                  AI by a board, an insurer or a major client.
-                </li>
-                <li>
-                  Businesses in regulated or sensitive sectors where getting
-                  technology wrong has consequences beyond downtime.
-                </li>
+      <Section>
+        <SectionHead num="01" title="Who this is for" />
+        <div className="grid grid-cols-2 gap-s6 max-md:grid-cols-1 max-md:gap-s5">
+          <div>
+            <h3 className="mb-s3 text-[17px] font-semibold">A good fit</h3>
+            <ul className="space-y-s2 text-[15px] leading-[1.65] text-ink-2">
+              <li>Australian businesses roughly 50\u2013500 people.</li>
+              <li>An IT manager or small team, but no CIO \u2014 and decisions that have outgrown the current structure.</li>
+              <li>Executive teams being asked hard questions about cyber risk or AI by a board, an insurer or a major client.</li>
+              <li>Regulated or sensitive sectors where getting technology wrong has consequences beyond downtime.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="mb-s3 text-[17px] font-semibold">Not a good fit</h3>
+            <ul className="space-y-s2 text-[15px] leading-[1.65] text-ink-2">
+              <li>Anyone looking for a managed service provider. I do not run helpdesks or resell hardware.</li>
+              <li>Organisations wanting a rubber stamp on a decision already made.</li>
+              <li>Large enterprises needing a full delivery team \u2014 you want a firm, not an individual.</li>
+            </ul>
+            <p className="mt-s4 text-[14px] italic text-ink-3">
+              I am a full-time serving CIO. Advisory work is deliberately capped so that it stays genuinely useful.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead num="02" title="Engagements" />
+        <div className="grid grid-cols-2 gap-[26px] max-lg:grid-cols-1">
+          {engagements.map((e) => (
+            <Card key={e.title}>
+              <Tag>{e.tag}</Tag>
+              <h3 className="mb-s2 text-[19px] font-semibold">{e.title}</h3>
+              <p className="mb-s4 text-[14.5px] leading-[1.62] text-ink-2">{e.summary}</p>
+              <ul className="mb-s4 space-y-s2">
+                {e.includes.map((i) => (
+                  <li key={i} className="flex gap-s3 text-[14px] text-ink-2">
+                    <span className="text-accent">\u2014</span>
+                    <span>{i}</span>
+                  </li>
+                ))}
               </ul>
+              <p className="border-t border-hairline pt-s3 text-[14.5px] font-medium text-ink">{e.outcome}</p>
+            </Card>
+          ))}
+        </div>
+        <p className="mt-s5 max-w-[62ch] text-[15px] text-ink-2">
+          Pricing is discussed openly on a first call once scope is clear. I would rather tell you
+          an engagement is not worth running than sell you one that is not.
+        </p>
+      </Section>
+
+      <Section className="!border-b-0">
+        <SectionHead num="03" title="How it starts" />
+        <div className="grid grid-cols-3 gap-[26px] max-md:grid-cols-1">
+          {steps.map((s) => (
+            <div key={s.n}>
+              <div className="mb-s3 font-mono text-[13px] text-accent">0{s.n}</div>
+              <h3 className="mb-s2 text-[17px] font-semibold">{s.t}</h3>
+              <p className="text-[14.5px] leading-[1.62] text-ink-2">{s.d}</p>
             </div>
-            <div>
-              <h2 className="text-3xl font-bold text-dark font-outfit mb-6">
-                Who this is not for
-              </h2>
-              <ul className="space-y-3 text-light leading-relaxed">
-                <li>
-                  Anyone looking for a managed service provider. I do not run
-                  helpdesks or resell hardware.
-                </li>
-                <li>
-                  Organisations wanting a rubber stamp on a decision already
-                  made.
-                </li>
-                <li>
-                  Large enterprises needing a full delivery team — you want a
-                  firm, not an individual.
-                </li>
-              </ul>
-              <p className="mt-6 text-sm text-light/80 italic">
-                I am a full-time serving CIO. Advisory work is deliberately
-                capped so that it stays genuinely useful.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
-      </section>
-
-      {/* Engagements */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center mb-12">
-            <span className="text-2xl font-bold text-primary font-outfit">01</span>
-            <div className="flex-1 h-px bg-light/30 mx-4"></div>
-            <span className="text-light font-medium">Engagements</span>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {engagements.map((e) => (
-              <div
-                key={e.n}
-                className="bg-white p-8 rounded-2xl shadow-sm border border-light/20 flex flex-col"
-              >
-                <span className="text-sm font-bold text-primary font-outfit mb-2">
-                  {e.n}
-                </span>
-                <h3 className="text-2xl font-bold text-dark font-outfit mb-2">
-                  {e.name}
-                </h3>
-                <p className="text-sm text-primary font-medium mb-4">{e.price}</p>
-                <p className="text-light leading-relaxed mb-6">{e.summary}</p>
-                <ul className="space-y-2 mb-6 flex-1">
-                  {e.includes.map((i) => (
-                    <li key={i} className="text-light text-sm flex gap-3">
-                      <span className="text-primary mt-1">—</span>
-                      <span>{i}</span>
-                    </li>
-                  ))}
-                </ul>
-                <p className="text-dark font-medium border-t border-light/20 pt-4">
-                  {e.outcome}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p className="mt-10 text-light max-w-3xl">
-            Pricing is discussed openly on a first call once scope is clear. I
-            would rather tell you an engagement is not worth running than sell
-            you one that is not.
-          </p>
-        </div>
-      </section>
-
-      {/* How it starts */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl lg:text-4xl font-bold text-dark font-outfit mb-12">
-            How it starts
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                n: '1',
-                t: 'A conversation',
-                d: 'Thirty minutes, no charge, no pitch. You describe the problem; I tell you honestly whether I am the right person for it.',
-              },
-              {
-                n: '2',
-                t: 'A written proposal',
-                d: 'Scope, deliverables, timeframe and fixed price in writing before anything begins. No open-ended day rates.',
-              },
-              {
-                n: '3',
-                t: 'The work',
-                d: 'Delivered by me, to the agreed date, ending in a written report and a live session with your executive team.',
-              },
-            ].map((s) => (
-              <div key={s.n}>
-                <div className="text-4xl font-bold text-primary font-outfit mb-4">
-                  {s.n}
-                </div>
-                <h3 className="text-xl font-bold text-dark font-outfit mb-3">
-                  {s.t}
-                </h3>
-                <p className="text-light leading-relaxed">{s.d}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-20 bg-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white font-outfit mb-6">
-            Tell me what you are dealing with
-          </h2>
-          <p className="text-light mb-8 max-w-2xl mx-auto">
-            If it is not something I can help with, I will say so and point you
-            somewhere better.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all hover:bg-primary/90 hover:-translate-y-1"
-          >
-            Get in touch
-          </Link>
-        </div>
-      </section>
+      </Section>
     </Layout>
   )
 }

@@ -33,9 +33,9 @@ export const metadata: Metadata = {
     type: 'profile',
     images: [
       {
-        url: '/images/iyan-barry-cio.jpg',
-        width: 2048,
-        height: 2048,
+        url: '/images/iyan-barry-og.jpg',
+        width: 1200,
+        height: 630,
         alt: 'Iyan Barry, Chief Information Officer',
       },
     ],
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Iyan Barry – Chief Information Officer',
     description: DESCRIPTION,
-    images: ['/images/iyan-barry-cio.jpg'],
+    images: ['/images/iyan-barry-og.jpg'],
   },
   robots: {
     index: true,
