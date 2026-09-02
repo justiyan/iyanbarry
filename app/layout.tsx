@@ -1,22 +1,89 @@
 import type { Metadata } from 'next'
 import './globals.css'
 
+const DESCRIPTION =
+  'Iyan Barry is a Brisbane-based Chief Information Officer. He advises Australian mid-market executive teams on IT strategy, cyber maturity (Essential Eight, ISO 27001) and practical AI adoption — and speaks on AI governance in regulated environments.'
+
 export const metadata: Metadata = {
-  title: 'Iyan Barry – IT Leader & Builder',
-  description: 'Personal site of Iyan Barry, an IT leader based in Brisbane, Australia. Sharing work, experiments, and thoughts on leadership, cybersecurity, AI, and building things.',
+  metadataBase: new URL('https://iyanbarry.com'),
+  title: {
+    default: 'Iyan Barry – Chief Information Officer | IT Strategy, Cyber & AI Advisory',
+    template: '%s | Iyan Barry',
+  },
+  description: DESCRIPTION,
+  keywords: [
+    'Iyan Barry',
+    'CIO Brisbane',
+    'IT strategy consultant Australia',
+    'Essential Eight',
+    'ISO 27001',
+    'AI governance',
+    'virtual CIO',
+    'IT leadership speaker Australia',
+  ],
+  authors: [{ name: 'Iyan Barry', url: 'https://iyanbarry.com' }],
+  creator: 'Iyan Barry',
+  alternates: { canonical: 'https://iyanbarry.com' },
   openGraph: {
-    title: 'Iyan Barry – IT Leader & Builder',
-    description: 'Personal site of Iyan Barry, an IT leader based in Brisbane, Australia. Sharing work, experiments, and thoughts on leadership, cybersecurity, AI, and building things.',
+    title: 'Iyan Barry – Chief Information Officer',
+    description: DESCRIPTION,
     url: 'https://iyanbarry.com',
     siteName: 'Iyan Barry',
     locale: 'en_AU',
-    type: 'website',
+    type: 'profile',
+    images: [
+      {
+        url: '/images/iyan-barry-cio.jpg',
+        width: 2048,
+        height: 2048,
+        alt: 'Iyan Barry, Chief Information Officer',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Iyan Barry – IT Leader & Builder',
-    description: 'Personal site of Iyan Barry, an IT leader based in Brisbane, Australia. Sharing work, experiments, and thoughts on leadership, cybersecurity, AI, and building things.',
+    title: 'Iyan Barry – Chief Information Officer',
+    description: DESCRIPTION,
+    images: ['/images/iyan-barry-cio.jpg'],
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  },
+}
+
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Iyan Barry',
+  givenName: 'Iyan',
+  familyName: 'Barry',
+  jobTitle: 'Chief Information Officer',
+  description: DESCRIPTION,
+  url: 'https://iyanbarry.com',
+  image: 'https://iyanbarry.com/images/iyan-barry-cio.jpg',
+  email: 'mailto:ask@iyanbarry.com',
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Brisbane',
+    addressRegion: 'QLD',
+    addressCountry: 'AU',
+  },
+  knowsAbout: [
+    'IT Strategy',
+    'Cybersecurity Governance',
+    'ACSC Essential Eight',
+    'ISO 27001',
+    'NIST Cybersecurity Framework',
+    'Artificial Intelligence Governance',
+    'Data Residency',
+    'IT Leadership',
+  ],
+  sameAs: [
+    'https://au.linkedin.com/in/iyanbarry',
+    'https://www.cio247.com',
+  ],
 }
 
 export default function RootLayout({
@@ -25,7 +92,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en-AU">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   )

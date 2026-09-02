@@ -24,7 +24,7 @@ export default function About() {
           <div className="prose prose-lg max-w-none mb-16">
             <div className="text-muted-foreground space-y-6 leading-relaxed">
               <p>
-                I'm based in Brisbane, Australia, where I work as a General Manager – Information Technology, essentially serving in a CIO-equivalent role for a growing organization. My journey into this position wasn't traditional, but it's given me a unique perspective on what it takes to transform technology teams in the real world.
+                I'm based in Brisbane, Australia, where I serve as Chief Information Officer at Safe Places for Children — a not-for-profit providing intensive therapeutic care to young people at risk. I lead technology, information, data, cybersecurity and digital enablement across our Australian operations and our UK arm, which is regulated by Ofsted. My first job in IT was at sixteen; three decades later the work is less about the technology and more about judgement under constraint.
               </p>
 
               <p>
@@ -53,7 +53,7 @@ export default function About() {
                 <div className="flex items-center mb-2">
                   <span className="text-sm font-medium text-primary bg-primary/10 px-2 py-1 rounded">2021</span>
                 </div>
-                <h3 className="font-semibold text-foreground mb-1">Took on General Manager – IT role</h3>
+                <h3 className="font-semibold text-foreground mb-1">Took on the IT leadership role</h3>
                 <p className="text-muted-foreground">Started leading the transformation of an overwhelmed, reactive IT function into a strategic capability.</p>
               </div>
 

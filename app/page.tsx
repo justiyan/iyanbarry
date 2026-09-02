@@ -30,13 +30,13 @@ export default function Home() {
           </svg>
         </div>
 
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
               <h1 className="text-4xl lg:text-6xl xl:text-7xl font-medium text-white font-outfit leading-tight mb-6">
-                <span className="text-light-muted">Looking For</span><br />
-                Winning IT<br />
-                Leader ?
+                <span className="text-white">Technology decisions</span><br />
+                your board can<br />
+                actually back.
               </h1>
 
               <div className="mb-6">
@@ -47,15 +47,15 @@ export default function Home() {
               </div>
 
               <p className="text-lg text-light leading-relaxed mb-8 max-w-lg">
-                Senior IT leader based in Brisbane, with experience transforming IT teams, uplifting cybersecurity, and using AI to automate workflows and solve real business problems.
+                I'm Iyan Barry, a sitting CIO. I help Australian mid-market executive teams modernise IT, lift cyber maturity and deploy AI — with the governance to stand behind it.
               </p>
 
               <div>
                 <Link
-                  href="/blog"
+                  href="/work-with-me"
                   className="inline-flex items-center gap-2 bg-primary text-white px-8 py-4 rounded-lg font-semibold transition-all hover:bg-primary/90 hover:transform hover:-translate-y-1"
                 >
-                  Explore My Work
+                  Work with me
                   <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
                       d="M3.90566 3.95808C3.88909 3.80893 4.02167 3.67634 4.1874 3.67634H11.1148C11.2806 3.67634 11.3966 3.79235 11.3966 3.95808V10.8855C11.3966 11.0512 11.264 11.1838 11.1148 11.1673L10.4685 11.1838C10.3028 11.1838 10.1702 11.0512 10.1868 10.9021L10.1702 5.74794L4.51885 11.3993C4.40284 11.5153 4.23712 11.5153 4.12111 11.3993L3.65707 10.9352C3.55763 10.8358 3.54106 10.6535 3.65707 10.5375L9.3084 4.88616H4.17083C4.02167 4.90273 3.88909 4.77015 3.88909 4.60442L3.90566 3.95808Z"
@@ -68,9 +68,13 @@ export default function Home() {
             <div className="order-1 lg:order-2 text-center">
               <div className="relative inline-block">
                 <div className="bg-primary/10 rounded-full p-8 backdrop-blur-sm">
-                  <div className="w-48 h-48 lg:w-64 lg:h-64 bg-gradient-to-br from-primary to-primary/70 rounded-full flex items-center justify-center text-white text-6xl lg:text-8xl font-bold font-outfit">
-                    IB
-                  </div>
+                  <img
+                    src="/images/iyan-barry-cio.jpg"
+                    alt="Iyan Barry, Chief Information Officer, Brisbane Australia"
+                    width={512}
+                    height={512}
+                    className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover object-top bg-white"
+                  />
                 </div>
               </div>
             </div>
@@ -98,7 +102,7 @@ export default function Home() {
             </div>
             <div className="xl:col-span-1">
               <h2 className="text-4xl lg:text-5xl font-bold text-dark font-outfit leading-tight">
-                Welcome to my portfolio, this is <span className="text-primary">"Iyan Barry",</span> senior IT leader with <span className="text-primary">8+ years</span> of experience transforming teams and <span className="text-primary">uplifting cybersecurity</span>
+Thirty years in technology, currently <span className="text-primary">Chief Information Officer</span> — building IT functions that are secure, well governed and genuinely useful to the business.
               </h2>
             </div>
           </div>
@@ -113,9 +117,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="text-4xl font-bold text-dark font-outfit mb-2">
-                  <span>8</span><span className="text-primary">+</span>
+                  <span>30</span><span className="text-primary">+</span>
                 </div>
-                <p className="text-light">Years of Experience</p>
+                <p className="text-light">Years in technology</p>
               </div>
 
               <div className="text-center">
@@ -125,9 +129,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="text-4xl font-bold text-dark font-outfit mb-2">
-                  <span>50</span><span className="text-primary">+</span>
+                  <span>CIO</span>
                 </div>
-                <p className="text-light">Teams Transformed</p>
+                <p className="text-light">Current executive role</p>
               </div>
 
               <div className="text-center">
@@ -137,9 +141,9 @@ export default function Home() {
                   </svg>
                 </div>
                 <div className="text-4xl font-bold text-dark font-outfit mb-2">
-                  <span>ISO</span><span className="text-primary"> 27001</span>
+                  <span>E8</span><span className="text-primary"> / ISO 27001</span>
                 </div>
-                <p className="text-light">Security Standards</p>
+                <p className="text-light">Frameworks implemented</p>
               </div>
             </div>
           </div>
@@ -173,8 +177,8 @@ export default function Home() {
             </div>
             <div className="xl:col-span-1">
               <h2 className="text-4xl lg:text-5xl font-bold text-dark font-outfit leading-tight">
-                <span className="block">Providing Quality Services</span>
-                For your Business
+                <span className="block">How I work with</span>
+                mid-market teams
               </h2>
             </div>
           </div>
