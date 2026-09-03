@@ -29,6 +29,7 @@ const engagements = [
 const facts = [
   { n: '30+', l: 'Years in technology' },
   { n: 'APAC · ANZ · UK', l: 'Experience across three regions' },
+  { n: 'iTnews 2026', l: 'Panellist, State of Data & AI, Sydney' },
   { n: 'E8 · ISO 27001', l: 'Also SMB1001 and ISO 27032' },
 ]
 
@@ -141,7 +142,7 @@ export default function Home() {
       {/* Background */}
       <Section id="background">
         <SectionHead num="03" title="Background" />
-        <div className="grid grid-cols-3 gap-[26px] max-md:grid-cols-1">
+        <div className="grid grid-cols-4 gap-[26px] max-lg:grid-cols-2 max-md:grid-cols-1">
           {facts.map((f) => (
             <div key={f.n} className="rounded-card border border-hairline p-s5">
               <div className="mb-s2 text-[30px] font-semibold tracking-[-0.028em]">{f.n}</div>

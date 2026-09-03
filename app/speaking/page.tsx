@@ -22,6 +22,18 @@ const topics = [
     body: 'How to ask better questions about AI proposals, separate genuine capability from vendor narrative, and make decisions you can defend in twelve months.' },
 ]
 
+const appearances = [
+  {
+    date: '22 July 2026',
+    event: 'iTnews State of Data & AI',
+    role: 'Panellist — “Scaling AI”',
+    detail:
+      'Executive breakfast for CIOs, CISOs and senior technology leaders at NEXTDC’s S3 data centre, Sydney. Panel alongside Tristan Cox (Workato) and Rolee Satyam (Tyro Payments), on moving AI beyond experimentation into governed, measurable business outcomes.',
+    href: 'https://www.itnews.com.au/gallery/in-pictures-itnews-state-of-data-ai-launch-sydney-627604',
+    linkLabel: 'Event coverage',
+  },
+]
+
 const formats = [
   'Conference keynote (20–45 min)',
   'Panel discussion and moderation',
@@ -32,8 +44,8 @@ const formats = [
 
 const bios = [
   { len: 'Short — one line', text: 'Iyan Barry is a Brisbane-based Chief Information Officer working at the intersection of AI, cybersecurity and child-safeguarding technology.' },
-  { len: 'Medium — 60 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. With three decades across APAC, ANZ and the UK, he focuses on making AI and security work in environments where the stakes are people rather than uptime. He writes and speaks on practical AI governance for regulated organisations.' },
-  { len: 'Long — 120 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, a not-for-profit providing intensive therapeutic care to young people at risk. He leads technology, information, data, cybersecurity and digital enablement across Australian operations and a UK arm regulated by Ofsted — an environment where data protection is a child-safety matter, not a compliance exercise. His career spans three decades across APAC, ANZ and UK organisations. He has rebuilt an IT function from reactive to strategic, implemented the ACSC Essential Eight, ISO 27001, ISO 27032 and SMB1001-aligned controls, and deployed AI and automation into day-to-day operations. He advises Australian mid-market executive teams and writes on IT leadership at iyanbarry.com.' },
+  { len: 'Medium — 60 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. With three decades across APAC, ANZ and the UK, he focuses on making AI and security work in environments where the stakes are people rather than uptime. He writes and speaks on practical AI governance for regulated organisations, most recently on the “Scaling AI” panel at iTnews State of Data & AI in Sydney.' },
+  { len: 'Long — 120 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, a not-for-profit providing intensive therapeutic care to young people at risk. He leads technology, information, data, cybersecurity and digital enablement across Australian operations and a UK arm regulated by Ofsted — an environment where data protection is a child-safety matter, not a compliance exercise. His career spans three decades across APAC, ANZ and UK organisations. He has rebuilt an IT function from reactive to strategic, implemented the ACSC Essential Eight, ISO 27001, ISO 27032 and SMB1001-aligned controls, and deployed AI and automation into day-to-day operations. He has spoken on enterprise AI alongside Workato and Tyro Payments at iTnews State of Data & AI. He advises Australian mid-market executive teams and writes on IT leadership at iyanbarry.com.' },
 ]
 
 export default function Speaking() {
@@ -50,6 +62,7 @@ export default function Speaking() {
                 I speak about the parts of technology leadership that are hard to talk about
                 honestly — governing AI where mistakes harm people, lifting security without an
                 enterprise budget, and what actually happens when you restructure a team.
+                Most recently on the “Scaling AI” panel at iTnews State of Data &amp; AI, Sydney.
               </p>
               <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
                 Enquire about an event
@@ -62,7 +75,38 @@ export default function Speaking() {
       </div>
 
       <Section>
-        <SectionHead num="01" title="Topics" />
+        <SectionHead num="01" title="Recent appearances" />
+        <div>
+          {appearances.map((a) => (
+            <div
+              key={a.event}
+              className="grid grid-cols-[130px_1fr] items-baseline gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1"
+            >
+              <span className="font-mono text-[12.5px] text-ink-3">{a.date}</span>
+              <div>
+                <h3 className="mb-[3px] text-[17px] font-[550]">{a.event}</h3>
+                <p className="mb-s2 font-mono text-[11px] uppercase tracking-[0.03em] text-accent">
+                  {a.role}
+                </p>
+                <p className="mb-s2 max-w-[68ch] text-[14.5px] leading-[1.62] text-ink-2">
+                  {a.detail}
+                </p>
+                <a
+                  href={a.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[14px] font-medium text-accent hover:underline"
+                >
+                  {a.linkLabel} →
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <SectionHead num="02" title="Topics" />
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {topics.map((t) => (
             <Card key={t.title}>
@@ -75,7 +119,7 @@ export default function Speaking() {
       </Section>
 
       <Section>
-        <SectionHead num="02" title="Formats &amp; media kit" />
+        <SectionHead num="03" title="Formats &amp; media kit" />
         <div className="grid grid-cols-[300px_1fr] gap-s6 max-lg:grid-cols-1">
           <div>
             <ul className="space-y-s2">
