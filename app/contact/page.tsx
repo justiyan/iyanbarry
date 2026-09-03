@@ -24,7 +24,7 @@ export default function Contact() {
             Get in touch
           </h1>
           <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
-            Tell me what you\u2019re dealing with. If it isn\u2019t something I can help with, I\u2019ll say so
+            Tell me what you’re dealing with. If it isn’t something I can help with, I’ll say so
             and point you somewhere better.
           </p>
           <div className="flex flex-wrap items-center gap-s3">

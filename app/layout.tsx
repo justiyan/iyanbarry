@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const DESCRIPTION =
-  'Iyan Barry is a Brisbane-based Chief Information Officer. He advises Australian mid-market executive teams on IT strategy, cyber maturity (Essential Eight, ISO 27001) and practical AI adoption — and speaks on AI governance in regulated environments.'
+  'Iyan Barry is a Brisbane-based Chief Information Officer. He advises Australian mid-market executive teams on IT strategy, cyber maturity (Essential Eight, ISO 27001, ISO 27032, SMB1001) and practical AI adoption — and speaks on AI governance in regulated environments.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://iyanbarry.com'),
@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     'IT strategy consultant Australia',
     'Essential Eight',
     'ISO 27001',
+    'ISO 27032',
+    'SMB1001',
     'AI governance',
     'virtual CIO',
     'IT leadership speaker Australia',
@@ -75,6 +77,8 @@ const personSchema = {
     'Cybersecurity Governance',
     'ACSC Essential Eight',
     'ISO 27001',
+    'ISO 27032',
+    'SMB1001',
     'NIST Cybersecurity Framework',
     'Artificial Intelligence Governance',
     'Data Residency',

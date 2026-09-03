@@ -27,7 +27,7 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="border-b border-hairline">
           <Shell className="pb-s6 pt-s6">
             <Link href="/blog" className="mb-s5 inline-block font-mono text-[12px] text-ink-3 transition-colors hover:text-accent">
-              \u2190 All writing
+              ← All writing
             </Link>
             <div className="mb-s3 flex flex-wrap items-center gap-s3">
               <time className="font-mono text-[12.5px] text-ink-3">

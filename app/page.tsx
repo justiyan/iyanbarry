@@ -27,9 +27,9 @@ const engagements = [
 ]
 
 const facts = [
-  { n: '30+', l: 'Years in technology, from age sixteen' },
-  { n: 'AU + UK', l: 'Operating across two regulatory regimes' },
-  { n: 'E8 / ISO 27001', l: 'Frameworks implemented in practice' },
+  { n: '30+', l: 'Years in technology' },
+  { n: 'APAC · ANZ · UK', l: 'Experience across three regions' },
+  { n: 'E8 · ISO 27001', l: 'Also SMB1001 and ISO 27032' },
 ]
 
 export default function Home() {

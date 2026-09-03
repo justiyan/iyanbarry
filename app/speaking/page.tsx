@@ -14,26 +14,26 @@ const topics = [
     body: 'What changes about AI adoption when the people in your data cannot consent in any meaningful way, and two different regulators are watching. Practical governance, not theory.' },
   { title: 'Essential Eight on a not-for-profit budget', audience: 'CIOs, IT managers, boards',
     body: 'Lifting cyber maturity when there is no dedicated security team and no enterprise budget. What to do first, what to defer, and how to evidence it to a board.' },
-  { title: 'Running IT across two regulators', audience: 'Executives operating internationally',
-    body: 'Data residency, cross-border access and jurisdictional complexity when the same organisation operates under Australian and UK regimes at once.' },
+  { title: 'Running IT across multiple jurisdictions', audience: 'Executives operating internationally',
+    body: 'Data residency, cross-border access and jurisdictional complexity across APAC, ANZ and UK regimes — where the same control means different things to different regulators.' },
   { title: 'From firefighting to strategic', audience: 'IT leaders, executive teams',
-    body: 'Taking a reactive, under-resourced team and restructuring it into distinct delivery streams \u2014 including the part where you discover you are the bottleneck.' },
+    body: 'Taking a reactive, under-resourced team and restructuring it into distinct delivery streams — including the part where you discover you are the bottleneck.' },
   { title: 'The CIO as an AI translator', audience: 'Boards and executive teams',
     body: 'How to ask better questions about AI proposals, separate genuine capability from vendor narrative, and make decisions you can defend in twelve months.' },
 ]
 
 const formats = [
-  'Conference keynote (20\u201345 min)',
+  'Conference keynote (20–45 min)',
   'Panel discussion and moderation',
-  'Executive or board briefing (45\u201390 min)',
+  'Executive or board briefing (45–90 min)',
   'Workshop (half or full day)',
   'Podcast and interview',
 ]
 
 const bios = [
-  { len: 'Short \u2014 one line', text: 'Iyan Barry is a Brisbane-based Chief Information Officer working at the intersection of AI, cybersecurity and child-safeguarding technology.' },
-  { len: 'Medium \u2014 60 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. With three decades in technology, he focuses on making AI and security work in environments where the stakes are people rather than uptime. He writes and speaks on practical AI governance for regulated organisations.' },
-  { len: 'Long \u2014 120 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, a not-for-profit providing intensive therapeutic care to young people at risk. He leads technology, information, data, cybersecurity and digital enablement across Australian operations and a UK arm regulated by Ofsted \u2014 an environment where data protection is a child-safety matter, not a compliance exercise. His career in technology began at sixteen and spans three decades across Australian organisations. He has rebuilt an IT function from reactive to strategic, implemented the ACSC Essential Eight and ISO 27001-aligned controls, and deployed AI and automation into day-to-day operations. He advises Australian mid-market executive teams and writes on IT leadership at iyanbarry.com.' },
+  { len: 'Short — one line', text: 'Iyan Barry is a Brisbane-based Chief Information Officer working at the intersection of AI, cybersecurity and child-safeguarding technology.' },
+  { len: 'Medium — 60 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. With three decades across APAC, ANZ and the UK, he focuses on making AI and security work in environments where the stakes are people rather than uptime. He writes and speaks on practical AI governance for regulated organisations.' },
+  { len: 'Long — 120 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, a not-for-profit providing intensive therapeutic care to young people at risk. He leads technology, information, data, cybersecurity and digital enablement across Australian operations and a UK arm regulated by Ofsted — an environment where data protection is a child-safety matter, not a compliance exercise. His career spans three decades across APAC, ANZ and UK organisations. He has rebuilt an IT function from reactive to strategic, implemented the ACSC Essential Eight, ISO 27001, ISO 27032 and SMB1001-aligned controls, and deployed AI and automation into day-to-day operations. He advises Australian mid-market executive teams and writes on IT leadership at iyanbarry.com.' },
 ]
 
 export default function Speaking() {
@@ -48,14 +48,14 @@ export default function Speaking() {
               </h1>
               <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
                 I speak about the parts of technology leadership that are hard to talk about
-                honestly \u2014 governing AI where mistakes harm people, lifting security without an
+                honestly — governing AI where mistakes harm people, lifting security without an
                 enterprise budget, and what actually happens when you restructure a team.
               </p>
               <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
                 Enquire about an event
               </Link>
             </div>
-            <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry \u2014 speaker headshot" width={600} height={670}
+            <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry — speaker headshot" width={600} height={670}
               className="h-[375px] w-[300px] rounded-xl border border-hairline bg-surface-2 object-cover object-[50%_28%] max-lg:order-1 max-lg:h-[260px] max-lg:w-[210px]" />
           </div>
         </Shell>
@@ -81,7 +81,7 @@ export default function Speaking() {
             <ul className="space-y-s2">
               {formats.map((f) => (
                 <li key={f} className="flex gap-s3 text-[15px] text-ink-2">
-                  <span className="text-accent">\u2014</span><span>{f}</span>
+                  <span className="text-accent">—</span><span>{f}</span>
                 </li>
               ))}
             </ul>
@@ -89,7 +89,7 @@ export default function Speaking() {
               Headshots available on request in high resolution, square and transparent-background formats.
             </p>
             <Link href="/contact" className="mt-s3 inline-block text-[14.5px] font-medium text-accent hover:underline">
-              Request the media kit \u2192
+              Request the media kit →
             </Link>
           </div>
           <div className="space-y-s4">

@@ -10,11 +10,11 @@ export const metadata: Metadata = {
 }
 
 const timeline = [
-  { y: '1996', t: 'First job in IT, aged sixteen', d: 'The start of three decades across Australian organisations.' },
+  { y: '1996', t: 'Started in IT', d: 'The beginning of three decades across APAC, ANZ and UK organisations.' },
   { y: '2021', t: 'Took on the IT leadership role', d: 'Began transforming an overwhelmed, reactive IT function into a strategic capability.' },
-  { y: '2022', t: 'Cybersecurity uplift programme', d: 'Microsoft Secure Score uplift, ISO 27001 alignment and Essential Eight implementation.' },
+  { y: '2022', t: 'Cybersecurity uplift programme', d: 'Secure Score uplift, ISO 27001 / ISO 27032 alignment, SMB1001 and Essential Eight implementation.' },
   { y: '2023', t: 'Practical AI and automation', d: 'Deploying AI tooling into day-to-day operations, with the governance to support it.' },
-  { y: '2024', t: 'Restructured the team into three delivery streams', d: 'Service delivery, technical delivery and project delivery \u2014 same people, clearer focus.' },
+  { y: '2024', t: 'Restructured the team into three delivery streams', d: 'Service delivery, technical delivery and project delivery — same people, clearer focus.' },
   { y: '2026', t: 'Appointed Chief Information Officer', d: 'Leading technology, data, cyber and digital enablement across AU and a UK arm regulated by Ofsted.' },
 ]
 
@@ -35,27 +35,29 @@ export default function About() {
               <h1 className="mb-s5 max-w-[16ch] text-[clamp(34px,4.2vw,52px)] font-semibold">About</h1>
               <div className="max-w-prose space-y-s4 text-[17.5px] leading-[1.72] text-ink-2">
                 <p>
-                  I\u2019m based in Brisbane, where I serve as Chief Information Officer at Safe Places
-                  for Children \u2014 a not-for-profit providing intensive therapeutic care to young
+                  I’m based in Brisbane, where I serve as Chief Information Officer at Safe Places
+                  for Children — a not-for-profit providing intensive therapeutic care to young
                   people at risk. I lead technology, information, data, cybersecurity and digital
                   enablement across our Australian operations and our UK arm, which is regulated by
                   Ofsted.
                 </p>
                 <p>
-                  My first job in IT was at sixteen. Three decades later the work is less about the
-                  technology and more about judgement under constraint \u2014 deciding what matters,
-                  what can wait, and what you are willing to defend to a board.
+                  Three decades in, the work is less about the technology and more about judgement
+                  under constraint — deciding what matters, what can wait, and what you are willing
+                  to defend to a board. That experience spans APAC, ANZ and the UK, across markedly
+                  different regulatory expectations.
                 </p>
                 <p>
                   When I took on this role I inherited an IT team that was reactive and
                   under-resourced, constantly firefighting with little time for strategic thinking.
                   Turning that around was not about implementing trendy frameworks. It was about
                   building trust, establishing clear priorities, and creating systems that actually
-                  work \u2014 including recognising, eventually, that I had become the bottleneck.
+                  work — including recognising, eventually, that I had become the bottleneck.
                 </p>
                 <p>
                   A significant part of my work has focused on cybersecurity uplift: improving our
-                  Microsoft Secure Score, aligning controls to ISO 27001 and the Essential Eight, and
+                  Microsoft Secure Score, aligning controls to ISO 27001, ISO 27032, SMB1001 and the
+                  ACSC Essential Eight, and
                   implementing governance and risk frameworks that protect the organisation without
                   creating bureaucratic overhead. The key has been making security practical and
                   sustainable, not merely compliant.

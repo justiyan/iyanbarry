@@ -11,10 +11,10 @@ export const metadata: Metadata = {
 
 const engagements = [
   {
-    tag: 'Fixed fee \u00b7 2\u20133 weeks',
+    tag: 'Fixed fee · 2–3 weeks',
     title: 'IT & AI Readiness Assessment',
     summary:
-      'A structured review of where your technology, security and data actually stand \u2014 and what to do about it in the next twelve months.',
+      'A structured review of where your technology, security and data actually stand — and what to do about it in the next twelve months.',
     includes: [
       'Executive interviews and a review of your current environment',
       'Cyber maturity scored against the ACSC Essential Eight',
@@ -22,15 +22,15 @@ const engagements = [
       'A prioritised roadmap by effort and impact, costed at a high level',
       'A written report and a live session with your executive team or board',
     ],
-    outcome: 'You leave with a decision-ready plan you can take to a board \u2014 not a vendor pitch.',
+    outcome: 'You leave with a decision-ready plan you can take to a board — not a vendor pitch.',
   },
   {
     tag: 'Scoped per engagement',
     title: 'Cyber Maturity Uplift',
     summary:
-      'Getting a business from \u201cwe think we\u2019re probably fine\u201d to a defensible, evidenced security position.',
+      'Getting a business from “we think we’re probably fine” to a defensible, evidenced security position.',
     includes: [
-      'Essential Eight and ISO 27001 gap assessment',
+      'Gap assessment against Essential Eight, ISO 27001, ISO 27032 or SMB1001',
       'A remediation plan sequenced by risk, not by product',
       'Governance, risk and incident response frameworks people will actually use',
       'Board-level reporting your directors can understand',
@@ -38,7 +38,7 @@ const engagements = [
     outcome: 'Security you can evidence to a client, an insurer, an auditor or a regulator.',
   },
   {
-    tag: 'Monthly retainer \u00b7 limited availability',
+    tag: 'Monthly retainer · limited availability',
     title: 'Fractional / Interim CIO',
     summary:
       'Executive technology leadership for organisations that need the judgement of a CIO but not a full-time salary.',
@@ -54,7 +54,7 @@ const engagements = [
     tag: 'Workshop or advisory',
     title: 'AI Governance for Regulated Environments',
     summary:
-      'For organisations handling sensitive data \u2014 care, health, education, government-adjacent \u2014 that want AI without creating a privacy or compliance problem.',
+      'For organisations handling sensitive data — care, health, education, government-adjacent — that want AI without creating a privacy or compliance problem.',
     includes: [
       'Acceptable-use and AI governance policy',
       'Data residency and cross-border transfer review',
@@ -81,7 +81,7 @@ export default function WorkWithMe() {
           </h1>
           <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
             I work with a small number of organisations at a time, alongside my executive role.
-            Engagements are scoped, fixed in duration, and delivered by me personally \u2014 there is
+            Engagements are scoped, fixed in duration, and delivered by me personally — there is
             no delivery team behind this.
           </p>
           <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
@@ -96,8 +96,8 @@ export default function WorkWithMe() {
           <div>
             <h3 className="mb-s3 text-[17px] font-semibold">A good fit</h3>
             <ul className="space-y-s2 text-[15px] leading-[1.65] text-ink-2">
-              <li>Australian businesses roughly 50\u2013500 people.</li>
-              <li>An IT manager or small team, but no CIO \u2014 and decisions that have outgrown the current structure.</li>
+              <li>Australian businesses roughly 50–500 people.</li>
+              <li>An IT manager or small team, but no CIO — and decisions that have outgrown the current structure.</li>
               <li>Executive teams being asked hard questions about cyber risk or AI by a board, an insurer or a major client.</li>
               <li>Regulated or sensitive sectors where getting technology wrong has consequences beyond downtime.</li>
             </ul>
@@ -107,7 +107,7 @@ export default function WorkWithMe() {
             <ul className="space-y-s2 text-[15px] leading-[1.65] text-ink-2">
               <li>Anyone looking for a managed service provider. I do not run helpdesks or resell hardware.</li>
               <li>Organisations wanting a rubber stamp on a decision already made.</li>
-              <li>Large enterprises needing a full delivery team \u2014 you want a firm, not an individual.</li>
+              <li>Large enterprises needing a full delivery team — you want a firm, not an individual.</li>
             </ul>
             <p className="mt-s4 text-[14px] italic text-ink-3">
               I am a full-time serving CIO. Advisory work is deliberately capped so that it stays genuinely useful.
@@ -127,7 +127,7 @@ export default function WorkWithMe() {
               <ul className="mb-s4 space-y-s2">
                 {e.includes.map((i) => (
                   <li key={i} className="flex gap-s3 text-[14px] text-ink-2">
-                    <span className="text-accent">\u2014</span>
+                    <span className="text-accent">—</span>
                     <span>{i}</span>
                   </li>
                 ))}
