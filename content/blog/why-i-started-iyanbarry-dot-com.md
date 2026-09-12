@@ -1,53 +1,50 @@
 ---
-title: "Why I Started iyanbarry.com"
+title: "What I want this site to be useful for"
 date: "2023-11-01"
-summary: "The story of why this site exists: a central place to share work, ideas, and experiments."
-tags: ["Personal", "Meta"]
+updated: "2026-09-12"
+summary: "A place for practical writing about technology leadership, security, data and building useful tools. What I will share, and what stays private."
+tags: ["Personal", "Leadership"]
 published: true
 ---
 
-For years, I've been building things—internal tools, trading bots, process improvements, team transformations. Most of it lived in scattered notes, private repositories, or conversations that ended when the meeting did.
+I want this site to be useful before anyone gets in touch about working together.
 
-I realized I was missing opportunities to reflect on what I was learning and share it with others who might benefit from the same insights.
+If you are leading a technology team, deciding where AI fits or trying to make disconnected systems work better, I hope you find something here that helps you think through the next step. That might be a question to ask a supplier, a way to review a proposal or a reminder to check the less visible parts of a build.
 
-## The Catalyst
+My work spans technology leadership, cybersecurity, data, AI and automation. I don’t see those as separate worlds. A technology decision affects the people operating it. A security requirement changes the design. An integration can be more useful than a new application. A capable team needs room to work as well as a plan.
 
-The tipping point came during a conversation with another IT leader who was facing similar challenges: reactive teams, security debt, resistance to change. As I shared approaches that had worked for us, I thought: "How many other people could benefit from these learnings?"
+## Advice and building belong in the same conversation
 
-That's when I decided to build this site.
+I enjoy both sides of the work. Sometimes the useful contribution is helping a leadership team choose a direction. Sometimes it is building a small tool and finding out which assumptions survive contact with a real task.
 
-## What This Isn't
+This site should reflect that range. Custom internal AI platforms are a particular interest, but they are not the whole of what I do. You’ll find the business decisions alongside the practical work of getting something built and handing it over.
 
-This isn't a corporate blog optimized for thought leadership points. You won't find buzzword-heavy posts about "digital transformation" or "synergistic solutions."
+I want the writing to explain the decisions, not just describe the finished result. What was the problem? Which options were worth considering? What would make an approach unsuitable? What needs to be checked before people rely on it?
 
-This also isn't a technical tutorial site. There are better places to learn specific technologies or frameworks.
+## Useful detail without exposing private work
 
-## What This Is
+Some of the most valuable lessons come from work that should not be published in detail. I can discuss a design decision or a way of approaching a problem without naming an internal system, showing staff conversations or sharing sensitive information.
 
-This is a collection of real experiences, honest reflections, and practical experiments from someone who's been in the trenches of IT leadership and building things.
+Where an example is hypothetical, I’ll say so. Where a conclusion is my judgement, I don’t want to dress it up as a universal rule. And where a number hasn’t been measured, it shouldn’t appear as a result.
 
-I write about:
-- Leading technology teams through real challenges
-- Using AI tools in practical, non-hype ways
-- Building side projects that teach unexpected lessons
-- The messy reality of cybersecurity and governance work
+That leaves plenty to write about. The questions around permissions, ownership, handover, change and human review are often useful well beyond the organisation where someone first encountered them.
 
-## The Format
+## Writing that can be used
 
-Most posts will be short and focused. I'm not trying to write comprehensive guides—just capture insights while they're fresh and share approaches that might be useful to others.
+I’d rather publish a piece that helps someone make a decision than fill a calendar with short posts. Some articles will be practical guides. Others will be reflections on how I work and what I’m still learning.
 
-I'm also documenting my side projects here. Not because they're groundbreaking, but because the process of building them often teaches more than the final product.
+I will also revisit older pieces when my thinking changes or they need more detail. Those revisions should be visible. A current update is not a reason to pretend an article was first written yesterday.
 
-## The Audience
+If you only read one article, it should still make sense without having followed everything else I’ve published.
 
-I'm writing primarily for other people in technology leadership roles, especially those working in smaller organizations where you wear multiple hats and have to figure things out as you go.
+## Start with the problem you have
 
-But if you're a developer, project manager, or anyone interested in the intersection of technology and leadership, you might find something useful here too.
+If your team is constantly interrupted, start with [leading an IT team out of firefighting](/blog/leading-it-teams-in-the-real-world).
 
-## The Commitment
+If you are using AI to prepare decisions or documents, [using AI without outsourcing your judgement](/blog/using-ai-as-an-it-leader) covers the checks I think matter.
 
-I'm planning to publish 2-3 posts per week. Nothing revolutionary—just consistent sharing of what I'm learning and building.
+If you are considering an internal AI platform, [the decisions behind the build](/blog/building-an-internal-ai-platform) goes into access, company knowledge, model services and operating responsibility.
 
-Some posts will be about work. Some will be about side projects. All will be honest about what worked, what didn't, and what I learned in the process.
+And if you are wondering why a CIO still spends time building small tools, [why I stay hands-on](/blog/side-projects-as-a-leadership-lab) explains what I get from it and where the limits should be.
 
-Thanks for reading. If you're working on similar challenges or experiments, I'd love to hear about them.
+If something here connects with a problem you’re working through, I’m happy to compare notes. You don’t need a fully formed project brief to start a conversation.

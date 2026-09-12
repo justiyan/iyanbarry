@@ -3,6 +3,7 @@ import Layout from '@/components/Layout'
 import { Shell, Section, SectionHead, Card, Tag } from '@/components/ui'
 import { getSortedPostsData } from '@/lib/blog'
 import { capabilities } from '@/lib/capabilities'
+import PostDate from '@/components/PostDate'
 
 const facts = [
   { n: '30+', l: 'Years in technology' },
@@ -123,18 +124,13 @@ export default function Home() {
               href={`/blog/${p.slug}`}
               className="group grid grid-cols-[120px_1fr] items-baseline gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1"
             >
-              <span className="font-mono text-[12.5px] text-ink-3">
-                {new Date(p.date).toLocaleDateString('en-AU', {
-                  day: '2-digit',
-                  month: 'short',
-                  year: 'numeric',
-                })}
-              </span>
+              <PostDate date={p.date} updated={p.updated} />
               <div>
                 <h3 className="mb-[4px] text-[17px] font-[550] transition-colors group-hover:text-accent">
                   {p.title}
                 </h3>
                 <p className="text-[14.5px] text-ink-3">{p.summary}</p>
+                <p className="mt-s2 font-mono text-[11px] text-ink-3">{p.readingMinutes} min read</p>
               </div>
             </Link>
           ))}

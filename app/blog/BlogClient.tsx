@@ -3,7 +3,8 @@
 import Link from 'next/link'
 import { useState, useMemo } from 'react'
 import { Shell } from '@/components/ui'
-import { BlogPost } from '@/lib/blog'
+import type { BlogPost } from '@/lib/blog'
+import PostDate from '@/components/PostDate'
 
 export default function BlogClient({ posts }: { posts: BlogPost[] }) {
   const [tag, setTag] = useState<string | null>(null)
@@ -18,6 +19,8 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
     () => (tag ? posts.filter((p) => p.tags.includes(tag)) : posts),
     [posts, tag]
   )
+  const featured = !tag ? filtered[0] : null
+  const listed = featured ? filtered.slice(1) : filtered
 
   return (
     <>
@@ -25,8 +28,9 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
         <Shell className="pb-s6 pt-s7 max-md:pt-s6">
           <h1 className="mb-s4 max-w-[18ch] text-[clamp(34px,4.2vw,52px)] font-semibold">Writing</h1>
           <p className="max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
-            Notes on IT leadership, AI governance, cybersecurity and the practical realities of
-            running technology in a regulated environment.
+            Practical writing about leading technology teams, building useful tools and making
+            better decisions about AI, security and data. The details that matter when you have
+            to make something work.
           </p>
         </Shell>
       </div>
@@ -54,23 +58,35 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           ))}
         </div>
 
-        <div>
-          {filtered.map((p) => (
+        {featured && (
+          <article data-featured-post className="mb-s6 rounded-card border border-hairline bg-surface-2 p-s5 max-md:p-s4">
+            <p className="mb-s3 font-mono text-[11px] uppercase tracking-[0.04em] text-accent">Latest writing</p>
+            <h2 className="mb-s3 max-w-[30ch] text-[clamp(24px,3vw,34px)] font-semibold">
+              <Link href={`/blog/${featured.slug}`} className="hover:text-accent">{featured.title}</Link>
+            </h2>
+            <p className="mb-s4 max-w-[65ch] text-[17px] leading-[1.65] text-ink-2">{featured.summary}</p>
+            <div className="flex flex-wrap items-end gap-s4">
+              <PostDate date={featured.date} updated={featured.updated} />
+              <span className="font-mono text-[12px] text-ink-3">{featured.readingMinutes} min read</span>
+              <Link href={`/blog/${featured.slug}`} className="text-[14px] font-medium text-accent hover:underline">Read the article →</Link>
+            </div>
+          </article>
+        )}
+
+        <div data-post-list>
+          {listed.map((p) => (
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
               className="group grid grid-cols-[120px_1fr] items-baseline gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1"
             >
-              <span className="font-mono text-[12.5px] text-ink-3">
-                {new Date(p.date).toLocaleDateString('en-AU', {
-                  day: '2-digit', month: 'short', year: 'numeric',
-                })}
-              </span>
+              <PostDate date={p.date} updated={p.updated} />
               <div>
                 <h2 className="mb-[4px] text-[17px] font-[550] transition-colors group-hover:text-accent">
                   {p.title}
                 </h2>
                 <p className="text-[14.5px] text-ink-3">{p.summary}</p>
+                <p className="mt-s2 font-mono text-[11px] text-ink-3">{p.readingMinutes} min read</p>
               </div>
             </Link>
           ))}
@@ -82,6 +98,10 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
 
         <p className="mt-s5 font-mono text-[12px] text-ink-3">
           {filtered.length} of {posts.length} posts
+        </p>
+        <p className="mt-s3 max-w-[65ch] text-[13px] text-ink-3">
+          Older pieces are revisited when there’s more to say. Updated dates mark substantial
+          revisions; the original publication date stays on each article.
         </p>
       </Shell>
     </>

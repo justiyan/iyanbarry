@@ -10,10 +10,28 @@ export interface BlogPost {
   slug: string
   title: string
   date: string
+  updated?: string
+  wordCount: number
+  readingMinutes: number
   summary: string
   tags: string[]
   published: boolean
   content?: string
+}
+
+function postMetadata(slug: string, data: Record<string, any>, body: string): BlogPost {
+  const wordCount = (body.match(/\b[\w’'-]+\b/g) || []).length
+  return {
+    slug,
+    title: data.title,
+    date: data.date,
+    updated: data.updated,
+    summary: data.summary,
+    tags: data.tags || [],
+    published: data.published !== false,
+    wordCount,
+    readingMinutes: Math.max(1, Math.ceil(wordCount / 220)),
+  }
 }
 
 export function getSortedPostsData(): BlogPost[] {
@@ -30,23 +48,13 @@ export function getSortedPostsData(): BlogPost[] {
       const fileContents = fs.readFileSync(fullPath, 'utf8')
       const matterResult = matter(fileContents)
 
-      return {
-        slug,
-        title: matterResult.data.title,
-        date: matterResult.data.date,
-        summary: matterResult.data.summary,
-        tags: matterResult.data.tags || [],
-        published: matterResult.data.published !== false,
-      }
+      return postMetadata(slug, matterResult.data, matterResult.content)
     })
     .filter((post) => post.published)
 
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1
-    } else {
-      return -1
-    }
+    const latest = (b.updated || b.date).localeCompare(a.updated || a.date)
+    return latest || b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug)
   })
 }
 
@@ -59,6 +67,7 @@ export async function getPostData(slug: string): Promise<BlogPost | null> {
     const fullPath = path.join(postsDirectory, `${slug}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
+    if (matterResult.data.published === false) return null
 
     const processedContent = await remark()
       .use(html)
@@ -66,12 +75,7 @@ export async function getPostData(slug: string): Promise<BlogPost | null> {
     const contentHtml = processedContent.toString()
 
     return {
-      slug,
-      title: matterResult.data.title,
-      date: matterResult.data.date,
-      summary: matterResult.data.summary,
-      tags: matterResult.data.tags || [],
-      published: matterResult.data.published !== false,
+      ...postMetadata(slug, matterResult.data, matterResult.content),
       content: contentHtml,
     }
   } catch (error) {
@@ -84,12 +88,5 @@ export function getAllPostSlugs() {
     return []
   }
 
-  const fileNames = fs.readdirSync(postsDirectory)
-  return fileNames
-    .filter((fileName) => fileName.endsWith('.md'))
-    .map((fileName) => ({
-      params: {
-        slug: fileName.replace(/\.md$/, ''),
-      },
-    }))
+  return getSortedPostsData().map(post => ({ params: { slug: post.slug } }))
 }

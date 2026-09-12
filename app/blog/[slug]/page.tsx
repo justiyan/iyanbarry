@@ -4,6 +4,7 @@ import Layout from '@/components/Layout'
 import { Shell } from '@/components/ui'
 import { getPostData, getAllPostSlugs } from '@/lib/blog'
 import { generateMetadata as generateMeta } from '@/lib/metadata'
+import PostDate, { formatPostDate } from '@/components/PostDate'
 
 interface Props { params: { slug: string } }
 
@@ -14,29 +15,54 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const post = await getPostData(params.slug)
   if (!post) return generateMeta({ title: 'Post not found' })
-  return generateMeta({ title: post.title, description: post.summary, path: `/blog/${params.slug}` })
+  const base = generateMeta({ title: post.title, description: post.summary, path: `/blog/${params.slug}` })
+  return {
+    ...base,
+    openGraph: {
+      ...base.openGraph,
+      type: 'article' as const,
+      publishedTime: post.date,
+      modifiedTime: post.updated || post.date,
+      authors: ['Iyan Barry'],
+    },
+  }
 }
 
 export default async function BlogPostPage({ params }: Props) {
   const post = await getPostData(params.slug)
   if (!post) notFound()
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.title,
+    description: post.summary,
+    datePublished: post.date,
+    dateModified: post.updated || post.date,
+    author: { '@type': 'Person', name: 'Iyan Barry', url: 'https://iyanbarry.com/about' },
+    mainEntityOfPage: `https://iyanbarry.com/blog/${post.slug}`,
+    image: 'https://iyanbarry.com/images/iyan-barry-og.jpg',
+    wordCount: post.wordCount,
+  }
 
   return (
     <Layout>
       <article>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
         <div className="border-b border-hairline">
           <Shell className="pb-s6 pt-s6">
             <Link href="/blog" className="mb-s5 inline-block font-mono text-[12px] text-ink-3 transition-colors hover:text-accent">
               ← All writing
             </Link>
-            <div className="mb-s3 flex flex-wrap items-center gap-s3">
-              <time className="font-mono text-[12.5px] text-ink-3">
-                {new Date(post.date).toLocaleDateString('en-AU', { day: '2-digit', month: 'long', year: 'numeric' })}
-              </time>
+            <div className="mb-s3 flex flex-wrap items-end gap-s3">
+              <PostDate date={post.date} updated={post.updated} />
+              <span className="font-mono text-[12px] text-ink-3">{post.readingMinutes} min read</span>
               {post.tags.map((t) => (
                 <span key={t} className="font-mono text-[11px] uppercase tracking-[0.03em] text-accent">{t}</span>
               ))}
             </div>
+            {post.updated && (
+              <p className="mb-s4 text-[12px] text-ink-3">Originally published {formatPostDate(post.date, true)}</p>
+            )}
             <h1 className="max-w-[22ch] text-[clamp(30px,3.6vw,44px)] font-semibold">{post.title}</h1>
             {post.summary && (
               <p className="mt-s4 max-w-[62ch] text-[18px] leading-[1.6] text-ink-2">{post.summary}</p>
@@ -53,7 +79,8 @@ export default async function BlogPostPage({ params }: Props) {
             <div className="max-w-[62ch]">
               <h2 className="mb-s3 text-[24px] font-semibold">Working on something similar?</h2>
               <p className="mb-s4 text-[16px] text-ink-2">
-                I advise Australian mid-market executive teams on exactly these problems.
+                If this connects with something you’re working through, I’m happy to talk about
+                where you’re stuck and whether I can help.
               </p>
               <Link href="/work-with-me" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
                 See how I work
