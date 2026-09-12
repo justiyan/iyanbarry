@@ -7,7 +7,7 @@ interface MetadataOptions {
 }
 
 const DEFAULT_DESC =
-  'Iyan Barry is a Brisbane-based Chief Information Officer. He advises Australian mid-market executive teams on IT strategy, cyber maturity (Essential Eight, ISO 27001, ISO 27032, SMB1001) and practical AI adoption.'
+  'Iyan Barry is a Brisbane-based CIO building custom internal AI platforms with leading models, company knowledge and data governance designed around your business.'
 
 export function generateMetadata({
   title,
@@ -16,7 +16,7 @@ export function generateMetadata({
 }: MetadataOptions = {}): Metadata {
   const fullTitle = title
     ? `${title} | Iyan Barry`
-    : 'Iyan Barry – Chief Information Officer | IT Strategy, Cyber & AI Advisory'
+    : 'Iyan Barry – CIO | Custom Internal AI Platforms & Governance'
   const url = `https://iyanbarry.com${path}`
 
   return {

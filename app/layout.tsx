@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const DESCRIPTION =
-  'Iyan Barry is a Brisbane-based Chief Information Officer. He advises Australian mid-market executive teams on IT strategy, cyber maturity (Essential Eight, ISO 27001, ISO 27032, SMB1001) and practical AI adoption — and speaks on AI governance in regulated environments.'
+  'Iyan Barry is a Brisbane-based CIO building custom internal AI platforms with leading models, company knowledge and data governance designed around your business.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://iyanbarry.com'),
   title: {
-    default: 'Iyan Barry – Chief Information Officer | IT Strategy, Cyber & AI Advisory',
+    default: 'Iyan Barry – CIO | Custom Internal AI Platforms & Governance',
     template: '%s | Iyan Barry',
   },
   description: DESCRIPTION,
@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     'ISO 27032',
     'SMB1001',
     'AI governance',
+    'custom internal AI platforms',
+    'enterprise AI development',
     'virtual CIO',
     'IT leadership speaker Australia',
   ],
@@ -27,7 +29,7 @@ export const metadata: Metadata = {
   creator: 'Iyan Barry',
   alternates: { canonical: 'https://iyanbarry.com' },
   openGraph: {
-    title: 'Iyan Barry – Chief Information Officer',
+    title: 'Iyan Barry – CIO | Custom Internal AI Platforms',
     description: DESCRIPTION,
     url: 'https://iyanbarry.com',
     siteName: 'Iyan Barry',
@@ -44,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Iyan Barry – Chief Information Officer',
+    title: 'Iyan Barry – CIO | Custom Internal AI Platforms',
     description: DESCRIPTION,
     images: ['/images/iyan-barry-og.jpg'],
   },
@@ -81,6 +83,8 @@ const personSchema = {
     'SMB1001',
     'NIST Cybersecurity Framework',
     'Artificial Intelligence Governance',
+    'Custom Internal AI Platforms',
+    'Retrieval-Augmented Generation',
     'Data Residency',
     'IT Leadership',
   ],

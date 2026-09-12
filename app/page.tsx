@@ -45,31 +45,32 @@ export default function Home() {
             <div className="max-lg:order-2">
               <div className="mb-s5 inline-flex items-center gap-s2 rounded-full border border-hairline bg-surface-2 px-[11px] py-[5px] text-[12px] font-medium text-ink-2">
                 <span className="h-[6px] w-[6px] rounded-full bg-live" />
-                Available for advisory · {new Date().getFullYear()}
+                Internal AI platforms & advisory · {new Date().getFullYear()}
               </div>
 
               <h1 className="mb-s4 max-w-[16ch] text-[clamp(36px,4.6vw,58px)] font-semibold">
-                Technology decisions your board can actually back.
+                Give your people powerful AI. Keep control of how it’s used.
               </h1>
 
               <p className="mb-s5 max-w-[52ch] text-[19px] leading-[1.6] text-ink-2">
-                I’m a sitting CIO. I help Australian mid-market executive teams modernise IT,
-                lift cyber maturity and deploy AI — with the governance to stand behind it.
+                I’m Iyan Barry, a sitting CIO. I design and build custom internal AI platforms
+                that connect your people to leading models and organisational knowledge,
+                with access and data handling designed around your business.
               </p>
 
               <div className="flex flex-wrap items-center gap-s3">
                 <Link
-                  href="/work-with-me"
+                  href="/contact"
                   data-hero-cta
                   className="rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent"
                 >
-                  Work with me
+                  Discuss your AI platform
                 </Link>
                 <Link
-                  href="/blog"
+                  href="/work-with-me#internal-ai-platforms"
                   className="rounded-btn border border-hairline px-s4 py-[11px] text-[14.5px] font-medium text-ink transition-colors hover:border-ink-3 hover:bg-surface-2"
                 >
-                  Read the writing
+                  How it works
                 </Link>
               </div>
             </div>
@@ -85,9 +86,38 @@ export default function Home() {
         </Shell>
       </div>
 
-      {/* Advisory */}
+      <Section id="internal-ai-platforms">
+        <SectionHead num="01" title="Custom internal AI platforms" />
+        <div className="grid grid-cols-2 gap-s6 max-md:grid-cols-1 max-md:gap-s5">
+          <div>
+            <Tag>Design · build · pilot · handover</Tag>
+            <h3 className="mb-s3 text-[25px] font-semibold">A useful platform, built around your business.</h3>
+            <p className="mb-s4 text-[17px] leading-[1.65] text-ink-2">
+              Give staff a practical way to use frontier AI models for everyday work,
+              with corporate sign-in, approved knowledge sources and clearly defined access.
+              Each engagement starts with your use cases and information requirements.
+            </p>
+            <Link href="/work-with-me#internal-ai-platforms" className="text-[14.5px] font-medium text-accent hover:underline">
+              Explore the offering →
+            </Link>
+          </div>
+          <div className="rounded-card border border-hairline bg-surface-2 p-s5">
+            <h3 className="mb-s3 text-[17px] font-semibold">Governance is part of the design.</h3>
+            <p className="mb-s3 text-[15px] leading-[1.65] text-ink-2">
+              Agree which information the platform can use, who can access it, where it is
+              processed and where human review is required. Model selection follows those decisions.
+            </p>
+            <p className="text-[14px] leading-[1.65] text-ink-2">
+              Hosting the application in your cloud does not automatically keep model processing
+              there. Provider terms, retention and processing locations need checking for each service.
+            </p>
+          </div>
+        </div>
+      </Section>
+
+      {/* Supporting advisory services */}
       <Section id="advisory">
-        <SectionHead num="01" title="Advisory" />
+        <SectionHead num="02" title="Supporting advisory" />
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {engagements.map((e) => (
             <Card key={e.title}>
@@ -107,7 +137,7 @@ export default function Home() {
 
       {/* Writing */}
       <Section id="writing">
-        <SectionHead num="02" title="Writing" />
+        <SectionHead num="03" title="Writing" />
         <div>
           {posts.map((p) => (
             <Link
@@ -141,7 +171,7 @@ export default function Home() {
 
       {/* Background */}
       <Section id="background">
-        <SectionHead num="03" title="Background" />
+        <SectionHead num="04" title="Background" />
         <div className="grid grid-cols-4 gap-[26px] max-lg:grid-cols-2 max-md:grid-cols-1">
           {facts.map((f) => (
             <div key={f.n} className="rounded-card border border-hairline p-s5">
