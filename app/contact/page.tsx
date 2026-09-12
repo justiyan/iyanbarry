@@ -5,11 +5,12 @@ import { Shell, Section, SectionHead } from '@/components/ui'
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Get in touch with Iyan Barry about advisory engagements, speaking enquiries or IT leadership.',
+    'Talk to Iyan Barry about technology advice, AI and automation, cybersecurity, data projects or speaking.',
+  alternates: { canonical: 'https://iyanbarry.com/contact' },
 }
 
 const reasons = [
-  { t: 'Advisory', d: 'Assessments, cyber maturity uplift, fractional CIO or AI governance work.' },
+  { t: 'Advice or a project', d: 'Technology decisions, security, AI platforms, automation, data or connecting systems. Tell me what you need help with.' },
   { t: 'Speaking', d: 'Conferences, panels, executive briefings, workshops and podcasts.' },
   { t: 'Media', d: 'Comment or background on AI governance, cyber and technology leadership.' },
   { t: 'Comparing notes', d: 'Other IT leaders working on the same problems. Always happy to talk.' },
@@ -24,8 +25,8 @@ export default function Contact() {
             Get in touch
           </h1>
           <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
-            Tell me what you’re dealing with. If it isn’t something I can help with, I’ll say so
-            and point you somewhere better.
+            Tell me what you’re working on, or where you’re stuck. If I’m not the right
+            person to help, I’ll say so.
           </p>
           <div className="flex flex-wrap items-center gap-s3">
             <a href="mailto:ask@iyanbarry.com" className="rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">

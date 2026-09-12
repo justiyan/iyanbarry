@@ -2,12 +2,12 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 const DESCRIPTION =
-  'Iyan Barry is a Brisbane-based CIO building custom internal AI platforms with leading models, company knowledge and data governance designed around your business.'
+  'Iyan Barry is a Brisbane-based CIO working across technology strategy, cybersecurity, data, AI and automation. Practical advice and hands-on delivery, with three decades of experience.'
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://iyanbarry.com'),
   title: {
-    default: 'Iyan Barry – CIO | Custom Internal AI Platforms & Governance',
+    default: 'Iyan Barry – CIO | Technology, AI & Cybersecurity',
     template: '%s | Iyan Barry',
   },
   description: DESCRIPTION,
@@ -22,6 +22,8 @@ export const metadata: Metadata = {
     'AI governance',
     'custom internal AI platforms',
     'enterprise AI development',
+    'data integration',
+    'workflow automation',
     'virtual CIO',
     'IT leadership speaker Australia',
   ],
@@ -29,7 +31,7 @@ export const metadata: Metadata = {
   creator: 'Iyan Barry',
   alternates: { canonical: 'https://iyanbarry.com' },
   openGraph: {
-    title: 'Iyan Barry – CIO | Custom Internal AI Platforms',
+    title: 'Iyan Barry – CIO | Technology, AI & Cybersecurity',
     description: DESCRIPTION,
     url: 'https://iyanbarry.com',
     siteName: 'Iyan Barry',
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Iyan Barry – CIO | Custom Internal AI Platforms',
+    title: 'Iyan Barry – CIO | Technology, AI & Cybersecurity',
     description: DESCRIPTION,
     images: ['/images/iyan-barry-og.jpg'],
   },
@@ -87,6 +89,9 @@ const personSchema = {
     'Retrieval-Augmented Generation',
     'Data Residency',
     'IT Leadership',
+    'Data Integration',
+    'Workflow Automation',
+    'Technology Team Development',
   ],
   sameAs: [
     'https://au.linkedin.com/in/iyanbarry',

@@ -2,17 +2,19 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import { Shell, Section, SectionHead } from '@/components/ui'
+import { capabilities } from '@/lib/capabilities'
 
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Iyan Barry is Chief Information Officer at Safe Places for Children, leading technology, data and cybersecurity across Australian and UK operations.',
+    'Meet Iyan Barry, a Brisbane-based CIO with three decades in technology across APAC, ANZ and the UK. Strategy, teams, cybersecurity, data, AI and hands-on delivery.',
+  alternates: { canonical: 'https://iyanbarry.com/about' },
 }
 
 const timeline = [
   { y: '1996', t: 'Started in IT', d: 'The beginning of three decades across APAC, ANZ and UK organisations.' },
   { y: '2021', t: 'Took on the IT leadership role', d: 'Began transforming an overwhelmed, reactive IT function into a strategic capability.' },
-  { y: '2022', t: 'Cybersecurity uplift programme', d: 'Secure Score uplift, ISO 27001 / ISO 27032 alignment, SMB1001 and Essential Eight implementation.' },
+  { y: '2022', t: 'Cybersecurity uplift programme', d: 'Improving Microsoft Secure Score, with ISO 27001-aligned controls and Essential Eight implementation.' },
   { y: '2023', t: 'Practical AI and automation', d: 'Deploying AI tooling into day-to-day operations, with the governance to support it.' },
   { y: '2024', t: 'Restructured the team into three delivery streams', d: 'Service delivery, technical delivery and project delivery — same people, clearer focus.' },
   { y: '2026', t: 'Appointed Chief Information Officer', d: 'Leading technology, data, cyber and digital enablement across AU and a UK arm regulated by Ofsted.' },
@@ -20,9 +22,9 @@ const timeline = [
 
 const values = [
   { t: 'Psychological safety', d: 'People do their best work when they feel secure enough to say what they actually think.' },
-  { t: 'Clarity of purpose', d: 'Everyone should understand why their work matters and how it connects to the whole.' },
-  { t: 'Practical delivery', d: 'Perfect is the enemy of good. Ship something that works, then improve it.' },
-  { t: 'Think big, start small, scale fast', d: 'Ambitious vision, pragmatic execution.' },
+  { t: 'Make the priorities clear', d: 'People need to know what matters, why it matters and what can wait.' },
+  { t: 'Stay close to the work', d: 'I like understanding how things work, building where it helps and learning from the people using them.' },
+  { t: 'Start with something useful', d: 'Test the idea on a manageable problem, learn what happens and build from there.' },
 ]
 
 export default function About() {
@@ -42,30 +44,27 @@ export default function About() {
                   Ofsted.
                 </p>
                 <p>
-                  Three decades in, the work is less about the technology and more about judgement
-                  under constraint — deciding what matters, what can wait, and what you are willing
-                  to defend to a board. That experience spans APAC, ANZ and the UK, across markedly
-                  different regulatory expectations.
+                  I’ve spent three decades in technology, with experience across APAC, ANZ and
+                  the UK. I enjoy the mix of working through a big decision with a leadership
+                  team and getting into the detail of how something will work.
                 </p>
                 <p>
-                  When I took on this role I inherited an IT team that was reactive and
-                  under-resourced, constantly firefighting with little time for strategic thinking.
-                  Turning that around was not about implementing trendy frameworks. It was about
-                  building trust, establishing clear priorities, and creating systems that actually
-                  work — including recognising, eventually, that I had become the bottleneck.
+                  A lot of my work has been about helping teams move beyond firefighting.
+                  That means clearer priorities, trust between people and enough structure to
+                  get work finished. It has also meant recognising when I was the bottleneck
+                  and changing how I led the team.
                 </p>
                 <p>
-                  A significant part of my work has focused on cybersecurity uplift: improving our
-                  Microsoft Secure Score, aligning controls to ISO 27001, ISO 27032, SMB1001 and the
-                  ACSC Essential Eight, and
-                  implementing governance and risk frameworks that protect the organisation without
-                  creating bureaucratic overhead. The key has been making security practical and
-                  sustainable, not merely compliant.
+                  Cybersecurity is another big part of my work, including Microsoft Secure Score,
+                  ISO 27001-aligned controls and the ACSC Essential Eight. I’m also familiar with SMB1001 and ISO 27032.
+                  I want people to understand what the controls are for and be able to use them
+                  in the day-to-day work.
                 </p>
                 <p>
-                  Where our sector differs from most is the stakes. Data protection here is a
-                  child-safety matter, not a compliance exercise. That shapes how I think about AI:
-                  useful, but only with governance you can articulate and defend.
+                  I’m hands-on with AI, automation, data and integration too. Sometimes the right
+                  answer is a custom tool; sometimes it’s making better use of what’s already
+                  there. I care about whether it helps the people doing the work and whether
+                  we understand how it handles their information.
                 </p>
               </div>
             </div>
@@ -75,8 +74,20 @@ export default function About() {
         </Shell>
       </div>
 
+      <Section id="capabilities">
+        <SectionHead num="01" title="What I bring to the work" />
+        <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
+          {capabilities.map((c) => (
+            <div key={c.title} className="rounded-card border border-hairline p-s5">
+              <h3 className="mb-s2 text-[19px] font-semibold">{c.title}</h3>
+              <p className="text-[15px] leading-[1.65] text-ink-2">{c.examples}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section>
-        <SectionHead num="01" title="Timeline" />
+        <SectionHead num="02" title="Timeline" />
         <div className="max-w-[70ch]">
           {timeline.map((i) => (
             <div key={i.y} className="grid grid-cols-[90px_1fr] gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1">
@@ -91,7 +102,7 @@ export default function About() {
       </Section>
 
       <Section>
-        <SectionHead num="02" title="How I work" />
+        <SectionHead num="03" title="How I work" />
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {values.map((v) => (
             <div key={v.t} className="rounded-card border border-hairline p-s5">
@@ -106,10 +117,11 @@ export default function About() {
         <div className="max-w-[62ch]">
           <h2 className="mb-s3 text-[30px] font-semibold">Work with me</h2>
           <p className="mb-s5 text-[17px] text-ink-2">
-            I advise a small number of Australian mid-market executive teams alongside the day job.
+            Alongside my CIO role, I work with a small number of organisations on advice and
+            hands-on projects. If you think I could help, tell me what you’re working on.
           </p>
           <Link href="/work-with-me" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
-            See engagements
+            Ways we can work together
           </Link>
         </div>
       </Section>

@@ -6,7 +6,8 @@ import { Shell, Section, SectionHead, Card } from '@/components/ui'
 export const metadata: Metadata = {
   title: 'Speaking',
   description:
-    'Iyan Barry speaks on AI governance in regulated environments, cyber maturity for resource-constrained organisations, and building IT teams that scale. Bio, headshots and topics for event organisers.',
+    'Iyan Barry speaks about technology leadership, practical AI, cybersecurity and building IT teams. Topics, past appearances and bios for event organisers.',
+  alternates: { canonical: 'https://iyanbarry.com/speaking' },
 }
 
 const topics = [
@@ -43,9 +44,9 @@ const formats = [
 ]
 
 const bios = [
-  { len: 'Short — one line', text: 'Iyan Barry is a Brisbane-based Chief Information Officer working at the intersection of AI, cybersecurity and child-safeguarding technology.' },
-  { len: 'Medium — 60 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. With three decades across APAC, ANZ and the UK, he focuses on making AI and security work in environments where the stakes are people rather than uptime. He writes and speaks on practical AI governance for regulated organisations, most recently on the “Scaling AI” panel at iTnews State of Data & AI in Sydney.' },
-  { len: 'Long — 120 words', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, a not-for-profit providing intensive therapeutic care to young people at risk. He leads technology, information, data, cybersecurity and digital enablement across Australian operations and a UK arm regulated by Ofsted — an environment where data protection is a child-safety matter, not a compliance exercise. His career spans three decades across APAC, ANZ and UK organisations. He has rebuilt an IT function from reactive to strategic, implemented the ACSC Essential Eight, ISO 27001, ISO 27032 and SMB1001-aligned controls, and deployed AI and automation into day-to-day operations. He has spoken on enterprise AI alongside Workato and Tyro Payments at iTnews State of Data & AI. He advises Australian mid-market executive teams and writes on IT leadership at iyanbarry.com.' },
+  { len: 'One line', text: 'Iyan Barry is a Brisbane-based CIO who works across technology leadership, cybersecurity, data, AI and automation.' },
+  { len: 'Short bio', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, leading technology, data and cybersecurity across Australian and UK operations. His career spans three decades across APAC, ANZ and the UK. He combines technology leadership with hands-on work in AI and automation, and speaks about what it takes to make technology useful in practice. He was a panellist at iTnews State of Data & AI in Sydney.' },
+  { len: 'Full bio', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. He has spent three decades in technology, with experience across APAC, ANZ and the UK. His work includes developing IT teams, improving security, connecting systems and putting AI and automation to use. He has worked with the ACSC Essential Eight and ISO 27001-aligned controls, and is familiar with SMB1001 and ISO 27032. Alongside his executive role, he helps organisations with technology decisions and hands-on projects. He spoke on the “Scaling AI” panel alongside Workato and Tyro Payments at iTnews State of Data & AI in Sydney, and writes about technology leadership at iyanbarry.com.' },
 ]
 
 export default function Speaking() {

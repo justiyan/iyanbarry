@@ -2,15 +2,16 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
 import { Shell, Section, SectionHead, Card, Tag } from '@/components/ui'
+import { capabilities } from '@/lib/capabilities'
 
 export const metadata: Metadata = {
-  title: 'Internal AI Platforms & Advisory',
+  title: 'Work with me',
   description:
-    'Custom internal AI platforms by Iyan Barry: leading models, company knowledge and governance designed together. Assessment, build, pilot and handover for Australian businesses.',
+    'Work with Iyan Barry on technology strategy, AI and automation, cybersecurity, data and integration. Practical advice and hands-on delivery from a Brisbane-based CIO.',
   alternates: { canonical: 'https://iyanbarry.com/work-with-me' },
   openGraph: {
-    title: 'Internal AI Platforms & Advisory | Iyan Barry',
-    description: 'Custom internal AI platforms connecting leading models and company knowledge, with access and data handling designed around your business.',
+    title: 'Work with me | Iyan Barry',
+    description: 'Technology leadership, AI and automation, cybersecurity, data and integration. Practical advice and hands-on delivery.',
     url: 'https://iyanbarry.com/work-with-me',
     type: 'website',
     images: [{ url: '/images/iyan-barry-og.jpg', width: 1200, height: 630, alt: 'Iyan Barry, Chief Information Officer' }],
@@ -22,61 +23,61 @@ const engagements = [
     tag: 'Fixed fee · 2–3 weeks',
     title: 'IT & AI Readiness Assessment',
     summary:
-      'A structured review of where your technology, security and data actually stand — and what to do about it in the next twelve months.',
+      'A clear look at your technology, security and data, with a practical plan for what to do next.',
     includes: [
       'Executive interviews and a review of your current environment',
       'Cyber maturity scored against the ACSC Essential Eight',
-      'An honest read on where AI will and will not pay off',
+      'A look at where AI could help and where it probably would not',
       'A prioritised roadmap by effort and impact, costed at a high level',
       'A written report and a live session with your executive team or board',
     ],
-    outcome: 'You leave with a decision-ready plan you can take to a board — not a vendor pitch.',
+    outcome: 'A plan your team can use, with enough detail to explain the priorities to your board.',
   },
   {
     tag: 'Scoped per engagement',
     title: 'Cyber Maturity Uplift',
     summary:
-      'Getting a business from “we think we’re probably fine” to a defensible, evidenced security position.',
+      'Understand where your security needs work and make a plan your team can realistically deliver.',
     includes: [
-      'Gap assessment against Essential Eight, ISO 27001, ISO 27032 or SMB1001',
-      'A remediation plan sequenced by risk, not by product',
+      'Review against relevant controls, including Essential Eight and ISO 27001',
+      'A plan that puts the most important fixes first',
       'Governance, risk and incident response frameworks people will actually use',
       'Board-level reporting your directors can understand',
     ],
-    outcome: 'Security you can evidence to a client, an insurer, an auditor or a regulator.',
+    outcome: 'A clearer view of your risks, the work ahead and how to explain your progress.',
   },
   {
     tag: 'Monthly retainer · limited availability',
     title: 'Fractional / Interim CIO',
     summary:
-      'Executive technology leadership for organisations that need the judgement of a CIO but not a full-time salary.',
+      'Help with the decisions that usually land on a CIO’s desk, without adding a full-time role.',
     includes: [
       'Technology strategy and roadmap ownership',
       'Board and executive reporting',
       'Vendor selection, contract review and negotiation support',
       'Coaching and structure for an existing IT team or manager',
     ],
-    outcome: 'A steady hand on technology decisions, without another executive headcount.',
+    outcome: 'Someone to work through the difficult calls with you and help your team follow through.',
   },
   {
     tag: 'Workshop or advisory',
     title: 'AI Governance for Regulated Environments',
     summary:
-      'For organisations handling sensitive data — care, health, education, government-adjacent — that want AI without creating a privacy or compliance problem.',
+      'Work through what your people can use AI for, what information is appropriate and where the limits need to be.',
     includes: [
       'Acceptable-use and AI governance policy',
       'Data residency and cross-border transfer review',
       'Risk assessment for proposed AI use cases',
       'Staff guidance that is practical rather than prohibitive',
     ],
-    outcome: 'A position on AI you can defend to your board, your regulator and your clients.',
+    outcome: 'Clear guidance for staff and a record of the decisions behind it.',
   },
 ]
 
 const steps = [
-  { n: '1', t: 'A conversation', d: 'Thirty minutes, no charge, no pitch. You describe the problem; I tell you honestly whether I am the right person for it.' },
-  { n: '2', t: 'A written proposal', d: 'Scope, deliverables, timeframe and fixed price in writing before anything begins. No open-ended day rates.' },
-  { n: '3', t: 'Delivery and handover', d: 'For a build, the outcome is an agreed working platform, pilot findings and operating documentation. Advisory engagements deliver the agreed assessment or guidance. Ongoing support is separately scoped.' },
+  { n: '1', t: 'A conversation', d: 'We start with a short, no-charge conversation about what you need. I’ll be honest about whether I can help.' },
+  { n: '2', t: 'Agree the work', d: 'We put the scope, timing, costs and what you’ll receive in writing before we start.' },
+  { n: '3', t: 'Delivery and handover', d: 'For a build, you get the agreed working platform, pilot findings and documentation. For advice, you get the agreed review or plan. We agree any ongoing support separately.' },
 ]
 
 export default function WorkWithMe() {
@@ -85,63 +86,76 @@ export default function WorkWithMe() {
       <div className="border-b border-hairline">
         <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
           <h1 className="mb-s4 max-w-[18ch] text-[clamp(34px,4.2vw,52px)] font-semibold">
-            Internal AI platforms, built for your business.
+            Let’s work on what’s next.
           </h1>
           <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
-            Connect your people to leading AI models and organisational knowledge, with access
-            and data handling designed around your requirements. I design and build the platform,
-            working with your team from assessment through to pilot and handover.
+            You might need help making a technology decision, improving security, connecting
+            systems or getting an AI idea into use. I work with you and your team to figure out
+            what’s needed, then help get it done.
           </p>
           <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
-            Discuss your AI platform
+            Let’s talk
           </Link>
         </Shell>
       </div>
 
+      <Section id="capabilities" className="scroll-mt-[80px]">
+        <SectionHead num="01" title="How I can help" />
+        <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
+          {capabilities.map((c) => (
+            <Card key={c.title}>
+              <h3 className="mb-s2 text-[19px] font-semibold">{c.title}</h3>
+              <p className="mb-s3 text-[15px] leading-[1.65] text-ink-2">{c.summary}</p>
+              <p className="border-t border-hairline pt-s3 text-[14px] text-ink-2">{c.examples}</p>
+            </Card>
+          ))}
+        </div>
+      </Section>
+
       <Section id="internal-ai-platforms" className="scroll-mt-[80px]">
-        <SectionHead num="01" title="Custom internal AI platforms" />
+        <SectionHead num="02" title="Custom internal AI platforms" />
         <div className="grid grid-cols-2 gap-s6 max-lg:grid-cols-1">
           <div>
-            <Tag>Scope agreed before build</Tag>
+            <Tag>A featured offering</Tag>
             <h3 className="mb-s3 text-[23px] font-semibold">An AI platform built around your organisation.</h3>
             <p className="mb-s4 text-[16px] leading-[1.65] text-ink-2">
-              An internal platform can give people a consistent place to work with AI while
-              giving the organisation a clearer view of how its information is used.
-              The design starts with useful tasks and the boundaries the platform must respect.
+              Give your people one place to work with AI, using the models and company knowledge
+              that fit their tasks. We start with what they need to do and how the information
+              should be handled, rather than choosing a tool and working backwards.
             </p>
-            <p className="mb-s3 text-[15px] text-ink-2">Depending on the agreed scope, it may include:</p>
+            <p className="mb-s3 text-[15px] text-ink-2">Depending on what you need, that could include:</p>
             <ul className="list-disc space-y-s2 pl-s4 text-[15px] leading-[1.65] text-ink-2">
               <li>Corporate sign-in and role-based access.</li>
               <li>Selected frontier models accessed through approved services.</li>
               <li>Answers grounded in approved internal documents, with references staff can check.</li>
               <li>Purpose-built assistants for agreed workflows.</li>
               <li>Defined handling of uploads, conversations, retention and deletion.</li>
-              <li>Appropriately scoped activity logging, usage visibility and cost controls.</li>
+              <li>Activity logs, a view of usage and controls on cost.</li>
               <li>Staff guidance, evaluation and human review for higher-risk tasks.</li>
             </ul>
             <p className="mt-s4 text-[14px] text-ink-2">
-              These are options to scope and verify. Hosting, AI usage and ongoing support costs
-              are identified separately from the build.
+              We agree what’s included before building. Hosting, AI usage and ongoing support
+              costs are set out separately, so you can see what you’re committing to.
             </p>
           </div>
           <div className="space-y-s5">
             <div className="rounded-card border border-hairline bg-surface-2 p-s5">
               <h3 className="mb-s3 text-[19px] font-semibold">What “internal” means</h3>
               <p className="text-[15px] leading-[1.65] text-ink-2">
-                The application can be hosted in your organisation’s cloud environment.
-                Model requests may still be processed by external managed services. Processing
-                location, retention and training-use terms are checked for each selected service
-                and documented before sensitive information is used. Custom hosting alone is not
-                a guarantee of security or compliance.
+                The app can run in your organisation’s cloud environment, while model requests
+                may still go to external managed services. We check where each service processes
+                data, what it keeps and whether it can use that data for training. Those decisions
+                are documented before sensitive information is used. Custom hosting alone doesn’t
+                guarantee security or compliance.
               </p>
             </div>
             <div>
-              <h3 className="mb-s3 text-[19px] font-semibold">Built from practical experience</h3>
+              <h3 className="mb-s3 text-[19px] font-semibold">What building one taught me</h3>
               <p className="text-[15px] leading-[1.65] text-ink-2">
-                Building an internal AI platform has shaped my approach to this work. The useful
-                lessons sit beyond the chat interface: deciding which knowledge people can access,
-                tracing data through connected services and making the platform understandable to
-                the people operating it. I share those lessons without publishing internal systems or data.
+                Building an internal AI platform changed how I approach this work. A lot of the
+                important decisions never show up in a demo: which documents someone can access,
+                where an upload goes and who looks after the system when something changes.
+                I bring those lessons to the work without sharing internal systems or data.
               </p>
             </div>
           </div>
@@ -159,15 +173,15 @@ export default function WorkWithMe() {
       </Section>
 
       <Section>
-        <SectionHead num="02" title="Who this is for" />
+        <SectionHead num="03" title="Who I work with" />
         <div className="grid grid-cols-2 gap-s6 max-md:grid-cols-1 max-md:gap-s5">
           <div>
             <h3 className="mb-s3 text-[17px] font-semibold">A good fit</h3>
             <ul className="space-y-s2 text-[15px] leading-[1.65] text-ink-2">
-              <li>Australian businesses roughly 50–500 people.</li>
-              <li>An existing CIO or IT team needing specialist AI build capacity, or a smaller team needing help with design and governance.</li>
-              <li>Executive teams being asked hard questions about cyber risk or AI by a board, an insurer or a major client.</li>
-              <li>Regulated or sensitive sectors where getting technology wrong has consequences beyond downtime.</li>
+              <li>Australian mid-market businesses that want practical help with technology.</li>
+              <li>An existing CIO or IT team that needs another pair of hands, or a smaller team that needs help with the bigger decisions.</li>
+              <li>Leaders trying to improve security, get more from their data or put AI to use.</li>
+              <li>Organisations where sensitive information needs careful handling.</li>
             </ul>
           </div>
           <div>
@@ -178,15 +192,15 @@ export default function WorkWithMe() {
               <li>Large enterprises needing a full delivery team — you want a firm, not an individual.</li>
             </ul>
             <p className="mt-s4 text-[14px] italic text-ink-3">
-              I am a full-time serving CIO. Build and advisory engagements are deliberately capped
-              and delivered by me personally, with scope and timeframes agreed before work begins.
+              I’m a working CIO, so I take on a small number of projects alongside my role.
+              You work with me directly, and we agree the scope and timing before we start.
             </p>
           </div>
         </div>
       </Section>
 
       <Section>
-        <SectionHead num="03" title="Supporting advisory engagements" />
+        <SectionHead num="04" title="Ways we can work together" />
         <div className="grid grid-cols-2 gap-[26px] max-lg:grid-cols-1">
           {engagements.map((e) => (
             <Card key={e.title}>
@@ -206,13 +220,14 @@ export default function WorkWithMe() {
           ))}
         </div>
         <p className="mt-s5 max-w-[62ch] text-[15px] text-ink-2">
-          Pricing is discussed openly on a first call once scope is clear. I would rather tell you
-          an engagement is not worth running than sell you one that is not.
+          These are starting points, not a fixed menu. If you need a data integration, an automation
+          or a different kind of build, we can scope that together. We’ll talk about cost once we
+          understand the work, and before you commit to it.
         </p>
       </Section>
 
       <Section className="!border-b-0">
-        <SectionHead num="04" title="How it starts" />
+        <SectionHead num="05" title="How it starts" />
         <div className="grid grid-cols-3 gap-[26px] max-md:grid-cols-1">
           {steps.map((s) => (
             <div key={s.n}>
