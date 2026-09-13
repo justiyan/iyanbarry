@@ -6,7 +6,7 @@ import { Shell, Section, SectionHead, Card } from '@/components/ui'
 export const metadata: Metadata = {
   title: 'Speaking',
   description:
-    'Iyan Barry speaks about technology leadership, practical AI, cybersecurity and building IT teams. Topics, past appearances and bios for event organisers.',
+    'Iyan Barry speaks about technology leadership, practical AI, cybersecurity and building IT teams. Topics, formats and bios for event organisers.',
   alternates: { canonical: 'https://iyanbarry.com/speaking' },
 }
 
@@ -21,18 +21,6 @@ const topics = [
     body: 'Taking a reactive, under-resourced team and restructuring it into distinct delivery streams — including the part where you discover you are the bottleneck.' },
   { title: 'The CIO as an AI translator', audience: 'Boards and executive teams',
     body: 'How to ask better questions about AI proposals, separate genuine capability from vendor narrative, and make decisions you can defend in twelve months.' },
-]
-
-const appearances = [
-  {
-    date: '22 July 2026',
-    event: 'iTnews State of Data & AI',
-    role: 'Panellist — “Scaling AI”',
-    detail:
-      'Executive breakfast for CIOs, CISOs and senior technology leaders at NEXTDC’s S3 data centre, Sydney. Panel alongside Tristan Cox (Workato) and Rolee Satyam (Tyro Payments), on moving AI beyond experimentation into governed, measurable business outcomes.',
-    href: 'https://www.itnews.com.au/gallery/in-pictures-itnews-state-of-data-ai-launch-sydney-627604',
-    linkLabel: 'Event coverage',
-  },
 ]
 
 const formats = [
@@ -63,7 +51,7 @@ export default function Speaking() {
                 I speak about the parts of technology leadership that are hard to talk about
                 honestly — governing AI where mistakes harm people, lifting security without an
                 enterprise budget, and what actually happens when you restructure a team.
-                Most recently on the “Scaling AI” panel at iTnews State of Data &amp; AI, Sydney.
+
               </p>
               <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
                 Enquire about an event
@@ -76,38 +64,7 @@ export default function Speaking() {
       </div>
 
       <Section>
-        <SectionHead num="01" title="Recent appearances" />
-        <div>
-          {appearances.map((a) => (
-            <div
-              key={a.event}
-              className="grid grid-cols-[130px_1fr] items-baseline gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1"
-            >
-              <span className="font-mono text-[12.5px] text-ink-3">{a.date}</span>
-              <div>
-                <h3 className="mb-[3px] text-[17px] font-[550]">{a.event}</h3>
-                <p className="mb-s2 font-mono text-[11px] uppercase tracking-[0.03em] text-accent">
-                  {a.role}
-                </p>
-                <p className="mb-s2 max-w-[68ch] text-[14.5px] leading-[1.62] text-ink-2">
-                  {a.detail}
-                </p>
-                <a
-                  href={a.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[14px] font-medium text-accent hover:underline"
-                >
-                  {a.linkLabel} →
-                </a>
-              </div>
-            </div>
-          ))}
-        </div>
-      </Section>
-
-      <Section>
-        <SectionHead num="02" title="Topics" />
+        <SectionHead num="01" title="Topics" />
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {topics.map((t) => (
             <Card key={t.title}>
@@ -120,7 +77,7 @@ export default function Speaking() {
       </Section>
 
       <Section>
-        <SectionHead num="03" title="Formats &amp; media kit" />
+        <SectionHead num="02" title="Formats &amp; media kit" />
         <div className="grid grid-cols-[300px_1fr] gap-s6 max-lg:grid-cols-1">
           <div>
             <ul className="space-y-s2">
