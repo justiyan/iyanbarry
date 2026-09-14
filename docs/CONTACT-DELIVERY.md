@@ -28,7 +28,7 @@ Exchange RBAC scopes the SENDER, not destinations; the fixed recipient is enforc
 
 ## Current deployment gate
 
-The initial Exchange customisation inconsistency cleared on a later retry. The sender-only role is now assigned: `Application Mail.Send`, `RecipientAdministrativeUnitScope=6eb04a31-0f0b-4d12-9e8d-48f3043fa464`. Authorisation tests return InScope=True for website@iyanbarry.com and False for Iyan's personal mailbox. Direct sender tests are confirmed Delivered by Exchange message trace (latest direct test ID `a4bb9624-6fa7-4756-aaa9-08df122c8e37`). CONTACT_FORM_ENABLED is true for the next production deployment; final live browser submission and delivery are checked separately.
+The initial Exchange customisation inconsistency cleared on a later retry. The sender-only role is now assigned: `Application Mail.Send`, `RecipientAdministrativeUnitScope=6eb04a31-0f0b-4d12-9e8d-48f3043fa464`. Authorisation tests return InScope=True for website@iyanbarry.com and False for Iyan's personal mailbox. The form is live with CONTACT_FORM_ENABLED=true. Local and live browser submissions succeeded and both are confirmed Delivered by Exchange trace. Live-form trace ID: `2748650d-d0fa-4a13-596f-08df12306ab1`; recipient is the personal mailbox behind the unchanged ask@ alias. The live site also passes invalid-origin (403), invalid-body (400) and oversized-body (413) checks.
 
 ## Credentials
 
