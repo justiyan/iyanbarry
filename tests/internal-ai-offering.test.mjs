@@ -24,7 +24,7 @@ test('visitors can discover the internal AI offering and follow its service anch
     assert.ok(read(path).includes("@/lib/capabilities"), `${path} includes broader capabilities`)
   }
   assert.ok(read('app/about/page.tsx').includes('familiar with SMB1001 and ISO 27032'), 'framework familiarity is stated accurately')
-  assert.ok(read('app/speaking/page.tsx').includes('familiar with SMB1001 and ISO 27032'), 'speaker bio reflects familiarity, not implementation')
+  assert.ok(read('lib/speaker-kit.json').includes('familiar with SMB1001 and ISO 27032'), 'speaker bio reflects familiarity, not implementation')
   for (const path of ['app/page.tsx', 'app/work-with-me/page.tsx', 'app/about/page.tsx', 'app/speaking/page.tsx', 'app/contact/page.tsx', 'app/layout.tsx', 'lib/metadata.ts', 'lib/capabilities.ts']) {
     const source = read(path)
     assert.doesNotMatch(source, /ISO 27001 \/ ISO 27032 alignment|ISO 27032 and SMB1001-aligned controls|aligning controls to ISO 27001, ISO 27032, SMB1001/, `${path}: no overstated framework claims`)

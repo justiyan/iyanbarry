@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
+import speakerKit from '@/lib/speaker-kit.json'
 import { Shell, Section, SectionHead, Card } from '@/components/ui'
 
 export const metadata: Metadata = {
@@ -10,32 +11,7 @@ export const metadata: Metadata = {
   alternates: { canonical: 'https://iyanbarry.com/speaking' },
 }
 
-const topics = [
-  { title: 'Deploying AI when your users are vulnerable', audience: 'Care, health, education, government-adjacent',
-    body: 'What changes about AI adoption when the people in your data cannot consent in any meaningful way, and two different regulators are watching. Practical governance, not theory.' },
-  { title: 'Essential Eight on a not-for-profit budget', audience: 'CIOs, IT managers, boards',
-    body: 'Lifting cyber maturity when there is no dedicated security team and no enterprise budget. What to do first, what to defer, and how to evidence it to a board.' },
-  { title: 'Running IT across multiple jurisdictions', audience: 'Executives operating internationally',
-    body: 'Data residency, cross-border access and jurisdictional complexity across APAC, ANZ and UK regimes — where the same control means different things to different regulators.' },
-  { title: 'From firefighting to strategic', audience: 'IT leaders, executive teams',
-    body: 'Taking a reactive, under-resourced team and restructuring it into distinct delivery streams — including the part where you discover you are the bottleneck.' },
-  { title: 'The CIO as an AI translator', audience: 'Boards and executive teams',
-    body: 'How to ask better questions about AI proposals, separate genuine capability from vendor narrative, and make decisions you can defend in twelve months.' },
-]
-
-const formats = [
-  'Conference keynote (20–45 min)',
-  'Panel discussion and moderation',
-  'Executive or board briefing (45–90 min)',
-  'Workshop (half or full day)',
-  'Podcast and interview',
-]
-
-const bios = [
-  { len: 'One line', text: 'Iyan Barry is a Brisbane-based CIO who works across technology leadership, cybersecurity, data, AI and automation.' },
-  { len: 'Short bio', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, leading technology, data and cybersecurity across Australian and UK operations. His career spans three decades across APAC, ANZ and the UK. He combines technology leadership with hands-on work in AI and automation, and speaks about what it takes to make technology useful in practice. He was a panellist at iTnews State of Data & AI in Sydney.' },
-  { len: 'Full bio', text: 'Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. He has spent three decades in technology, with experience across APAC, ANZ and the UK. His work includes developing IT teams, improving security, connecting systems and putting AI and automation to use. He has worked with the ACSC Essential Eight and ISO 27001-aligned controls, and is familiar with SMB1001 and ISO 27032. Alongside his executive role, he helps organisations with technology decisions and hands-on projects. He spoke on the “Scaling AI” panel alongside Workato and Tyro Payments at iTnews State of Data & AI in Sydney, and writes about technology leadership at iyanbarry.com.' },
-]
+const { topics, formats, bios, downloads } = speakerKit
 
 export default function Speaking() {
   return (
@@ -48,10 +24,7 @@ export default function Speaking() {
                 Speaking &amp; media
               </h1>
               <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
-                I speak about the parts of technology leadership that are hard to talk about
-                honestly — governing AI where mistakes harm people, lifting security without an
-                enterprise budget, and what actually happens when you restructure a team.
-
+                {speakerKit.intro}
               </p>
               <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
                 Enquire about an event
@@ -71,6 +44,9 @@ export default function Speaking() {
               <h3 className="mb-s2 text-[17px] font-semibold">{t.title}</h3>
               <p className="mb-s3 font-mono text-[11px] uppercase tracking-[0.03em] text-accent">{t.audience}</p>
               <p className="text-[14.5px] leading-[1.62] text-ink-2">{t.body}</p>
+              <p className="mt-s3 border-t border-hairline pt-s3 text-[14.5px] leading-[1.62] text-ink-2">
+                <span className="font-medium text-ink">Audience takeaway: </span>{t.takeaway}
+              </p>
             </Card>
           ))}
         </div>
@@ -87,12 +63,25 @@ export default function Speaking() {
                 </li>
               ))}
             </ul>
-            <p className="mt-s5 text-[14.5px] leading-[1.62] text-ink-2">
-              Headshots available on request in high resolution, square and transparent-background formats.
-            </p>
-            <Link href="/contact" className="mt-s3 inline-block text-[14.5px] font-medium text-accent hover:underline">
-              Request the media kit →
-            </Link>
+            <div className="mt-s5 border-t border-hairline pt-s4">
+              <h3 className="mb-s3 text-[17px] font-semibold">For event organisers</h3>
+              <p className="mb-s4 text-[14.5px] leading-[1.62] text-ink-2">
+                Topics, formats and ready-to-use bios. Short bio and full bio text are also available below.
+              </p>
+              <ul className="space-y-s3">
+                {downloads.map((asset) => (
+                  <li key={asset.href}>
+                    <a href={asset.href} download className="text-[14.5px] font-medium text-accent hover:underline">
+                      Download {asset.label.toLowerCase()} ↓
+                    </a>
+                    <span className="mt-s1 block text-[12px] text-ink-3">{asset.detail}</span>
+                  </li>
+                ))}
+              </ul>
+              <Link href="/contact" className="mt-s4 inline-block text-[14.5px] font-medium text-accent hover:underline">
+                Discuss your event →
+              </Link>
+            </div>
           </div>
           <div className="space-y-s4">
             {bios.map((b) => (

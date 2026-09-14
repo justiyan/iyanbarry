@@ -28,7 +28,7 @@ Exchange RBAC scopes the SENDER, not destinations; the fixed recipient is enforc
 
 ## Current deployment gate
 
-Provisioning encountered an Exchange inconsistency: `IsDehydrated=False` and `Enable-OrganizationCustomization` says already enabled, yet restricted role assignment creation requests that command again. Do not grant unscoped permission as a workaround. Until scoped authorisation succeeds and an actual message is traced to delivery, the form must not be presented as operational.
+The initial Exchange customisation inconsistency cleared on a later retry. The sender-only role is now assigned: `Application Mail.Send`, `RecipientAdministrativeUnitScope=6eb04a31-0f0b-4d12-9e8d-48f3043fa464`. Authorisation tests return InScope=True for website@iyanbarry.com and False for Iyan's personal mailbox. Direct sender tests are confirmed Delivered by Exchange message trace (latest direct test ID `a4bb9624-6fa7-4756-aaa9-08df122c8e37`). CONTACT_FORM_ENABLED is true for the next production deployment; final live browser submission and delivery are checked separately.
 
 ## Credentials
 
@@ -40,10 +40,10 @@ Application credential and table SAS expire September 2027. Exact secret metadat
 - Sender-only administrative unit contains exactly the website mailbox.
 - Enterprise application's Graph app-role assignment list is empty (no unscoped grants).
 - Graph message reads return 403 for both the website and personal mailbox.
-- Direct send test currently returns 403; this is a BLOCKER, not a passing delivery test.
+- Direct send tests now return 202 and Exchange trace confirms Delivered to the mailbox behind ask@iyanbarry.com.
 - Real Azure Table adapter passes insert, duplicate denial, read and concurrent ETag compare-and-swap verification.
-- Production form is gated by `CONTACT_FORM_ENABLED=true`; leave unset until delivery is verified. Email/copy fallback is independent.
-- A single retry job is scheduled for the Exchange role creation; failures require Microsoft support rather than broader access. Support draft: `C:/Users/RPizzy2/hermes-media/northside-exchange-support.md`.
+- Production form is gated by `CONTACT_FORM_ENABLED=true`; email/copy fallback remains independent.
+- The one-shot retry job completed; no support escalation or broader permissions were needed.
 
 ## Test requirements before launch
 

@@ -1,0 +1,89 @@
+{
+  "name": "Iyan Barry",
+  "role": "CIO · Technology leader · Speaker",
+  "location": "Brisbane, Australia",
+  "website": "https://iyanbarry.com",
+  "contact": "https://iyanbarry.com/contact",
+  "intro": "I speak about the decisions technology leaders have to make: where AI is useful, what to build, how to prioritise security, and how to give teams room to deliver. Practical conversations about technology, people and trade-offs — without the sales pitch.",
+  "topics": [
+    {
+      "title": "Making practical AI decisions",
+      "audience": "CIOs, boards and executive teams",
+      "body": "Separate a useful AI application from an impressive demo. How to assess the problem, the data, the risks and the ongoing cost before committing to a pilot.",
+      "takeaway": "A set of questions to test an AI proposal, define success and decide whether to proceed, redesign or stop."
+    },
+    {
+      "title": "Building internal platforms that people use",
+      "audience": "Technology leaders, product and operations teams",
+      "body": "From an awkward workflow to a usable internal tool: scoping, build-versus-buy decisions, integration and ownership. An anonymised discussion of the decisions behind hands-on AI and automation work, not a product pitch.",
+      "takeaway": "A way to scope a first release, assign an owner and plan for adoption, support and maintenance beyond the demo."
+    },
+    {
+      "title": "Cybersecurity on a realistic budget",
+      "audience": "CIOs, IT managers and boards",
+      "body": "Prioritising security when money, time and specialist skills are limited. Using the Essential Eight as a practical reference, with clear choices about what to address first and what risk remains.",
+      "takeaway": "A method for ranking security work by risk and effort, and explaining priorities and residual risk to the board."
+    },
+    {
+      "title": "Leading teams beyond firefighting",
+      "audience": "IT leaders and executive teams",
+      "body": "Protecting delivery time while keeping the business running. The leadership work behind clear priorities, delegated decisions and a team that does not need its leader in every conversation.",
+      "takeaway": "A way to separate operational demand from improvement work, clarify decision rights and spot leadership bottlenecks."
+    },
+    {
+      "title": "Connecting data, systems and decisions",
+      "audience": "Technology, data and business leaders",
+      "body": "Why buying another system rarely fixes disconnected information. Mapping the workflow, understanding data ownership and choosing where integration will reduce friction rather than add complexity.",
+      "takeaway": "A practical approach to mapping a data flow, identifying its owner and prioritising integrations around a business decision."
+    },
+    {
+      "title": "Running technology across jurisdictions",
+      "audience": "Executives and technology teams operating internationally",
+      "body": "Balancing a common technology approach with local requirements. Data residency, cross-border access and accountability across Australian and UK operations, informed by a career across APAC, ANZ and the UK.",
+      "takeaway": "A checklist for separating shared controls from local requirements and identifying where specialist legal or regulatory advice is needed."
+    }
+  ],
+  "formats": [
+    "Conference keynote (20–45 min)",
+    "Panel discussion and moderation",
+    "Executive or board briefing (45–90 min)",
+    "Workshop (half or full day)",
+    "Podcast and interview"
+  ],
+  "bios": [
+    {
+      "len": "One line",
+      "text": "Iyan Barry is a Brisbane-based CIO who works across technology leadership, cybersecurity, data, AI and automation."
+    },
+    {
+      "len": "Short bio",
+      "text": "Iyan Barry is Chief Information Officer at Safe Places for Children, leading technology, data and cybersecurity across Australian and UK operations. His career spans three decades across APAC, ANZ and the UK. He combines technology leadership with hands-on work in AI and automation, and speaks about what it takes to make technology useful in practice. He was a panellist at iTnews State of Data & AI in Sydney."
+    },
+    {
+      "len": "Full bio",
+      "text": "Iyan Barry is Chief Information Officer at Safe Places for Children, where he leads technology, data, cybersecurity and digital strategy across Australian and UK operations. He has spent three decades in technology, with experience across APAC, ANZ and the UK. His work includes developing IT teams, improving security, connecting systems and putting AI and automation to use. He has worked with the ACSC Essential Eight and ISO 27001-aligned controls, and is familiar with SMB1001 and ISO 27032. Alongside his executive role, he helps organisations with technology decisions and hands-on projects. He spoke on the “Scaling AI” panel alongside Workato and Tyro Payments at iTnews State of Data & AI in Sydney, and writes about technology leadership at iyanbarry.com."
+    }
+  ],
+  "downloads": [
+    {
+      "label": "Speaker kit",
+      "detail": "PDF · 2 pages",
+      "href": "/downloads/iyan-barry-speaker-kit.pdf"
+    },
+    {
+      "label": "Copyable bios",
+      "detail": "TXT · one-line, short and full bios",
+      "href": "/downloads/iyan-barry-bios.txt"
+    },
+    {
+      "label": "Portrait",
+      "detail": "JPG · approved photo, website crop",
+      "href": "/downloads/iyan-barry-portrait.jpg"
+    },
+    {
+      "label": "Square headshot",
+      "detail": "JPG · tighter square crop",
+      "href": "/downloads/iyan-barry-portrait-square.jpg"
+    }
+  ]
+}

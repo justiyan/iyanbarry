@@ -6,6 +6,10 @@ const DESCRIPTION =
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://iyanbarry.com'),
+  icons: {
+    icon: [{ url: '/favicon.ico', sizes: 'any' }, { url: '/icon.png', type: 'image/png', sizes: '192x192' }],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+  },
   title: {
     default: 'Iyan Barry – CIO | Technology, AI & Cybersecurity',
     template: '%s | Iyan Barry',

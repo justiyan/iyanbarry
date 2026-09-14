@@ -12,12 +12,15 @@ export const metadata: Metadata = {
 }
 
 const timeline = [
-  { y: '1996', t: 'Started in IT', d: 'The beginning of three decades across APAC, ANZ and UK organisations.' },
-  { y: '2021', t: 'Took on the IT leadership role', d: 'Began transforming an overwhelmed, reactive IT function into a strategic capability.' },
-  { y: '2022', t: 'Cybersecurity uplift programme', d: 'Improving Microsoft Secure Score, with ISO 27001-aligned controls and Essential Eight implementation.' },
-  { y: '2023', t: 'Practical AI and automation', d: 'Deploying AI tooling into day-to-day operations, with the governance to support it.' },
-  { y: '2024', t: 'Restructured the team into three delivery streams', d: 'Service delivery, technical delivery and project delivery — same people, clearer focus.' },
-  { y: '2026', t: 'Appointed Chief Information Officer', d: 'Leading technology, data, cyber and digital enablement across AU and a UK arm regulated by Ofsted.' },
+  { y: '1996', t: 'Started in IT', d: 'The beginning of a career combining hands-on technology with business and people leadership.' },
+  { y: '2002–2009', t: 'Commercial and customer-facing roles', d: 'International Business Manager at Intertranz Container Lines, followed by roles across account management, consulting, telecommunications and regional management. This part of my career gave me a grounding in customers and how businesses work.' },
+  { y: '2010–2012', t: 'Technology support at Suncorp', d: 'Moved from Business Technology Service Desk Analyst to Group Executive Support Analyst, working closer to the technology needs of senior leaders.' },
+  { y: '2012–Aug 2018', t: 'Delivery Manager at Suncorp Group', d: 'Led Group Executive & Premium Support: technology delivery for the CEO, board and executive team, alongside service improvement, vendor management and a distributed support team.' },
+  { y: 'Feb 2019–Jul 2021', t: 'ANZ Infrastructure Engineering Lead at Domino’s', d: 'Led infrastructure strategy and engineering across ANZ, including service modernisation, cloud collaboration, operational resilience and team development.' },
+  { y: 'Jul 2021', t: 'General Manager – Information Technology', d: 'Joined Safe Places for Children to lead technology strategy and operations. The role grew across cybersecurity, data, enterprise systems and Australian and UK technology services, working with the CEO and board.' },
+  { y: 'Sep 2023–Nov 2024', t: 'Board member, Magical Getaway Foundation', d: 'Contributed to the charity’s strategic direction, governance and financial oversight. A chance to bring a technology and business perspective to decisions beyond the IT function.' },
+  { y: '2026', t: 'Appointed Chief Information Officer', d: 'Leading technology, data, cybersecurity and digital enablement across Australian and UK operations.' },
+  { y: '2026', t: 'Internal AI platforms', d: 'Hands-on work bringing AI models, organisational knowledge and access controls into a usable platform. Sharing the build lessons without disclosing confidential project details.' },
 ]
 
 const values = [
@@ -90,7 +93,7 @@ export default function About() {
         <SectionHead num="02" title="Timeline" />
         <div className="max-w-[70ch]">
           {timeline.map((i) => (
-            <div key={i.y} className="grid grid-cols-[90px_1fr] gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1">
+            <div key={i.t} className="grid grid-cols-[150px_1fr] gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1">
               <span className="font-mono text-[12.5px] text-accent">{i.y}</span>
               <div>
                 <h3 className="mb-[3px] text-[16px] font-[550]">{i.t}</h3>
