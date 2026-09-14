@@ -1,0 +1,5 @@
+# Preserve generated document bytes and PDF cross-reference offsets.
+*.pdf binary
+*.ico binary
+*.png binary
+*.jpg binary
