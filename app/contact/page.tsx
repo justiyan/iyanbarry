@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Layout from '@/components/Layout'
+import ContactForm, { EmailOptions } from '@/components/ContactForm'
 import { Shell, Section, SectionHead } from '@/components/ui'
 
 export const metadata: Metadata = {
@@ -28,10 +29,8 @@ export default function Contact() {
             Tell me what you’re working on, or where you’re stuck. If I’m not the right
             person to help, I’ll say so.
           </p>
-          <div className="flex flex-wrap items-center gap-s3">
-            <a href="mailto:ask@iyanbarry.com" className="rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
-              ask@iyanbarry.com
-            </a>
+          {process.env.CONTACT_FORM_ENABLED === 'true' ? <ContactForm /> : <EmailOptions />}
+          <div className="mt-s4 flex flex-wrap items-center gap-s3">
             <a href="https://au.linkedin.com/in/iyanbarry" target="_blank" rel="noopener noreferrer"
               className="rounded-btn border border-hairline px-s4 py-[11px] text-[14.5px] font-medium text-ink transition-colors hover:border-ink-3 hover:bg-surface-2">
               LinkedIn
