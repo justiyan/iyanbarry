@@ -33,11 +33,11 @@ const values = [
 export default function About() {
   return (
     <Layout>
-      <div className="border-b border-hairline">
-        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
-          <div className="grid grid-cols-[1fr_300px] items-start gap-s6 max-lg:grid-cols-1 max-lg:gap-s5">
-            <div className="max-lg:order-2">
-              <h1 className="mb-s5 max-w-[16ch] text-[clamp(34px,4.2vw,52px)] font-semibold">About</h1>
+      <div className="page-hero">
+        <Shell>
+          <div className="grid grid-cols-[minmax(0,1.4fr)_minmax(260px,0.8fr)] items-start gap-16 max-lg:grid-cols-1 max-lg:gap-s5">
+            <div className="min-w-0">
+              <h1 className="page-title mb-s5 max-w-[16ch]">About</h1>
               <div className="max-w-prose space-y-s4 text-[17.5px] leading-[1.72] text-ink-2">
                 <p>
                   I’m based in Brisbane, where I serve as Chief Information Officer at Safe Places
@@ -72,7 +72,7 @@ export default function About() {
               </div>
             </div>
             <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry, Chief Information Officer" width={600} height={670}
-              className="h-[375px] w-[300px] rounded-xl border border-hairline bg-surface-2 object-cover object-[50%_28%] max-lg:order-1 max-lg:h-[260px] max-lg:w-[210px]" />
+              className="editorial-portrait w-full max-w-[420px] justify-self-end max-lg:justify-self-start max-lg:max-w-[340px]" />
           </div>
         </Shell>
       </div>
@@ -81,9 +81,9 @@ export default function About() {
         <SectionHead num="01" title="What I bring to the work" />
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {capabilities.map((c) => (
-            <div key={c.title} className="rounded-card border border-hairline p-s5">
-              <h3 className="mb-s2 text-[19px] font-semibold">{c.title}</h3>
-              <p className="text-[15px] leading-[1.65] text-ink-2">{c.examples}</p>
+            <div key={c.title} className="border-t border-hairline py-7 md:pr-8">
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">{c.title}</h3>
+              <p className="text-[16px] leading-[1.75] text-ink-2">{c.examples}</p>
             </div>
           ))}
         </div>
@@ -91,13 +91,13 @@ export default function About() {
 
       <Section>
         <SectionHead num="02" title="Timeline" />
-        <div className="max-w-[70ch]">
+        <div className="max-w-[1000px]">
           {timeline.map((i) => (
-            <div key={i.t} className="grid grid-cols-[150px_1fr] gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1">
-              <span className="font-mono text-[12.5px] text-accent">{i.y}</span>
+            <div key={i.t} className="grid grid-cols-[190px_1fr] gap-10 border-b border-hairline py-8 first:border-t max-md:grid-cols-1 max-md:gap-3">
+              <span className="pt-1 text-[14px] text-accent">{i.y}</span>
               <div>
-                <h3 className="mb-[3px] text-[16px] font-[550]">{i.t}</h3>
-                <p className="text-[14.5px] text-ink-3">{i.d}</p>
+                <h3 className="mb-3 font-display text-[26px] font-normal leading-tight">{i.t}</h3>
+                <p className="text-[16px] leading-[1.75] text-ink-2">{i.d}</p>
               </div>
             </div>
           ))}
@@ -108,9 +108,9 @@ export default function About() {
         <SectionHead num="03" title="How I work" />
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {values.map((v) => (
-            <div key={v.t} className="rounded-card border border-hairline p-s5">
-              <h3 className="mb-s2 text-[16px] font-semibold">{v.t}</h3>
-              <p className="text-[14.5px] leading-[1.62] text-ink-2">{v.d}</p>
+            <div key={v.t} className="border-t border-hairline py-7 md:pr-8">
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">{v.t}</h3>
+              <p className="text-[16px] leading-[1.75] text-ink-2">{v.d}</p>
             </div>
           ))}
         </div>
@@ -118,12 +118,12 @@ export default function About() {
 
       <Section className="!border-b-0">
         <div className="max-w-[62ch]">
-          <h2 className="mb-s3 text-[30px] font-semibold">Work with me</h2>
+          <h2 className="section-title mb-s3">Work with me</h2>
           <p className="mb-s5 text-[17px] text-ink-2">
             Alongside my CIO role, I work with a small number of organisations on advice and
             hands-on projects. If you think I could help, tell me what you’re working on.
           </p>
-          <Link href="/work-with-me" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
+          <Link href="/work-with-me" className="btn-primary">
             Ways we can work together
           </Link>
         </div>

@@ -3,7 +3,7 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
 
 const email = 'ask@iyanbarry.com'
-const fieldClass = 'mt-s2 w-full rounded-btn border border-hairline-strong bg-white px-s3 py-3 text-[16px] text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-soft disabled:bg-surface-2'
+const fieldClass = 'mt-s2 w-full rounded-[4px] border border-hairline-strong bg-surface px-s3 py-3 text-[16px] text-ink focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent-soft disabled:bg-surface-2'
 const secondaryButtonClass = 'rounded-btn border border-hairline px-s4 py-3 text-[14.5px] font-medium transition-colors hover:border-ink-3 hover:bg-surface-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent'
 
 async function contactRequest(options: RequestInit, timeoutMs: number) {
@@ -151,7 +151,7 @@ export default function ContactForm() {
   }
 
   return (
-    <div className="max-w-[680px]">
+    <div className="contact-form max-w-[680px]">
       <form onSubmit={submit} aria-describedby="contact-privacy" className="space-y-s4">
         <div>
           <label htmlFor="contact-name" className="text-[14.5px] font-medium">Name</label>

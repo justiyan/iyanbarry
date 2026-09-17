@@ -48,22 +48,22 @@ export default async function BlogPostPage({ params }: Props) {
     <Layout>
       <article>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema).replace(/</g, '\\u003c') }} />
-        <div className="border-b border-hairline">
-          <Shell className="pb-s6 pt-s6">
-            <Link href="/blog" className="mb-s5 inline-block font-mono text-[12px] text-ink-3 transition-colors hover:text-accent">
+        <div className="page-hero">
+          <Shell>
+            <Link href="/blog" className="text-link mb-s5">
               ← All writing
             </Link>
             <div className="mb-s3 flex flex-wrap items-end gap-s3">
               <PostDate date={post.date} updated={post.updated} />
-              <span className="font-mono text-[12px] text-ink-3">{post.readingMinutes} min read</span>
+              <span className="text-[13px] text-ink-3">{post.readingMinutes} min read</span>
               {post.tags.map((t) => (
-                <span key={t} className="font-mono text-[11px] uppercase tracking-[0.03em] text-accent">{t}</span>
+                <span key={t} className="text-[13px] text-accent">{t}</span>
               ))}
             </div>
             {post.updated && (
-              <p className="mb-s4 text-[12px] text-ink-3">Originally published {formatPostDate(post.date, true)}</p>
+              <p className="mb-s4 text-[14px] text-ink-3">Originally published {formatPostDate(post.date, true)}</p>
             )}
-            <h1 className="max-w-[22ch] text-[clamp(30px,3.6vw,44px)] font-semibold">{post.title}</h1>
+            <h1 className="page-title max-w-[24ch]">{post.title}</h1>
             {post.summary && (
               <p className="mt-s4 max-w-[62ch] text-[18px] leading-[1.6] text-ink-2">{post.summary}</p>
             )}
@@ -77,12 +77,12 @@ export default async function BlogPostPage({ params }: Props) {
         <div className="border-t border-hairline">
           <Shell className="py-s6">
             <div className="max-w-[62ch]">
-              <h2 className="mb-s3 text-[24px] font-semibold">Working on something similar?</h2>
+              <h2 className="section-title mb-s3">Working on something similar?</h2>
               <p className="mb-s4 text-[16px] text-ink-2">
                 If this connects with something you’re working through, I’m happy to talk about
                 where you’re stuck and whether I can help.
               </p>
-              <Link href="/work-with-me" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
+              <Link href="/work-with-me" className="btn-primary">
                 See how I work
               </Link>
             </div>

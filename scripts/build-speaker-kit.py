@@ -12,7 +12,7 @@ from pathlib import Path
 from xml.sax.saxutils import escape
 
 import fitz
-from PIL import Image, ImageOps
+from PIL import Image, ImageDraw, ImageFont, ImageOps
 from reportlab.lib.colors import HexColor
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import ParagraphStyle
@@ -21,12 +21,13 @@ from reportlab.platypus import Paragraph
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_PHOTO = Path('C:/Users/RPizzy2/AppData/Local/hermes/cache/images/img_d2f7a2c80e36.jpg')
-INK, MUTED, BLUE, LINE = (HexColor(x) for x in ['#0b0d0f', '#3d444d', '#1f5fd0', '#e4e8ec'])
+INK, MUTED, ACCENT, PARCHMENT, SAGE = (HexColor(x) for x in ['#203b39', '#53615b', '#24645c', '#f4f2e9', '#e1e7db'])
+LINE = SAGE
 W, H = A4
 LEFT, RIGHT = 46, W - 46
 
 
-def build(portrait=None, render_dir=None):
+def build(portrait=None, render_dir=None, pdf_only=False):
     data_path = ROOT / 'lib/speaker-kit.json'
     data = json.loads(data_path.read_text(encoding='utf-8'))
     out = ROOT / 'public/downloads'
@@ -41,7 +42,11 @@ def build(portrait=None, render_dir=None):
     if website_crop:
         photo = ROOT / 'public/images/iyan-barry-cio.jpg'
         print('NOTE: uncropped original missing; preserving the approved website crop, labelled as such.')
-    if photo.is_file():
+    if pdf_only:
+        square = out / 'iyan-barry-portrait-square.jpg'
+        if not square.is_file():
+            raise FileNotFoundError('PDF-only refresh requires the existing approved square headshot.')
+    elif photo.is_file():
         original = out / ('iyan-barry-portrait.jpg' if website_crop else 'iyan-barry-portrait-original.jpg')
         square = out / 'iyan-barry-portrait-square.jpg'
         with Image.open(photo) as source:
@@ -68,7 +73,8 @@ def build(portrait=None, render_dir=None):
     bio_text = data['name'] + ' | Speaker bios\n' + data['website'] + '\n\n'
     bio_text += '\n\n'.join(b['len'].upper() + '\n' + b['text'] for b in data['bios'])
     bio_text += '\n\nSpeaking enquiries: ' + data['contact'] + '\n'
-    (out / 'iyan-barry-bios.txt').write_text(bio_text, encoding='utf-8')
+    if not pdf_only:
+        (out / 'iyan-barry-bios.txt').write_text(bio_text, encoding='utf-8')
     pdf_path = out / 'iyan-barry-speaker-kit.pdf'
     c = canvas.Canvas(str(pdf_path), pagesize=A4, pageCompression=1)
     c.setTitle('Iyan Barry | Speaker kit')
@@ -76,7 +82,8 @@ def build(portrait=None, render_dir=None):
     c.setSubject('Speaking topics, audience takeaways, formats and approved biographies')
 
     def text(value, x, top, width, size: float = 10, leading: float = 14, color=MUTED, bold=False):
-        style = ParagraphStyle('text', fontName='Helvetica-Bold' if bold else 'Helvetica',
+        font = 'Times-Roman' if size >= 12 and bold else ('Helvetica-Bold' if bold else 'Helvetica')
+        style = ParagraphStyle('text', fontName=font,
                                fontSize=size, leading=leading, textColor=color)
         p = Paragraph(escape(value), style)
         _, height = p.wrap(width, H)
@@ -91,13 +98,20 @@ def build(portrait=None, render_dir=None):
         c.setFont('Helvetica', 8)
         c.setFillColor(MUTED)
         c.drawString(LEFT, 29, 'IYAN BARRY  /  SPEAKER KIT')
-        c.setFillColor(BLUE)
+        c.setFillColor(ACCENT)
         c.drawString(265, 29, 'iyanbarry.com/contact')
         c.linkURL(data['contact'], (263, 25, 390, 40), relative=0)
         c.setFillColor(MUTED)
         c.drawRightString(RIGHT, 29, f'{page} / 2')
 
-    text('SPEAKING & MEDIA', LEFT, 37, 350, 9, 12, BLUE, True)
+    def background():
+        c.setFillColor(PARCHMENT)
+        c.rect(0, 0, W, H, fill=1, stroke=0)
+        c.setFillColor(SAGE)
+        c.rect(0, H - 18, W, 18, fill=1, stroke=0)
+
+    background()
+    text('SPEAKING & MEDIA', LEFT, 37, 350, 9, 12, ACCENT, True)
     text(data['name'], LEFT, 61, 355, 34, 39, INK, True)
     text(data['role'], LEFT, 108, 360, 11, 15, INK)
     text(data['location'], LEFT, 128, 360, 9, 12)
@@ -105,27 +119,28 @@ def build(portrait=None, render_dir=None):
     if square:
         c.drawImage(str(square), RIGHT - 94, H - 141, width=94, height=94, mask='auto')
     y = text(data['intro'], LEFT, 161, intro_width, 10.5, 15) + 21
-    text('01  /  TOPICS & AUDIENCE TAKEAWAYS', LEFT, y, RIGHT - LEFT, 9, 12, BLUE, True)
+    text('01  /  TOPICS & AUDIENCE TAKEAWAYS', LEFT, y, RIGHT - LEFT, 9, 12, ACCENT, True)
     y += 28
     for index, topic in enumerate(data['topics'], 1):
-        text(f'{index:02}', LEFT, y + 1, 25, 9, 12, BLUE)
+        text(f'{index:02}', LEFT, y + 1, 25, 9, 12, ACCENT)
         x, width = LEFT + 34, RIGHT - LEFT - 34
         y = text(topic['title'], x, y, width, 12, 15, INK, True) + 3
-        y = text(topic['audience'], x, y, width, 8, 11, BLUE) + 4
+        y = text(topic['audience'], x, y, width, 8, 11, ACCENT) + 4
         y = text(topic['takeaway'], x, y, width, 10, 13) + 12
         c.setStrokeColor(LINE)
         c.line(x, H - y + 4, RIGHT, H - y + 4)
     footer(1)
     c.showPage()
-    text('02  /  FOR EVENT ORGANISERS', LEFT, 39, RIGHT - LEFT, 9, 12, BLUE, True)
+    background()
+    text('02  /  FOR EVENT ORGANISERS', LEFT, 39, RIGHT - LEFT, 9, 12, ACCENT, True)
     text('Bios & booking', LEFT, 64, RIGHT - LEFT, 28, 34, INK, True)
     y = 119
     for bio in data['bios']:
-        y = text(bio['len'].upper(), LEFT, y, RIGHT - LEFT, 8, 11, BLUE, True) + 6
+        y = text(bio['len'].upper(), LEFT, y, RIGHT - LEFT, 8, 11, ACCENT, True) + 6
         y = text(bio['text'], LEFT, y, RIGHT - LEFT, 10, 14) + 19
     y += 2
-    text('FORMATS', LEFT, y, 190, 8, 11, BLUE, True)
-    text('PLANNING AN EVENT?', 315, y, RIGHT - 315, 8, 11, BLUE, True)
+    text('FORMATS', LEFT, y, 190, 8, 11, ACCENT, True)
+    text('PLANNING AN EVENT?', 315, y, RIGHT - 315, 8, 11, ACCENT, True)
     y += 23
     for line in data['formats']:
         text(line, LEFT, y, 242, 9, 13)
@@ -133,7 +148,7 @@ def build(portrait=None, render_dir=None):
     booking_top = y - 105
     text('Tell me the audience, the date and what you want them to walk away with. I will tell you honestly whether I am the right speaker for it.', 315, booking_top, RIGHT - 315, 10, 14)
     link_y = booking_top + 87
-    text('iyanbarry.com/contact', 315, link_y, RIGHT - 315, 10, 14, BLUE, True)
+    text('iyanbarry.com/contact', 315, link_y, RIGHT - 315, 10, 14, ACCENT, True)
     c.linkURL(data['contact'], (315, H - link_y - 16, RIGHT, H - link_y + 2), relative=0)
     footer(2)
     c.save()
@@ -147,9 +162,28 @@ def build(portrait=None, render_dir=None):
         print(json.dumps({'pdf': str(pdf_path), 'pages': len(pdf), 'bios': str(out / 'iyan-barry-bios.txt'), 'portrait_created': bool(square), 'bytes': pdf_path.stat().st_size}))
 
 
+def build_icons():
+    """Render the editorial IB monogram; preserve the public icon dimensions."""
+    font_path = Path('C:/Windows/Fonts/georgia.ttf')
+    font = ImageFont.truetype(str(font_path) if font_path.exists() else 'DejaVuSerif.ttf', 530)
+    image = Image.new('RGB', (1024, 1024), '#24645c')
+    draw = ImageDraw.Draw(image)
+    bounds = draw.textbbox((0, 0), 'IB', font=font)
+    x = (1024 - (bounds[2] - bounds[0])) / 2 - bounds[0]
+    y = (1024 - (bounds[3] - bounds[1])) / 2 - bounds[1]
+    draw.text((x, y), 'IB', font=font, fill='#f4f2e9')
+    for filename, size in [('icon.png', 192), ('apple-touch-icon.png', 180)]:
+        image.resize((size, size), Image.Resampling.LANCZOS).save(ROOT / 'public' / filename)
+    image.save(ROOT / 'public/favicon.ico', sizes=[(s, s) for s in (16, 24, 32, 48, 64, 128, 256)])
+
+
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--portrait', help='Approved real JPEG; default uses the original or its documented website crop')
     parser.add_argument('--render-dir', help='Optional directory for visual QA PNGs')
+    parser.add_argument('--pdf-only', action='store_true', help='Refresh PDF without rewriting shared content, bios or approved photographs')
+    parser.add_argument('--icons', action='store_true', help='Also refresh the editorial IB icons')
     args = parser.parse_args()
-    build(args.portrait, args.render_dir)
+    build(args.portrait, args.render_dir, args.pdf_only)
+    if args.icons:
+        build_icons()

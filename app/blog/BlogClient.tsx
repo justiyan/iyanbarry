@@ -24,9 +24,9 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
 
   return (
     <>
-      <div className="border-b border-hairline">
-        <Shell className="pb-s6 pt-s7 max-md:pt-s6">
-          <h1 className="mb-s4 max-w-[18ch] text-[clamp(34px,4.2vw,52px)] font-semibold">Writing</h1>
+      <div className="page-hero">
+        <Shell>
+          <h1 className="page-title mb-s4 max-w-[18ch]">Writing</h1>
           <p className="max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
             Practical writing about leading technology teams, building useful tools and making
             better decisions about AI, security and data. The details that matter when you have
@@ -39,8 +39,8 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
         <div className="mb-s5 flex flex-wrap gap-s2">
           <button
             onClick={() => setTag(null)}
-            className={`rounded-full border px-[13px] py-[5px] font-mono text-[11px] uppercase tracking-[0.03em] transition-colors ${
-              tag === null ? 'border-ink bg-ink text-white' : 'border-hairline text-ink-2 hover:border-ink-3'
+            className={`min-h-[44px] rounded-full border px-4 py-2 text-[14px] transition-colors ${
+              tag === null ? 'border-accent bg-accent text-surface' : 'border-hairline text-ink-2 hover:border-accent'
             }`}
           >
             All
@@ -49,8 +49,8 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             <button
               key={t}
               onClick={() => setTag(t)}
-              className={`rounded-full border px-[13px] py-[5px] font-mono text-[11px] uppercase tracking-[0.03em] transition-colors ${
-                tag === t ? 'border-ink bg-ink text-white' : 'border-hairline text-ink-2 hover:border-ink-3'
+              className={`min-h-[44px] rounded-full border px-4 py-2 text-[14px] transition-colors ${
+                tag === t ? 'border-accent bg-accent text-surface' : 'border-hairline text-ink-2 hover:border-accent'
               }`}
             >
               {t}
@@ -59,34 +59,34 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
         </div>
 
         {featured && (
-          <article data-featured-post className="mb-s6 rounded-card border border-hairline bg-surface-2 p-s5 max-md:p-s4">
-            <p className="mb-s3 font-mono text-[11px] uppercase tracking-[0.04em] text-accent">Latest writing</p>
-            <h2 className="mb-s3 max-w-[30ch] text-[clamp(24px,3vw,34px)] font-semibold">
+          <article data-featured-post className="mb-s6 border-y border-hairline bg-surface-2 p-8 md:p-12 max-md:px-5">
+            <p className="eyebrow mb-s4">Latest writing</p>
+            <h2 className="mb-s4 max-w-[30ch] font-display text-[clamp(30px,3.8vw,48px)] font-normal leading-[1.15] tracking-[-0.03em]">
               <Link href={`/blog/${featured.slug}`} className="hover:text-accent">{featured.title}</Link>
             </h2>
             <p className="mb-s4 max-w-[65ch] text-[17px] leading-[1.65] text-ink-2">{featured.summary}</p>
             <div className="flex flex-wrap items-end gap-s4">
               <PostDate date={featured.date} updated={featured.updated} />
-              <span className="font-mono text-[12px] text-ink-3">{featured.readingMinutes} min read</span>
-              <Link href={`/blog/${featured.slug}`} className="text-[14px] font-medium text-accent hover:underline">Read the article →</Link>
+              <span className="text-[13px] text-ink-3">{featured.readingMinutes} min read</span>
+              <Link href={`/blog/${featured.slug}`} className="text-link">Read the article →</Link>
             </div>
           </article>
         )}
 
-        <div data-post-list>
+        <div data-post-list className="article-list">
           {listed.map((p) => (
             <Link
               key={p.slug}
               href={`/blog/${p.slug}`}
-              className="group grid grid-cols-[120px_1fr] items-baseline gap-s5 border-b border-hairline py-s4 first:border-t max-md:grid-cols-1 max-md:gap-s1"
+              className="group grid grid-cols-[175px_1fr] items-baseline gap-7 border-b border-hairline py-8 first:border-t max-md:grid-cols-1 max-md:gap-3"
             >
               <PostDate date={p.date} updated={p.updated} />
               <div>
-                <h2 className="mb-[4px] text-[17px] font-[550] transition-colors group-hover:text-accent">
+                <h2 className="mb-3 font-display text-[28px] font-normal leading-[1.25] tracking-[-0.02em] transition-colors group-hover:text-accent">
                   {p.title}
                 </h2>
-                <p className="text-[14.5px] text-ink-3">{p.summary}</p>
-                <p className="mt-s2 font-mono text-[11px] text-ink-3">{p.readingMinutes} min read</p>
+                <p className="text-[16px] leading-[1.7] text-ink-2">{p.summary}</p>
+                <p className="mt-s2 text-[13px] text-ink-3">{p.readingMinutes} min read</p>
               </div>
             </Link>
           ))}
@@ -96,7 +96,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           <p className="py-s6 text-[15px] text-ink-3">No posts with that tag yet.</p>
         )}
 
-        <p className="mt-s5 font-mono text-[12px] text-ink-3">
+        <p className="mt-s5 text-[14px] text-ink-3">
           {filtered.length} of {posts.length} posts
         </p>
         <p className="mt-s3 max-w-[65ch] text-[13px] text-ink-3">

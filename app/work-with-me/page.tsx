@@ -83,9 +83,9 @@ const steps = [
 export default function WorkWithMe() {
   return (
     <Layout>
-      <div className="border-b border-hairline">
-        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
-          <h1 className="mb-s4 max-w-[18ch] text-[clamp(34px,4.2vw,52px)] font-semibold">
+      <div className="page-hero">
+        <Shell>
+          <h1 className="page-title mb-s4 max-w-[18ch]">
             Let’s work on what’s next.
           </h1>
           <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
@@ -93,7 +93,7 @@ export default function WorkWithMe() {
             systems or getting an AI idea into use. I work with you and your team to figure out
             what’s needed, then help get it done.
           </p>
-          <Link href="/contact" className="inline-block rounded-btn bg-ink px-s4 py-[11px] text-[14.5px] font-medium text-white transition-colors hover:bg-accent">
+          <Link href="/contact" className="btn-primary">
             Let’s talk
           </Link>
         </Shell>
@@ -104,7 +104,7 @@ export default function WorkWithMe() {
         <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
           {capabilities.map((c) => (
             <Card key={c.title}>
-              <h3 className="mb-s2 text-[19px] font-semibold">{c.title}</h3>
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">{c.title}</h3>
               <p className="mb-s3 text-[15px] leading-[1.65] text-ink-2">{c.summary}</p>
               <p className="border-t border-hairline pt-s3 text-[14px] text-ink-2">{c.examples}</p>
             </Card>
@@ -117,7 +117,7 @@ export default function WorkWithMe() {
         <div className="grid grid-cols-2 gap-s6 max-lg:grid-cols-1">
           <div>
             <Tag>A featured offering</Tag>
-            <h3 className="mb-s3 text-[23px] font-semibold">An AI platform built around your organisation.</h3>
+            <h3 className="mb-s4 font-display text-[34px] font-normal leading-tight">An AI platform built around your organisation.</h3>
             <p className="mb-s4 text-[16px] leading-[1.65] text-ink-2">
               Give your people one place to work with AI, using the models and company knowledge
               that fit their tasks. We start with what they need to do and how the information
@@ -139,8 +139,8 @@ export default function WorkWithMe() {
             </p>
           </div>
           <div className="space-y-s5">
-            <div className="rounded-card border border-hairline bg-surface-2 p-s5">
-              <h3 className="mb-s3 text-[19px] font-semibold">What “internal” means</h3>
+            <div className="bg-surface-2 p-7 md:p-9">
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">What “internal” means</h3>
               <p className="text-[15px] leading-[1.65] text-ink-2">
                 The app can run in your organisation’s cloud environment, while model requests
                 may still go to external managed services. We check where each service processes
@@ -150,7 +150,7 @@ export default function WorkWithMe() {
               </p>
             </div>
             <div>
-              <h3 className="mb-s3 text-[19px] font-semibold">What building one taught me</h3>
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">What building one taught me</h3>
               <p className="text-[15px] leading-[1.65] text-ink-2">
                 Building an internal AI platform changed how I approach this work. A lot of the
                 important decisions never show up in a demo: which documents someone can access,
@@ -161,14 +161,14 @@ export default function WorkWithMe() {
           </div>
         </div>
         <div className="mt-s6 border-t border-hairline pt-s5">
-          <h3 className="mb-s4 text-[23px] font-semibold">From assessment to a working platform</h3>
+          <h3 className="mb-s5 font-display text-[32px] font-normal leading-tight">From assessment to a working platform</h3>
           <div className="grid grid-cols-2 gap-s5 max-md:grid-cols-1">
             <div><h4 className="mb-s2 text-[17px]">Assess the need</h4><p className="text-[15px] text-ink-2">Identify useful tasks, permitted data and existing products or licences. If an existing enterprise product meets the requirements, I recommend it rather than a custom build.</p></div>
             <div><h4 className="mb-s2 text-[17px]">Agree the design</h4><p className="text-[15px] text-ink-2">Document identity and access, knowledge sources, model endpoints, processing locations, retention and support responsibilities.</p></div>
             <div><h4 className="mb-s2 text-[17px]">Build and pilot</h4><p className="text-[15px] text-ink-2">Implement the agreed platform and test it with a defined user group. Check retrieval permissions, answer quality and data flows before wider use.</p></div>
             <div><h4 className="mb-s2 text-[17px]">Handover and support</h4><p className="text-[15px] text-ink-2">Provide operating documentation and agree who maintains the platform, reviews model changes and handles incidents. Ongoing support is separately scoped.</p></div>
           </div>
-          <Link href="/contact" className="mt-s5 inline-block text-[15px] font-medium text-accent hover:underline">Discuss your use case →</Link>
+          <Link href="/contact" className="text-link mt-s5">Discuss your use case →</Link>
         </div>
       </Section>
 
@@ -201,11 +201,11 @@ export default function WorkWithMe() {
 
       <Section>
         <SectionHead num="04" title="Ways we can work together" />
-        <div className="grid grid-cols-2 gap-[26px] max-lg:grid-cols-1">
+        <div className="grid grid-cols-2 gap-x-16 gap-y-10 max-lg:grid-cols-1">
           {engagements.map((e) => (
             <Card key={e.title}>
               <Tag>{e.tag}</Tag>
-              <h3 className="mb-s2 text-[19px] font-semibold">{e.title}</h3>
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">{e.title}</h3>
               <p className="mb-s4 text-[14.5px] leading-[1.62] text-ink-2">{e.summary}</p>
               <ul className="mb-s4 space-y-s2">
                 {e.includes.map((i) => (
@@ -231,8 +231,8 @@ export default function WorkWithMe() {
         <div className="grid grid-cols-3 gap-[26px] max-md:grid-cols-1">
           {steps.map((s) => (
             <div key={s.n}>
-              <div className="mb-s3 font-mono text-[13px] text-accent">0{s.n}</div>
-              <h3 className="mb-s2 text-[17px] font-semibold">{s.t}</h3>
+              <div className="mb-s3 border-t border-hairline pt-6 text-[13px] text-accent">0{s.n}</div>
+              <h3 className="mb-s3 font-display text-[27px] font-normal leading-tight">{s.t}</h3>
               <p className="text-[14.5px] leading-[1.62] text-ink-2">{s.d}</p>
             </div>
           ))}

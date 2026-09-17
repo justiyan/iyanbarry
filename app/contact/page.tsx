@@ -20,9 +20,9 @@ const reasons = [
 export default function Contact() {
   return (
     <Layout>
-      <div className="border-b border-hairline">
-        <Shell className="pb-[120px] pt-s7 max-md:pb-s6 max-md:pt-s6">
-          <h1 className="mb-s4 max-w-[16ch] text-[clamp(34px,4.2vw,52px)] font-semibold">
+      <div className="page-hero">
+        <Shell>
+          <h1 className="page-title mb-s4 max-w-[16ch]">
             Get in touch
           </h1>
           <p className="mb-s5 max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
@@ -32,7 +32,7 @@ export default function Contact() {
           {process.env.CONTACT_FORM_ENABLED === 'true' ? <ContactForm /> : <EmailOptions />}
           <div className="mt-s4 flex flex-wrap items-center gap-s3">
             <a href="https://au.linkedin.com/in/iyanbarry" target="_blank" rel="noopener noreferrer"
-              className="rounded-btn border border-hairline px-s4 py-[11px] text-[14.5px] font-medium text-ink transition-colors hover:border-ink-3 hover:bg-surface-2">
+              className="text-link">
               LinkedIn
             </a>
           </div>
@@ -44,11 +44,11 @@ export default function Contact() {
 
       <Section className="!border-b-0">
         <SectionHead num="01" title="What to reach out about" />
-        <div className="grid grid-cols-2 gap-[26px] max-md:grid-cols-1">
+        <div className="grid grid-cols-2 gap-x-16 gap-y-5 max-md:grid-cols-1">
           {reasons.map((r) => (
-            <div key={r.t} className="rounded-card border border-hairline p-s5">
-              <h3 className="mb-s2 text-[16px] font-semibold">{r.t}</h3>
-              <p className="text-[14.5px] leading-[1.62] text-ink-2">{r.d}</p>
+            <div key={r.t} className="border-t border-hairline py-7">
+              <h3 className="mb-s3 font-display text-[28px] font-normal leading-tight">{r.t}</h3>
+              <p className="text-[16px] leading-[1.75] text-ink-2">{r.d}</p>
             </div>
           ))}
         </div>
