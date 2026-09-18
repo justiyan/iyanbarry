@@ -71,7 +71,7 @@ export default function About() {
                 </p>
               </div>
             </div>
-            <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry, Chief Information Officer" width={600} height={670}
+            <img src="/images/iyan-barry-parchment.webp" alt="Iyan Barry, Chief Information Officer" width={600} height={670}
               className="editorial-portrait w-full max-w-[420px] justify-self-end max-lg:justify-self-start max-lg:max-w-[340px]" />
           </div>
         </Shell>

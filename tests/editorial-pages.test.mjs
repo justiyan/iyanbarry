@@ -24,7 +24,8 @@ function contentFingerprint(file) {
   function visit(node) {
     if (ts.isJsxAttribute(node) && ['className', 'aria-pressed'].includes(node.name.getText(source))) return
     if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node) || ts.isJsxText(node)) {
-      const text = node.text.replace(/\s+/g, ' ').trim()
+      // Approved background-only derivative is the same portrait, not a copy change.
+      const text = node.text.replace('/images/iyan-barry-parchment.webp', '/images/iyan-barry-cio.jpg').replace(/\s+/g, ' ').trim()
       if (text) parts.push(text)
     }
     ts.forEachChild(node, visit)

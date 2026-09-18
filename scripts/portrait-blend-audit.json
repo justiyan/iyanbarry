@@ -1,0 +1,16 @@
+{
+  "source_sha256": "007a1b93960c97a79b1084c22a27b4b054b8e3d6744c31a7b0e68530669ba021",
+  "output_sha256": "66cd6253b044de90629ee392a66fb6d3de2ba9a1bd59676d29d644b2d4a944d5",
+  "size": [
+    1400,
+    1400
+  ],
+  "background_pixels": 1133826,
+  "subject_pixels_unchanged": true,
+  "target_rgb": [
+    244,
+    242,
+    233
+  ],
+  "method": "U2-Net human protection + border-connected neutral backdrop; 2px inward background-only feather; no subject regeneration"
+}

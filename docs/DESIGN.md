@@ -18,7 +18,7 @@ Fraunces is the display face; DM Sans is body/interface text. The three Latin va
 `app/globals.css` owns tokens and editorial components. Tailwind aliases reference those variables instead of duplicating colours. Shared Header/Footer/Layout/ui components carry the design across every route. Homepage follows the approved preview; inner pages preserve their original copy, timeline, URLs, schemas and dates with semantic content-fingerprint tests.
 
 ## Images and downloads
-The approved portrait is unchanged apart from the existing CSS crop/arch. A background blend has been discussed, but is not part of this rollout. Do not replace or recolour the person's likeness.
+The user subsequently approved blending the on-page portrait background into the parchment. Home, About and Speaking use `iyan-barry-parchment.webp`, a lossless derivative created by `scripts/blend-portrait-background.py`. A U2-Net human mask protects light clothing; only the border-connected neutral backdrop is replaced, with a 2px inward feather. The subject is not generated, recoloured or retouched. `scripts/portrait-blend-audit.json` and the saved background mask record the process. The original JPEG and downloadable headshots remain unchanged. The model used for regeneration is cached outside the repository at the path in the script.
 
 Speaker PDF and IB icons match the palette. `python scripts/build-speaker-kit.py --pdf-only` refreshes the PDF without rewriting bios or portrait downloads; existing icon-generation entry points are in that script. `python scripts/build-social-card.py` creates the matching social card from the approved portrait, without a generated likeness.
 

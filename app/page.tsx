@@ -18,7 +18,7 @@ export default function Home() {
             <div className="home-actions"><Link href="/contact" data-hero-cta className="btn-primary">Let’s talk <span aria-hidden="true">↗</span></Link><Link href="#capabilities" className="text-link">How I can help <span aria-hidden="true">↓</span></Link></div>
           </div>
           <figure>
-            <img src="/images/iyan-barry-cio.jpg" alt="Iyan Barry, Chief Information Officer, Brisbane" width={680} height={760} fetchPriority="high" className="editorial-portrait" />
+            <img src="/images/iyan-barry-parchment.webp" alt="Iyan Barry, Chief Information Officer, Brisbane" width={680} height={760} fetchPriority="high" className="editorial-portrait" />
             <figcaption className="portrait-caption"><span>IYAN BARRY</span><span>Leadership + hands-on delivery</span></figcaption>
           </figure>
         </section>
