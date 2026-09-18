@@ -12,10 +12,12 @@ const contentBaselines = {
   'app/work-with-me/page.tsx': '477c29c85925b59e8eeee6b520785bbc372dfdc5561df989433ca7a8ddd9c354',
   'app/speaking/page.tsx': '5cb2724e1f84abb95e24b023f9aaf2b3bd600eef1cb356118024ca27d9097906',
   'app/contact/page.tsx': 'defc4adf88cbb1e4f8f9f95619a83b6959183e10406d9844450d770e30b5c808',
-  'app/blog/BlogClient.tsx': 'b26e148454d59894f70e3d54f72d7a1f7ed2bc87376ae7a945c6fa9c83504156',
+  // Approved Writing library expansion: search/pagination and honest retrospective
+  // labels. Unrelated page baselines remain unchanged; behavior has fixture tests.
+  'app/blog/BlogClient.tsx': '86e68698b688bb69ed9426c0cb2a1530c9b3eafd8535a13b28598ea69adaab1d',
   'app/blog/page.tsx': '358a7fabed459fb3e521f396dfe05b22f6b6d642571ae81442912dfd36bbe8f7',
-  'app/blog/[slug]/page.tsx': '03352292f5f8c229e9b9789a79aed0c9ee99d19a8bbbb705c222b3072dd6df82',
-  'components/PostDate.tsx': '57bbe63ad8e4819352888ebf8dc9b8b001ef2389c4a9573296a2079406b92e0a',
+  'app/blog/[slug]/page.tsx': 'd1156966da9d17667738d9b65ee3208306b61b5eb89be84d75e72467148ae97f',
+  'components/PostDate.tsx': '8a3b47b2e9a853c7e3ef322aaafed21be7a4b6511c2994f3805e4401ae933c86',
 }
 
 function contentFingerprint(file) {

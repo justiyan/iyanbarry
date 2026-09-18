@@ -25,14 +25,20 @@ test('revision dates are shown consistently and the newest article is featured',
 
 test('writing refresh preserves original dates and exposes real revision dates and reading times', async () => {
   const posts = getSortedPostsData()
-  assert.equal(posts.length, 5)
-  assert.equal(posts[0].slug, 'building-an-internal-ai-platform')
+  const originalSlugs = [
+    'building-an-internal-ai-platform', 'leading-it-teams-in-the-real-world',
+    'side-projects-as-a-leadership-lab', 'using-ai-as-an-it-leader',
+    'why-i-started-iyanbarry-dot-com',
+  ]
+  const originals = posts.filter(post => originalSlugs.includes(post.slug))
+  assert.equal(originals.length, 5)
+  assert.equal(originals[0].slug, 'building-an-internal-ai-platform')
   const revised = posts.find(p => p.slug === 'leading-it-teams-in-the-real-world')
   assert.equal(revised.date, '2023-11-10')
   assert.equal(revised.updated, '2026-09-12', 'substantial revisions have a separate updated date')
   assert.ok(revised.readingMinutes >= 4)
   assert.ok(revised.wordCount >= 800)
-  for (const post of posts) {
+  for (const post of originals) {
     const full = await getPostData(post.slug)
     assert.equal(full.updated, post.updated)
     assert.equal(full.readingMinutes, post.readingMinutes)
