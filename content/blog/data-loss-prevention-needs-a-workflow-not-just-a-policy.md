@@ -1,7 +1,7 @@
 ---
 title: "Data loss prevention needs a workflow, not just a policy"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-21"
+date: "2026-02-02"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "DLP controls work better when staff have an approved way to share information, a useful response to blocks and a review process for mistakes."
 published: true

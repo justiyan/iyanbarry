@@ -1,7 +1,7 @@
 ---
 title: "Choosing between an API integration and a scheduled file"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-20"
+date: "2026-03-29"
+updated: "2026-09-18"
 summary: "An API is not automatically a better integration than a file. Compare the source contract, recovery path and latency the business actually needs."
 tags: ["Data", "Integration"]
 published: true

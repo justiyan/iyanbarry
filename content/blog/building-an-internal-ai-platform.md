@@ -1,6 +1,7 @@
 ---
 title: "Building an internal AI platform: the decisions that matter"
-date: "2026-09-12"
+date: "2025-10-04"
+updated: "2026-09-18"
 summary: "The chat window is the easy part. A practical guide to access, company knowledge, model choice and the work of running an internal AI platform."
 tags: ["AI", "Governance", "Delivery"]
 published: true

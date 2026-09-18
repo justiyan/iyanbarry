@@ -1,7 +1,7 @@
 ---
 title: "Writing acceptance criteria before the supplier starts building"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-02"
+date: "2026-05-09"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Turn supplier expectations into observable tests, including failed inputs, access boundaries and the work needed to run the service."
 published: true

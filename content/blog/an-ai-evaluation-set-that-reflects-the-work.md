@@ -1,7 +1,7 @@
 ---
 title: "An AI evaluation set that reflects the work"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-26"
+date: "2026-07-29"
+updated: "2026-09-18"
 summary: "Build evaluation cases around actual decisions, difficult inputs and agreed behaviour, with holdouts and human adjudication that resist demo bias."
 tags: ["AI", "Governance"]
 published: true

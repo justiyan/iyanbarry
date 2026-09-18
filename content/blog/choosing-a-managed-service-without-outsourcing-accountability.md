@@ -1,7 +1,7 @@
 ---
 title: "Choosing a managed service without outsourcing accountability"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-09"
+date: "2026-06-14"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Define what the provider operates, what the organisation decides and what evidence is needed when service boundaries fail."
 published: true

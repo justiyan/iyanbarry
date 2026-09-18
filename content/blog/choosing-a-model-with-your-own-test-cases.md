@@ -1,7 +1,7 @@
 ---
 title: "Choosing a model with your own test cases"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-18"
+date: "2026-08-20"
+updated: "2026-09-18"
 summary: "Select models against a fixed business task, data terms and total completion cost, using your own cases rather than an unsupported league table."
 tags: ["AI", "Governance"]
 published: true

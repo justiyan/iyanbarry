@@ -1,7 +1,7 @@
 ---
 title: "The difference between missing data and zero"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-12"
+date: "2026-03-22"
+updated: "2026-09-18"
 summary: "Zero is a result; missing information is a state of knowledge. Reports need to show the difference before readers draw the wrong conclusion."
 tags: ["Data", "Integration"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Knowing when an AI system should decline to answer"
-date: "2026-09-18"
-retrospectiveDate: "2026-09-14"
+date: "2026-09-14"
+updated: "2026-09-18"
 summary: "Design useful abstention around missing evidence, ambiguous requests and access limits, with clear next steps instead of invented certainty."
 tags: ["AI", "Governance"]
 published: true

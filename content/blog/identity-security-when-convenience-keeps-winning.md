@@ -1,7 +1,7 @@
 ---
 title: "Identity security when convenience keeps winning"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-17"
+date: "2025-12-31"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Identity controls have to survive lost phones, shift work and urgent requests. Build strong authentication with a recovery process people can actually use."
 published: true

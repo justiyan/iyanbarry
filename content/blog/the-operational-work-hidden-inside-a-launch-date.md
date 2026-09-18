@@ -1,7 +1,7 @@
 ---
 title: "The operational work hidden inside a launch date"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-09"
+date: "2026-05-16"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "A readiness review should test access, failure detection, recovery and support ownership, not just whether the release is finished."
 published: true

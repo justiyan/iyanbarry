@@ -1,7 +1,7 @@
 ---
 title: "What a board should know about ransomware recovery"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-09"
+date: "2025-12-24"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Ransomware recovery needs trusted access, workable service priorities and clear authority. Boards should ask for evidence of those decisions before an incident."
 published: true

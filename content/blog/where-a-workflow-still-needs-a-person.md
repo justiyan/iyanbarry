@@ -1,7 +1,7 @@
 ---
 title: "Where a workflow still needs a person"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-29"
+date: "2026-07-03"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Place human judgement where consequences and ambiguity justify it, then give reviewers the evidence, time and authority to act."
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "The difference between a risk register and risk ownership"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-24"
+date: "2025-11-09"
+updated: "2026-09-18"
 summary: "Risk ownership requires authority to accept the remaining exposure, evidence to review that choice and a response when agreed actions expire."
 tags: ["Leadership", "Strategy"]
 published: true

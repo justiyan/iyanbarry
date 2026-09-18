@@ -1,7 +1,7 @@
 ---
 title: "Starting a cyber uplift when the list is longer than the budget"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-02"
+date: "2025-12-16"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "A defensible cyber budget starts with credible exposure, recovery dependencies and explicit deferrals, rather than a race to improve a framework score."
 published: true

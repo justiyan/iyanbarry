@@ -1,7 +1,7 @@
 ---
 title: "When an AI assistant becomes an agent"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-03"
+date: "2026-08-05"
+updated: "2026-09-18"
 summary: "Classify AI by what it can change, whose authority it uses and where transactions commit, rather than by the agent label."
 tags: ["AI", "Governance"]
 published: true

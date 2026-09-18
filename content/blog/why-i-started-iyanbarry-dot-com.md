@@ -1,7 +1,7 @@
 ---
 title: "What I want this site to be useful for"
-date: "2023-11-01"
-updated: "2026-09-12"
+date: "2025-09-19"
+updated: "2026-09-18"
 summary: "A place for practical writing about technology leadership, security, data and building useful tools. What I will share, and what stays private."
 tags: ["Personal", "Leadership"]
 published: true

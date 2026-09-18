@@ -1,7 +1,7 @@
 ---
 title: "Preparing for a cyber incident before anyone is on call"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-29"
+date: "2026-01-11"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Prepare incident authority, contact routes and adviser arrangements before an after-hours alert forces staff to improvise under pressure."
 published: true

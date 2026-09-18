@@ -1,7 +1,7 @@
 ---
 title: "Why a successful data load can still produce a bad report"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-25"
+date: "2026-03-07"
+updated: "2026-09-18"
 summary: "A green pipeline status only says the job finished. Check whether the loaded information is complete, meaningful and fit for the report people rely on."
 tags: ["Data", "Integration"]
 published: true

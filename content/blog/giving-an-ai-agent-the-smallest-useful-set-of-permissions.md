@@ -1,7 +1,7 @@
 ---
 title: "Giving an AI agent the smallest useful set of permissions"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-06"
+date: "2026-08-09"
+updated: "2026-09-18"
 summary: "Design narrow action tools and scoped identities so an agent can finish its job without inheriting the whole application’s authority."
 tags: ["AI", "Governance"]
 published: true

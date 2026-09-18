@@ -1,7 +1,7 @@
 ---
 title: "What I would ask before letting an AI agent act for the business"
 date: "2026-09-18"
-retrospectiveDate: "2026-09-18"
+updated: "2026-09-18"
 summary: "A consequence-led deployment decision for business agents: define the commitment, prove the limits, rehearse recovery and give someone authority to stop."
 tags: ["AI", "Governance"]
 published: true

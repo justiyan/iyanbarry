@@ -1,7 +1,7 @@
 ---
 title: "Planning a cutover people can reverse"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-13"
+date: "2026-05-20"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Rollback becomes difficult when records and external actions diverge. Plan the last safe reversal point before changing production."
 published: true

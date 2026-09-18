@@ -1,7 +1,7 @@
 ---
 title: "Making room for improvement without promising extra capacity"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-28"
+date: "2025-12-13"
+updated: "2026-09-18"
 summary: "Protect improvement work with explicit interruption rules and conditional commitments that reflect the uncertainty of operational demand."
 tags: ["Leadership", "Strategy"]
 published: true

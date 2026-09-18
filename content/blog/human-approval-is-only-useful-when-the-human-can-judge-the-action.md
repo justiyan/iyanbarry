@@ -1,7 +1,7 @@
 ---
 title: "Human approval is only useful when the human can judge the action"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-10"
+date: "2026-08-12"
+updated: "2026-09-18"
 summary: "A meaningful approval shows the exact change, evidence and consequences, then binds consent to that operation rather than a vague request to continue."
 tags: ["AI", "Governance"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Using AI as an IT leader without outsourcing your judgement"
-date: "2023-11-08"
-updated: "2026-09-12"
+date: "2025-09-26"
+updated: "2026-09-18"
 summary: "Where AI helps with decisions, documents and everyday leadership work, and how to keep checking the parts that matter."
 tags: ["AI", "Leadership"]
 published: true

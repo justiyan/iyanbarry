@@ -12,12 +12,12 @@ const contentBaselines = {
   'app/work-with-me/page.tsx': '477c29c85925b59e8eeee6b520785bbc372dfdc5561df989433ca7a8ddd9c354',
   'app/speaking/page.tsx': '5cb2724e1f84abb95e24b023f9aaf2b3bd600eef1cb356118024ca27d9097906',
   'app/contact/page.tsx': 'defc4adf88cbb1e4f8f9f95619a83b6959183e10406d9844450d770e30b5c808',
-  // Approved Writing library expansion: search/pagination and honest retrospective
-  // labels. Unrelated page baselines remain unchanged; behavior has fixture tests.
-  'app/blog/BlogClient.tsx': '86e68698b688bb69ed9426c0cb2a1530c9b3eafd8535a13b28598ea69adaab1d',
+  // Approved single-publication-date display and publication-month filtering.
+  // Unrelated page baselines remain unchanged; behavior has fixture tests.
+  'app/blog/BlogClient.tsx': '10ff93a473d76a19369664feebed2edab7d0ac569158d59fcfa88e4e13d3b182',
   'app/blog/page.tsx': '358a7fabed459fb3e521f396dfe05b22f6b6d642571ae81442912dfd36bbe8f7',
-  'app/blog/[slug]/page.tsx': 'd1156966da9d17667738d9b65ee3208306b61b5eb89be84d75e72467148ae97f',
-  'components/PostDate.tsx': '8a3b47b2e9a853c7e3ef322aaafed21be7a4b6511c2994f3805e4401ae933c86',
+  'app/blog/[slug]/page.tsx': '2a6e8ac9f11d77ec074f1968ca633a518c9155e68e6cf2c11b79d4e64f058db7',
+  'components/PostDate.tsx': '415c27073d04d9a347d67110c67a823f7d4453121bb814b84538d8780e665993',
 }
 
 function contentFingerprint(file) {

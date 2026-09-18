@@ -1,7 +1,7 @@
 ---
 title: "Evaluating an AI proposal without being distracted by the demo"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-06"
+date: "2026-07-10"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Evaluate an AI proposal through the work, evidence, permissions and ongoing cost it would introduce, rather than its best demonstration."
 published: true

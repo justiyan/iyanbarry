@@ -1,7 +1,7 @@
 ---
 title: "How to say no to a technology request without losing trust"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-04"
+date: "2025-10-22"
+updated: "2026-09-18"
 summary: "A credible refusal explains the constraint, offers workable options and leaves a fair route to challenge the priority decision."
 tags: ["Leadership", "Strategy"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "What to ask before approving another software subscription"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-20"
+date: "2025-11-06"
+updated: "2026-09-18"
 summary: "Before adding a subscription, check the existing capability, the work needed for adoption and the practical cost of leaving."
 tags: ["Leadership", "Strategy"]
 published: true

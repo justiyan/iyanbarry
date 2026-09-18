@@ -1,7 +1,7 @@
 ---
 title: "Making security awareness useful to busy staff"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-29"
+date: "2026-02-09"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Security awareness should help staff complete risky tasks safely and report uncertainty quickly, with practical feedback instead of punitive click-rate theatre."
 published: true

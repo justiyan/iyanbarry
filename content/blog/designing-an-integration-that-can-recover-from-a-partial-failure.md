@@ -1,7 +1,7 @@
 ---
 title: "Designing an integration that can recover from a partial failure"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-08"
+date: "2026-04-17"
+updated: "2026-09-18"
 summary: "A timeout does not tell you whether the destination acted. Design an order flow with durable state, idempotency and reconciliation before relying on retries."
 tags: ["Data", "Integration"]
 published: true

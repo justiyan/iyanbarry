@@ -17,13 +17,14 @@ function nodes(tree, predicate) {
   return [...(predicate(tree) ? [tree] : []), ...nodes(tree.props?.children, predicate)]
 }
 
-test('retrospective labels remain separate from visible and machine-readable publication dates', async () => {
+test('one Published date is visible while real modified dates remain machine-readable', async () => {
   const dateModule = load('components/PostDate.tsx')
   const fixture = { slug: 'ai', title: 'AI', date: '2026-09-18', retrospectiveDate: '2025-09-20', updated: '2026-09-19', tags: ['AI'], summary: 'Summary', wordCount: 800, readingMinutes: 4 }
   const markup = renderToStaticMarkup(React.createElement(dateModule.default, fixture))
-  assert.match(markup, /Retrospective · September 2025/)
-  assert.match(markup, /dateTime="2026-09-19"/)
-  assert.doesNotMatch(markup, /dateTime="2025-09-20"/)
+  assert.match(markup, /Published/)
+  assert.match(markup, /dateTime="2026-09-18"/)
+  assert.equal((markup.match(/<time /g) || []).length, 1)
+  assert.doesNotMatch(markup, /Retrospective|Updated|2026-09-19|2025-09-20/)
   const article = load('app/blog/[slug]/page.tsx', {
     'next/navigation': { notFound: () => { throw new Error('not found') } },
     'next/link': link, '@/components/Layout': passthrough, '@/components/ui': { Shell: passthrough },
@@ -39,11 +40,13 @@ test('retrospective labels remain separate from visible and machine-readable pub
   const schema = JSON.parse(script.props.dangerouslySetInnerHTML.__html)
   assert.equal(schema.datePublished, fixture.date)
   assert.equal(schema.dateModified, fixture.updated)
-  assert.match(renderToStaticMarkup(tree), /not an earlier publication date/)
+  const articleMarkup = renderToStaticMarkup(tree)
+  assert.doesNotMatch(articleMarkup, /retrospective|Originally published/i)
+  assert.equal((articleMarkup.match(/<time /g) || []).length, 1)
   const sitemap = load('app/sitemap.ts', { '@/lib/blog': { getSortedPostsData: () => [fixture] } }).default()
   assert.equal(sitemap.find(p => p.url.endsWith('/blog/ai')).lastModified.toISOString().slice(0, 10), fixture.updated)
   for (const file of ['app/page.tsx', 'app/blog/BlogClient.tsx', 'app/blog/[slug]/page.tsx']) {
-    assert.match(readFileSync(path.join(root, file), 'utf8'), /retrospectiveDate=\{(?:post|p|featured)\.retrospectiveDate\}/)
+    assert.doesNotMatch(readFileSync(path.join(root, file), 'utf8'), /retrospectiveDate|Originally published/)
   }
 })
 const root = path.resolve(path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1')), '..')
@@ -99,39 +102,39 @@ function library(posts) {
 }
 const fixturePosts = () => Array.from({ length: 100 }, (_, i) => ({
   slug: `article-${i}`, title: i === 0 ? 'Newest AI article' : `Article ${i}`,
-  date: '2026-09-18', retrospectiveDate: i < 19 ? '2026-09-17' : '2025-09-20',
+  date: i < 19 ? '2026-09-17' : '2025-09-20',
   summary: i === 65 ? 'A unique procurement lesson' : 'Practical writing',
   tags: i < 19 ? ['AI'] : ['Leadership'], published: true, wordCount: 800, readingMinutes: 4,
 }))
 
-test('mobile controls stack at full width and retrospective note precedes controls', () => {
+test('mobile controls stack at full width without duplicate dating notes', () => {
   const ui = library(fixturePosts())
   const source = readFileSync(path.join(root, 'app/blog/BlogClient.tsx'), 'utf8')
   assert.match(source, /data-writing-controls className="[^"]*flex-col[^\"]*md:flex-row/)
   assert.equal(ui.find(n => n.props?.['aria-label'] === 'Search articles').props.placeholder, 'Search articles')
-  for (const label of ['Search articles', 'Retrospective month']) {
+  for (const label of ['Search articles', 'Publication month']) {
     const control = ui.find(n => n.props?.['aria-label'] === label)
     assert.match(control.props.className, /border-\[#788b80\]/)
     assert.match(control.props.className, /focus:ring-accent/)
   }
   assert.match(source, /data-writing-tags className="[^"]*overflow-x-auto/)
   const markup = ui.markup()
-  assert.ok(markup.indexOf('Retrospective articles published') < markup.indexOf('data-writing-controls'))
+  assert.doesNotMatch(markup, /retrospective|original publication|Updated dates/i)
 })
 
-test('archive note derives real publication and retrospective ranges from metadata', () => {
+test('publication month options include all posts and format their dates', () => {
   const posts = fixturePosts()
   let ui = library(posts)
-  assert.match(ui.markup(), /Retrospective articles published 18 September 2026/)
-  assert.match(ui.markup(), /September 2025–September 2026/)
-  assert.match(ui.markup(), /not earlier publication/)
-  posts[0] = { ...posts[0], date: '2026-09-21' }
+  assert.match(ui.markup(), /All months/)
+  assert.match(ui.markup(), /September 2025/)
+  assert.match(ui.markup(), /September 2026/)
+  posts[0] = { ...posts[0], date: '2026-08-21' }
   ui = library(posts)
-  assert.match(ui.markup(), /18 September 2026–21 September 2026/)
-  assert.doesNotMatch(library([{ ...posts[0], retrospectiveDate: undefined }]).markup(), /Retrospective articles published/)
+  assert.match(ui.markup(), /August 2026/)
+  assert.equal(load('components/PostDate.tsx').formatPostMonth('2026-08-21'), 'August 2026')
 })
 
-test('search, tag and retrospective month filters reset pagination and clear empty results', () => {
+test('search, tag and publication month filters reset pagination and clear empty results', () => {
   const ui = library(fixturePosts())
   const next = () => ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Next page').props.onClick())
   const search = value => ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Search articles').props.onChange({ target: { value } }))
@@ -151,7 +154,7 @@ test('search, tag and retrospective month filters reset pagination and clear emp
   assert.equal(ui.slugs()[0], 'article-0', 'tag change returns to page one')
   assert.equal(ui.find(n => n.type === 'button' && n.props.children === 'AI').props['aria-pressed'], true)
   next()
-  ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Retrospective month').props.onChange({ target: { value: '2025-09' } }))
+  ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Publication month').props.onChange({ target: { value: '2025-09' } }))
   assert.deepEqual(ui.slugs(), [])
   assert.match(ui.markup(), /No articles match these filters/)
   assert.equal(ui.find(n => n.props?.['aria-label'] === 'Next page').props.disabled, true)
@@ -160,7 +163,7 @@ test('search, tag and retrospective month filters reset pagination and clear emp
   assert.equal(ui.slugs().length, 12)
   assert.ok(ui.find(n => Object.hasOwn(n.props || {}, 'data-featured-post')))
   next()
-  ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Retrospective month').props.onChange({ target: { value: '2025-09' } }))
+  ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Publication month').props.onChange({ target: { value: '2025-09' } }))
   assert.equal(ui.slugs()[0], 'article-19')
   assert.ok(ui.find(n => n.props?.['aria-live'] === 'polite'))
 })
@@ -223,21 +226,21 @@ async function withPosts(entries, run) {
   }
 }
 
-test('invalid or post-publication retrospective dates are ignored without changing real dates', async () => {
+test('legacy retrospective metadata is excluded without changing publication dates', async () => {
   await withPosts([
-    { slug: 'malformed', date: '2026-09-18', retrospectiveDate: 'not-a-date' },
+    { slug: 'malformed', date: '2026-09-18', retrospectiveDate: '2025-09-20' },
     { slug: 'impossible', date: '2026-09-18', retrospectiveDate: '2026-02-30' },
     { slug: 'future-topic', date: '2026-09-18', retrospectiveDate: '2026-09-19' },
   ], async api => {
     for (const post of api.getSortedPostsData()) {
-      assert.equal(post.retrospectiveDate, undefined)
+      assert.equal(Object.hasOwn(post, 'retrospectiveDate'), false)
       assert.equal(post.date, '2026-09-18')
       assert.equal((await api.getPostData(post.slug)).retrospectiveDate, undefined)
     }
   })
 })
 
-test('real publication/revision dates sort first; retrospective ties descend before slug', async () => {
+test('newest publication sorts first even when older posts are updated today; ties use slug', async () => {
   await withPosts([
     { slug: 'a-old-topic', date: '2026-09-18', retrospectiveDate: '2025-09-20' },
     { slug: 'z-new-ai', date: '2026-09-18', retrospectiveDate: '2026-09-17' },
@@ -247,9 +250,9 @@ test('real publication/revision dates sort first; retrospective ties descend bef
     { slug: 'draft', date: '2026-09-21', published: false },
   ], async api => {
     const posts = api.getSortedPostsData()
-    assert.deepEqual(posts.map(p => p.slug), ['revised', 'later-publication', 'z-new-ai', 'a-old-topic', 'original'])
-    assert.equal(posts[2].retrospectiveDate, '2026-09-17')
-    assert.equal((await api.getPostData('z-new-ai')).retrospectiveDate, '2026-09-17')
+    assert.deepEqual(posts.map(p => p.slug), ['later-publication', 'a-old-topic', 'z-new-ai', 'original', 'revised'])
+    assert.equal(await api.getPostData('draft'), null)
+    assert.ok(!api.getAllPostSlugs().some(p => p.params.slug === 'draft'))
     assert.ok(posts.every(p => !Object.hasOwn(p, 'content')), 'client metadata excludes article bodies')
     assert.equal(posts[4].retrospectiveDate, undefined, 'existing posts remain compatible')
   })

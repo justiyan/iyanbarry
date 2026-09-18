@@ -1,7 +1,7 @@
 ---
 title: "Retiring a legacy report without surprising its users"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-01"
+date: "2026-04-09"
+updated: "2026-09-18"
 summary: "Low usage does not prove a report is safe to remove. Find its decision dependencies, agree the replacement and make retirement explicit."
 tags: ["Data", "Integration"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Testing backups by restoring the service"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-13"
+date: "2025-12-27"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "A restore test should prove that a business service can operate, including its identity, configuration, integrations and acceptance checks."
 published: true

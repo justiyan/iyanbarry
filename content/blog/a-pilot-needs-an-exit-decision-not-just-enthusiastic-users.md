@@ -1,7 +1,7 @@
 ---
 title: "A pilot needs an exit decision, not just enthusiastic users"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-05"
+date: "2026-05-12"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Design a pilot around a decision: what it must prove, what it cannot prove and when to expand, extend or stop."
 published: true

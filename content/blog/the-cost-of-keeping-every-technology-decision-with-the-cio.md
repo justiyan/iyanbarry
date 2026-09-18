@@ -1,7 +1,7 @@
 ---
 title: "The cost of keeping every technology decision with the CIO"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-08"
+date: "2025-10-26"
+updated: "2026-09-18"
 summary: "Decision authority should sit close to the work, with explicit limits for consequences, reversibility and escalation."
 tags: ["Leadership", "Strategy"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Measuring adoption without mistaking logins for value"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-21"
+date: "2026-05-27"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Measure completed work, errors and displaced effort alongside usage, while being honest about what the baseline can establish."
 published: true

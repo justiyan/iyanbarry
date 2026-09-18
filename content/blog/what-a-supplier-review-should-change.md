@@ -1,7 +1,7 @@
 ---
 title: "What a supplier review should change"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-12"
+date: "2025-11-28"
+updated: "2026-09-18"
 summary: "A supplier review should change service actions, responsibilities or commercial decisions rather than simply acknowledge a performance presentation."
 tags: ["Leadership", "Strategy"]
 published: true

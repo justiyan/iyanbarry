@@ -1,7 +1,7 @@
 ---
 title: "Making the technology budget easier to challenge"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-28"
+date: "2025-11-13"
+updated: "2026-09-18"
 summary: "A technology budget is easier to defend when existing commitments, change options and uncertainty are presented separately."
 tags: ["Leadership", "Strategy"]
 published: true

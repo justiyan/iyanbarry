@@ -1,7 +1,7 @@
 ---
 title: "How to check that offboarding really removes access"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-17"
+date: "2026-01-29"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Offboarding is complete only when the relevant access paths have been checked, including application sessions, delegated permissions and integrations."
 published: true

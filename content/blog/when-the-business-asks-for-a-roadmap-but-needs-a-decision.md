@@ -1,7 +1,7 @@
 ---
 title: "When the business asks for a roadmap but needs a decision"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-01"
+date: "2025-10-18"
+updated: "2026-09-18"
 summary: "A roadmap becomes credible when investment choices and dependencies are settled before dates are presented as commitments."
 tags: ["Leadership", "Strategy"]
 published: true

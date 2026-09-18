@@ -1,7 +1,7 @@
 ---
 title: "What real-time reporting costs the organisation"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-04"
+date: "2026-04-13"
+updated: "2026-09-18"
 summary: "Faster refreshes create costs beyond the data platform. Match latency to the action, then account for provisional data, recovery and support."
 tags: ["Data", "Integration"]
 published: true

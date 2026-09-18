@@ -1,7 +1,7 @@
 ---
 title: "Finding the owner of a business metric"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-17"
+date: "2026-02-28"
+updated: "2026-09-18"
 summary: "A metric needs someone who can decide what it means, not just someone who can maintain the calculation. Here is a practical way to separate those roles."
 tags: ["Data", "Integration"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Moving reporting off a shared spreadsheet without breaking the process"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-01"
+date: "2026-03-11"
+updated: "2026-09-18"
 summary: "A shared workbook often contains an undocumented operating process. Preserve the useful rules and handovers before replacing its technology."
 tags: ["Data", "Integration"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "When the right project decision is to stop"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-02"
+date: "2026-06-07"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Review the remaining investment against current assumptions, then stop cleanly without losing useful work or leaving obligations behind."
 published: true

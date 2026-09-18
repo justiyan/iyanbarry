@@ -1,7 +1,7 @@
 ---
 title: "Data retention is an operational decision too"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-12"
+date: "2026-04-20"
+updated: "2026-09-18"
 summary: "A retention schedule needs an operating path through applications, backups and derived copies. Assign the decisions and verify what deletion actually does."
 tags: ["Data", "Integration"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Managing a vendor change that arrives halfway through delivery"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-21"
+date: "2026-06-25"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Assess a mid-delivery supplier change across dependencies, terms and service obligations before accepting a quiet concession."
 published: true

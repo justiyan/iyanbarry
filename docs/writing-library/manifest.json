@@ -1,7 +1,6 @@
 {
-  "publicationDate": "2026-09-18",
-  "retrospectiveStart": "2025-09-19",
-  "retrospectiveEnd": "2026-09-18",
+  "startDate": "2025-09-19",
+  "endDate": "2026-09-18",
   "expectedTotal": 100,
   "existing": [
     "building-an-internal-ai-platform",
@@ -12,1239 +11,1279 @@
   ],
   "articles": [
     {
-      "index": 1,
-      "group": "leadership",
-      "slug": "a-technology-strategy-that-survives-the-next-budget-meeting",
-      "title": "A technology strategy that survives the next budget meeting",
-      "angle": "Separate funded choices, dependencies and deferrals; include a realistic decision record rather than a strategy template.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-09-19",
-      "tags": [
-        "Leadership",
-        "Strategy"
-      ]
+      "slug": "why-i-started-iyanbarry-dot-com",
+      "title": "What I want this site to be useful for",
+      "group": "existing",
+      "date": "2025-09-19",
+      "updated": "2026-09-18",
+      "index": 1
     },
     {
-      "index": 2,
-      "group": "leadership",
-      "slug": "what-your-first-ninety-days-as-an-it-leader-should-uncover",
-      "title": "What your first ninety days as an IT leader should uncover",
-      "angle": "Map obligations and existing capability before restructuring; show listening questions and where an early intervention is justified.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-09-23",
-      "tags": [
-        "Leadership",
-        "Strategy"
-      ]
+      "slug": "side-projects-as-a-leadership-lab",
+      "title": "Why I still build things as a CIO",
+      "group": "existing",
+      "date": "2025-09-23",
+      "updated": "2026-09-18",
+      "index": 2
     },
     {
-      "index": 3,
-      "group": "leadership",
-      "slug": "writing-a-board-technology-report-that-earns-a-decision",
-      "title": "Writing a board technology report that earns a decision",
-      "angle": "Contrast operational measures with decisions and risk movement; create a clearly illustrative reporting example.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-09-27",
-      "tags": [
-        "Leadership",
-        "Strategy"
-      ]
+      "slug": "using-ai-as-an-it-leader",
+      "title": "Using AI as an IT leader without outsourcing your judgement",
+      "group": "existing",
+      "date": "2025-09-26",
+      "updated": "2026-09-18",
+      "index": 3
     },
     {
-      "index": 4,
-      "group": "leadership",
-      "slug": "when-the-business-asks-for-a-roadmap-but-needs-a-decision",
-      "title": "When the business asks for a roadmap but needs a decision",
-      "angle": "Show competing investment choices and why a dates-only roadmap hides them.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-01",
-      "tags": [
-        "Leadership",
-        "Strategy"
-      ]
+      "slug": "leading-it-teams-in-the-real-world",
+      "title": "Leading an IT team out of firefighting",
+      "group": "existing",
+      "date": "2025-09-30",
+      "updated": "2026-09-18",
+      "index": 4
     },
     {
-      "index": 5,
-      "group": "leadership",
-      "slug": "how-to-say-no-to-a-technology-request-without-losing-trust",
-      "title": "How to say no to a technology request without losing trust",
-      "angle": "Offer options with explicit displaced work and legitimate escalation; distinguish refusal from indefinite deferral.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-04",
-      "tags": [
-        "Leadership",
-        "Strategy"
-      ]
+      "slug": "building-an-internal-ai-platform",
+      "title": "Building an internal AI platform: the decisions that matter",
+      "group": "existing",
+      "date": "2025-10-04",
+      "updated": "2026-09-18",
+      "index": 5
     },
     {
       "index": 6,
       "group": "leadership",
-      "slug": "the-cost-of-keeping-every-technology-decision-with-the-cio",
-      "title": "The cost of keeping every technology decision with the CIO",
-      "angle": "Decision rights, reversibility and escalation thresholds; no invented autobiography.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-08",
+      "slug": "a-technology-strategy-that-survives-the-next-budget-meeting",
+      "title": "A technology strategy that survives the next budget meeting",
+      "angle": "Separate funded choices, dependencies and deferrals; include a realistic decision record rather than a strategy template.",
+      "date": "2025-10-07",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 7,
       "group": "leadership",
-      "slug": "a-useful-conversation-about-technical-debt",
-      "title": "A useful conversation about technical debt",
-      "angle": "Translate one dependency into exposure, maintenance cost and a priced alternative without false precision.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-12",
+      "slug": "what-your-first-ninety-days-as-an-it-leader-should-uncover",
+      "title": "What your first ninety days as an IT leader should uncover",
+      "angle": "Map obligations and existing capability before restructuring; show listening questions and where an early intervention is justified.",
+      "date": "2025-10-11",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 8,
       "group": "leadership",
-      "slug": "choosing-an-it-operating-model-for-the-organisation-you-have",
-      "title": "Choosing an IT operating model for the organisation you have",
-      "angle": "Central versus embedded ownership, small-team constraints, and service boundaries; avoid fashionable org charts.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-16",
+      "slug": "writing-a-board-technology-report-that-earns-a-decision",
+      "title": "Writing a board technology report that earns a decision",
+      "angle": "Contrast operational measures with decisions and risk movement; create a clearly illustrative reporting example.",
+      "date": "2025-10-15",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 9,
       "group": "leadership",
-      "slug": "what-to-ask-before-approving-another-software-subscription",
-      "title": "What to ask before approving another software subscription",
-      "angle": "Existing licence/capability inventory, adoption and exit cost before procurement.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-20",
+      "slug": "when-the-business-asks-for-a-roadmap-but-needs-a-decision",
+      "title": "When the business asks for a roadmap but needs a decision",
+      "angle": "Show competing investment choices and why a dates-only roadmap hides them.",
+      "date": "2025-10-18",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 10,
       "group": "leadership",
-      "slug": "the-difference-between-a-risk-register-and-risk-ownership",
-      "title": "The difference between a risk register and risk ownership",
-      "angle": "Who accepts residual risk, what evidence changes the decision, and how expired actions surface.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-24",
+      "slug": "how-to-say-no-to-a-technology-request-without-losing-trust",
+      "title": "How to say no to a technology request without losing trust",
+      "angle": "Offer options with explicit displaced work and legitimate escalation; distinguish refusal from indefinite deferral.",
+      "date": "2025-10-22",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 11,
       "group": "leadership",
-      "slug": "making-the-technology-budget-easier-to-challenge",
-      "title": "Making the technology budget easier to challenge",
-      "angle": "Distinguish run commitments, change options and contingency; show assumptions not fabricated savings.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-10-28",
+      "slug": "the-cost-of-keeping-every-technology-decision-with-the-cio",
+      "title": "The cost of keeping every technology decision with the CIO",
+      "angle": "Decision rights, reversibility and escalation thresholds; no invented autobiography.",
+      "date": "2025-10-26",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 12,
       "group": "leadership",
-      "slug": "when-a-steering-committee-stops-steering",
-      "title": "When a steering committee stops steering",
-      "angle": "Define real authority, decision turnaround and a way to retire redundant meetings.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-01",
+      "slug": "a-useful-conversation-about-technical-debt",
+      "title": "A useful conversation about technical debt",
+      "angle": "Translate one dependency into exposure, maintenance cost and a priced alternative without false precision.",
+      "date": "2025-10-29",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 13,
       "group": "leadership",
-      "slug": "hiring-an-it-manager-without-looking-for-a-smaller-version-of-yourself",
-      "title": "Hiring an IT manager without looking for a smaller version of yourself",
-      "angle": "Role outcomes, observable interview evidence and support for complementary strengths.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-04",
+      "slug": "choosing-an-it-operating-model-for-the-organisation-you-have",
+      "title": "Choosing an IT operating model for the organisation you have",
+      "angle": "Central versus embedded ownership, small-team constraints, and service boundaries; avoid fashionable org charts.",
+      "date": "2025-11-02",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 14,
       "group": "leadership",
-      "slug": "a-succession-plan-for-the-person-everyone-depends-on",
-      "title": "A succession plan for the person everyone depends on",
-      "angle": "Dependency mapping, paired operations and proof someone else can perform key tasks.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-08",
+      "slug": "what-to-ask-before-approving-another-software-subscription",
+      "title": "What to ask before approving another software subscription",
+      "angle": "Existing licence/capability inventory, adoption and exit cost before procurement.",
+      "date": "2025-11-06",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 15,
       "group": "leadership",
-      "slug": "what-a-supplier-review-should-change",
-      "title": "What a supplier review should change",
-      "angle": "Review service evidence, incentives, ownership and exit options rather than account-manager presentations.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-12",
+      "slug": "the-difference-between-a-risk-register-and-risk-ownership",
+      "title": "The difference between a risk register and risk ownership",
+      "angle": "Who accepts residual risk, what evidence changes the decision, and how expired actions surface.",
+      "date": "2025-11-09",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 16,
       "group": "leadership",
-      "slug": "putting-business-ownership-into-a-technology-project",
-      "title": "Putting business ownership into a technology project",
-      "angle": "Give business owners a concrete decision remit without transferring engineering judgement.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-16",
+      "slug": "making-the-technology-budget-easier-to-challenge",
+      "title": "Making the technology budget easier to challenge",
+      "angle": "Distinguish run commitments, change options and contingency; show assumptions not fabricated savings.",
+      "date": "2025-11-13",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 17,
       "group": "leadership",
-      "slug": "deciding-what-should-stay-in-house",
-      "title": "Deciding what should stay in-house",
-      "angle": "Capability, sensitivity, economics and exitability; a scenario where outsourcing and retaining ownership differ.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-20",
+      "slug": "when-a-steering-committee-stops-steering",
+      "title": "When a steering committee stops steering",
+      "angle": "Define real authority, decision turnaround and a way to retire redundant meetings.",
+      "date": "2025-11-17",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 18,
       "group": "leadership",
-      "slug": "a-practical-way-to-review-your-it-strategy-each-quarter",
-      "title": "A practical way to review your IT strategy each quarter",
-      "angle": "Change assumptions and stop work deliberately rather than rewrite the deck.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-24",
+      "slug": "hiring-an-it-manager-without-looking-for-a-smaller-version-of-yourself",
+      "title": "Hiring an IT manager without looking for a smaller version of yourself",
+      "angle": "Role outcomes, observable interview evidence and support for complementary strengths.",
+      "date": "2025-11-21",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 19,
       "group": "leadership",
-      "slug": "making-room-for-improvement-without-promising-extra-capacity",
-      "title": "Making room for improvement without promising extra capacity",
-      "angle": "Allocation and trade-offs when run demand is variable; planning guardrails and an honest uncertainty range.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-11-28",
+      "slug": "a-succession-plan-for-the-person-everyone-depends-on",
+      "title": "A succession plan for the person everyone depends on",
+      "angle": "Dependency mapping, paired operations and proof someone else can perform key tasks.",
+      "date": "2025-11-24",
       "tags": [
         "Leadership",
         "Strategy"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 20,
-      "group": "cybersecurity",
-      "slug": "starting-a-cyber-uplift-when-the-list-is-longer-than-the-budget",
-      "title": "Starting a cyber uplift when the list is longer than the budget",
-      "angle": "Prioritise credible exposure and recovery capability; do not conflate a framework score with quantified risk.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-02",
+      "group": "leadership",
+      "slug": "what-a-supplier-review-should-change",
+      "title": "What a supplier review should change",
+      "angle": "Review service evidence, incentives, ownership and exit options rather than account-manager presentations.",
+      "date": "2025-11-28",
       "tags": [
-        "Cybersecurity",
-        "Governance"
-      ]
+        "Leadership",
+        "Strategy"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 21,
-      "group": "cybersecurity",
-      "slug": "essential-eight-maturity-is-not-a-security-score",
-      "title": "Essential Eight maturity is not a security score",
-      "angle": "Explain model scope and interdependencies using current ACSC material; no claim certification or universal legal requirement.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-05",
+      "group": "leadership",
+      "slug": "putting-business-ownership-into-a-technology-project",
+      "title": "Putting business ownership into a technology project",
+      "angle": "Give business owners a concrete decision remit without transferring engineering judgement.",
+      "date": "2025-12-02",
       "tags": [
-        "Cybersecurity",
-        "Governance"
-      ]
+        "Leadership",
+        "Strategy"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 22,
-      "group": "cybersecurity",
-      "slug": "what-a-board-should-know-about-ransomware-recovery",
-      "title": "What a board should know about ransomware recovery",
-      "angle": "Decisions around identity, restores and operations; legal/incident response decisions go to qualified specialists.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-09",
+      "group": "leadership",
+      "slug": "deciding-what-should-stay-in-house",
+      "title": "Deciding what should stay in-house",
+      "angle": "Capability, sensitivity, economics and exitability; a scenario where outsourcing and retaining ownership differ.",
+      "date": "2025-12-05",
       "tags": [
-        "Cybersecurity",
-        "Governance"
-      ]
+        "Leadership",
+        "Strategy"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 23,
-      "group": "cybersecurity",
-      "slug": "testing-backups-by-restoring-the-service",
-      "title": "Testing backups by restoring the service",
-      "angle": "Dependencies, credentials, sequencing and acceptance evidence beyond job success.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-13",
+      "group": "leadership",
+      "slug": "a-practical-way-to-review-your-it-strategy-each-quarter",
+      "title": "A practical way to review your IT strategy each quarter",
+      "angle": "Change assumptions and stop work deliberately rather than rewrite the deck.",
+      "date": "2025-12-09",
       "tags": [
-        "Cybersecurity",
-        "Governance"
-      ]
+        "Leadership",
+        "Strategy"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 24,
-      "group": "cybersecurity",
-      "slug": "identity-security-when-convenience-keeps-winning",
-      "title": "Identity security when convenience keeps winning",
-      "angle": "Choose practical authentication/access controls and approved exceptions; distinguish MFA from phishing-resistant MFA.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-17",
+      "group": "leadership",
+      "slug": "making-room-for-improvement-without-promising-extra-capacity",
+      "title": "Making room for improvement without promising extra capacity",
+      "angle": "Allocation and trade-offs when run demand is variable; planning guardrails and an honest uncertainty range.",
+      "date": "2025-12-13",
       "tags": [
-        "Cybersecurity",
-        "Governance"
-      ]
+        "Leadership",
+        "Strategy"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 25,
       "group": "cybersecurity",
-      "slug": "privileged-access-without-shared-administrator-accounts",
-      "title": "Privileged access without shared administrator accounts",
-      "angle": "Separate named administration, emergency access and service identities; explain transition pitfalls.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-21",
+      "slug": "starting-a-cyber-uplift-when-the-list-is-longer-than-the-budget",
+      "title": "Starting a cyber uplift when the list is longer than the budget",
+      "angle": "Prioritise credible exposure and recovery capability; do not conflate a framework score with quantified risk.",
+      "date": "2025-12-16",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 26,
       "group": "cybersecurity",
-      "slug": "the-security-questions-to-ask-a-saas-vendor-before-signing",
-      "title": "The security questions to ask a SaaS vendor before signing",
-      "angle": "Data access, logging, support, incident notice and exit evidence, not a generic exhaustive questionnaire.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-25",
+      "slug": "essential-eight-maturity-is-not-a-security-score",
+      "title": "Essential Eight maturity is not a security score",
+      "angle": "Explain model scope and interdependencies using current ACSC material; no claim certification or universal legal requirement.",
+      "date": "2025-12-20",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 27,
       "group": "cybersecurity",
-      "slug": "preparing-for-a-cyber-incident-before-anyone-is-on-call",
-      "title": "Preparing for a cyber incident before anyone is on call",
-      "angle": "Authority, contact methods, legal/insurer dependencies and an offline runbook; avoid prescriptive legal timelines.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2025-12-29",
+      "slug": "what-a-board-should-know-about-ransomware-recovery",
+      "title": "What a board should know about ransomware recovery",
+      "angle": "Decisions around identity, restores and operations; legal/incident response decisions go to qualified specialists.",
+      "date": "2025-12-24",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 28,
       "group": "cybersecurity",
-      "slug": "a-tabletop-exercise-that-tests-decisions-rather-than-memory",
-      "title": "A tabletop exercise that tests decisions rather than memory",
-      "angle": "Facilitated hypothetical scenario with decision evidence and follow-up; no aggressive technical exploitation details.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-02",
+      "slug": "testing-backups-by-restoring-the-service",
+      "title": "Testing backups by restoring the service",
+      "angle": "Dependencies, credentials, sequencing and acceptance evidence beyond job success.",
+      "date": "2025-12-27",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 29,
       "group": "cybersecurity",
-      "slug": "why-patch-compliance-can-hide-the-systems-that-matter",
-      "title": "Why patch compliance can hide the systems that matter",
-      "angle": "Asset coverage, exclusions and exposed services versus an aggregate percentage.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-05",
+      "slug": "identity-security-when-convenience-keeps-winning",
+      "title": "Identity security when convenience keeps winning",
+      "angle": "Choose practical authentication/access controls and approved exceptions; distinguish MFA from phishing-resistant MFA.",
+      "date": "2025-12-31",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 30,
       "group": "cybersecurity",
-      "slug": "handling-security-exceptions-with-an-expiry-date",
-      "title": "Handling security exceptions with an expiry date",
-      "angle": "Compensating controls, accountable approval, review triggers and safe retirement.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-09",
+      "slug": "privileged-access-without-shared-administrator-accounts",
+      "title": "Privileged access without shared administrator accounts",
+      "angle": "Separate named administration, emergency access and service identities; explain transition pitfalls.",
+      "date": "2026-01-04",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 31,
       "group": "cybersecurity",
-      "slug": "what-zero-trust-changes-in-an-ordinary-it-team",
-      "title": "What zero trust changes in an ordinary IT team",
-      "angle": "Resource-level verification, identity and device signals; contrast principles with product buying.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-13",
+      "slug": "the-security-questions-to-ask-a-saas-vendor-before-signing",
+      "title": "The security questions to ask a SaaS vendor before signing",
+      "angle": "Data access, logging, support, incident notice and exit evidence, not a generic exhaustive questionnaire.",
+      "date": "2026-01-07",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 32,
       "group": "cybersecurity",
-      "slug": "how-to-check-that-offboarding-really-removes-access",
-      "title": "How to check that offboarding really removes access",
-      "angle": "Sessions, integrations, delegated access and device ownership, not only disabling the directory account.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-17",
+      "slug": "preparing-for-a-cyber-incident-before-anyone-is-on-call",
+      "title": "Preparing for a cyber incident before anyone is on call",
+      "angle": "Authority, contact methods, legal/insurer dependencies and an offline runbook; avoid prescriptive legal timelines.",
+      "date": "2026-01-11",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 33,
       "group": "cybersecurity",
-      "slug": "data-loss-prevention-needs-a-workflow-not-just-a-policy",
-      "title": "Data loss prevention needs a workflow, not just a policy",
-      "angle": "Classifications, legitimate sharing, false positives and exception routes; no blanket prevention guarantee.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-21",
+      "slug": "a-tabletop-exercise-that-tests-decisions-rather-than-memory",
+      "title": "A tabletop exercise that tests decisions rather than memory",
+      "angle": "Facilitated hypothetical scenario with decision evidence and follow-up; no aggressive technical exploitation details.",
+      "date": "2026-01-15",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 34,
       "group": "cybersecurity",
-      "slug": "turning-penetration-test-findings-into-accountable-work",
-      "title": "Turning penetration-test findings into accountable work",
-      "angle": "Validation, owner assignment, retest evidence and what cannot be safely deferred.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-25",
+      "slug": "why-patch-compliance-can-hide-the-systems-that-matter",
+      "title": "Why patch compliance can hide the systems that matter",
+      "angle": "Asset coverage, exclusions and exposed services versus an aggregate percentage.",
+      "date": "2026-01-18",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 35,
       "group": "cybersecurity",
-      "slug": "making-security-awareness-useful-to-busy-staff",
-      "title": "Making security awareness useful to busy staff",
-      "angle": "Relevant scenarios, easy reporting and non-punitive feedback; do not invent click-rate outcomes.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-01-29",
+      "slug": "handling-security-exceptions-with-an-expiry-date",
+      "title": "Handling security exceptions with an expiry date",
+      "angle": "Compensating controls, accountable approval, review triggers and safe retirement.",
+      "date": "2026-01-22",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 36,
       "group": "cybersecurity",
-      "slug": "secure-remote-access-for-small-distributed-teams",
-      "title": "Secure remote access for small distributed teams",
-      "angle": "Device management, identity, support and emergency operations; do not equate VPN with complete trust.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-02",
+      "slug": "what-zero-trust-changes-in-an-ordinary-it-team",
+      "title": "What zero trust changes in an ordinary IT team",
+      "angle": "Resource-level verification, identity and device signals; contrast principles with product buying.",
+      "date": "2026-01-26",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 37,
       "group": "cybersecurity",
-      "slug": "what-a-cyber-insurance-questionnaire-does-not-tell-you",
-      "title": "What a cyber insurance questionnaire does not tell you",
-      "angle": "Separate contractual disclosure and exclusions from control effectiveness; recommend qualified policy review.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-05",
+      "slug": "how-to-check-that-offboarding-really-removes-access",
+      "title": "How to check that offboarding really removes access",
+      "angle": "Sessions, integrations, delegated access and device ownership, not only disabling the directory account.",
+      "date": "2026-01-29",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 38,
       "group": "cybersecurity",
-      "slug": "a-security-dashboard-that-shows-the-uncomfortable-gaps",
-      "title": "A security dashboard that shows the uncomfortable gaps",
-      "angle": "Coverage denominators, aged exceptions and restore evidence with actionable ownership.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-09",
+      "slug": "data-loss-prevention-needs-a-workflow-not-just-a-policy",
+      "title": "Data loss prevention needs a workflow, not just a policy",
+      "angle": "Classifications, legitimate sharing, false positives and exception routes; no blanket prevention guarantee.",
+      "date": "2026-02-02",
       "tags": [
         "Cybersecurity",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 39,
-      "group": "data",
-      "slug": "before-building-another-dashboard-agree-on-the-decision",
-      "title": "Before building another dashboard, agree on the decision",
-      "angle": "Audience, action, freshness and definition; show when a spreadsheet is enough.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-13",
+      "group": "cybersecurity",
+      "slug": "turning-penetration-test-findings-into-accountable-work",
+      "title": "Turning penetration-test findings into accountable work",
+      "angle": "Validation, owner assignment, retest evidence and what cannot be safely deferred.",
+      "date": "2026-02-06",
       "tags": [
-        "Data",
-        "Integration"
-      ]
+        "Cybersecurity",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 40,
-      "group": "data",
-      "slug": "finding-the-owner-of-a-business-metric",
-      "title": "Finding the owner of a business metric",
-      "angle": "Calculation versus policy ownership, disputes and a metric definition record.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-17",
+      "group": "cybersecurity",
+      "slug": "making-security-awareness-useful-to-busy-staff",
+      "title": "Making security awareness useful to busy staff",
+      "angle": "Relevant scenarios, easy reporting and non-punitive feedback; do not invent click-rate outcomes.",
+      "date": "2026-02-09",
       "tags": [
-        "Data",
-        "Integration"
-      ]
+        "Cybersecurity",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 41,
-      "group": "data",
-      "slug": "when-two-reports-disagree-start-with-the-grain",
-      "title": "When two reports disagree, start with the grain",
-      "angle": "Record grain, joins, deduplication and time windows, using an explicitly fictional example.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-21",
+      "group": "cybersecurity",
+      "slug": "secure-remote-access-for-small-distributed-teams",
+      "title": "Secure remote access for small distributed teams",
+      "angle": "Device management, identity, support and emergency operations; do not equate VPN with complete trust.",
+      "date": "2026-02-13",
       "tags": [
-        "Data",
-        "Integration"
-      ]
+        "Cybersecurity",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 42,
-      "group": "data",
-      "slug": "why-a-successful-data-load-can-still-produce-a-bad-report",
-      "title": "Why a successful data load can still produce a bad report",
-      "angle": "Completeness, null shells, validation rules and reconciliation; no employer-specific counts.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-02-25",
+      "group": "cybersecurity",
+      "slug": "what-a-cyber-insurance-questionnaire-does-not-tell-you",
+      "title": "What a cyber insurance questionnaire does not tell you",
+      "angle": "Separate contractual disclosure and exclusions from control effectiveness; recommend qualified policy review.",
+      "date": "2026-02-17",
       "tags": [
-        "Data",
-        "Integration"
-      ]
+        "Cybersecurity",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 43,
-      "group": "data",
-      "slug": "moving-reporting-off-a-shared-spreadsheet-without-breaking-the-process",
-      "title": "Moving reporting off a shared spreadsheet without breaking the process",
-      "angle": "Identify hidden business rules and owner workflow before changing technology.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-01",
+      "group": "cybersecurity",
+      "slug": "a-security-dashboard-that-shows-the-uncomfortable-gaps",
+      "title": "A security dashboard that shows the uncomfortable gaps",
+      "angle": "Coverage denominators, aged exceptions and restore evidence with actionable ownership.",
+      "date": "2026-02-20",
       "tags": [
-        "Data",
-        "Integration"
-      ]
+        "Cybersecurity",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 44,
       "group": "data",
-      "slug": "an-integration-needs-an-owner-after-it-goes-live",
-      "title": "An integration needs an owner after it goes live",
-      "angle": "Operating ownership, credentials, failure alerts, replay authority and support expectations.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-05",
+      "slug": "before-building-another-dashboard-agree-on-the-decision",
+      "title": "Before building another dashboard, agree on the decision",
+      "angle": "Audience, action, freshness and definition; show when a spreadsheet is enough.",
+      "date": "2026-02-24",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 45,
       "group": "data",
-      "slug": "designing-a-useful-data-quality-check",
-      "title": "Designing a useful data-quality check",
-      "angle": "Checks tied to decisions with tolerances, quarantine and correction ownership.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-08",
+      "slug": "finding-the-owner-of-a-business-metric",
+      "title": "Finding the owner of a business metric",
+      "angle": "Calculation versus policy ownership, disputes and a metric definition record.",
+      "date": "2026-02-28",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 46,
       "group": "data",
-      "slug": "the-difference-between-missing-data-and-zero",
-      "title": "The difference between missing data and zero",
-      "angle": "Reporting semantics, completeness indicators and consequences for interpretation.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-12",
+      "slug": "when-two-reports-disagree-start-with-the-grain",
+      "title": "When two reports disagree, start with the grain",
+      "angle": "Record grain, joins, deduplication and time windows, using an explicitly fictional example.",
+      "date": "2026-03-03",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 47,
       "group": "data",
-      "slug": "building-a-small-data-catalogue-people-will-maintain",
-      "title": "Building a small data catalogue people will maintain",
-      "angle": "Start with consequential datasets, definitions, access and change ownership rather than exhaustive tooling.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-16",
+      "slug": "why-a-successful-data-load-can-still-produce-a-bad-report",
+      "title": "Why a successful data load can still produce a bad report",
+      "angle": "Completeness, null shells, validation rules and reconciliation; no employer-specific counts.",
+      "date": "2026-03-07",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 48,
       "group": "data",
-      "slug": "choosing-between-an-api-integration-and-a-scheduled-file",
-      "title": "Choosing between an API integration and a scheduled file",
-      "angle": "Reliability, volume, latency, failure handling and actual source-system support.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-20",
+      "slug": "moving-reporting-off-a-shared-spreadsheet-without-breaking-the-process",
+      "title": "Moving reporting off a shared spreadsheet without breaking the process",
+      "angle": "Identify hidden business rules and owner workflow before changing technology.",
+      "date": "2026-03-11",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 49,
       "group": "data",
-      "slug": "making-a-migration-reconcile-before-calling-it-complete",
-      "title": "Making a migration reconcile before calling it complete",
-      "angle": "Counts, keys, balances and exception resolution across staged cutovers.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-24",
+      "slug": "an-integration-needs-an-owner-after-it-goes-live",
+      "title": "An integration needs an owner after it goes live",
+      "angle": "Operating ownership, credentials, failure alerts, replay authority and support expectations.",
+      "date": "2026-03-14",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 50,
       "group": "data",
-      "slug": "who-can-see-the-data-after-you-join-it",
-      "title": "Who can see the data after you join it",
-      "angle": "Aggregation and linkage can change sensitivity; authorisation must follow the combined result.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-03-28",
+      "slug": "designing-a-useful-data-quality-check",
+      "title": "Designing a useful data-quality check",
+      "angle": "Checks tied to decisions with tolerances, quarantine and correction ownership.",
+      "date": "2026-03-18",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 51,
       "group": "data",
-      "slug": "retiring-a-legacy-report-without-surprising-its-users",
-      "title": "Retiring a legacy report without surprising its users",
-      "angle": "Usage evidence, decision dependencies, parallel run and explicit retirement signoff.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-01",
+      "slug": "the-difference-between-missing-data-and-zero",
+      "title": "The difference between missing data and zero",
+      "angle": "Reporting semantics, completeness indicators and consequences for interpretation.",
+      "date": "2026-03-22",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 52,
       "group": "data",
-      "slug": "what-real-time-reporting-costs-the-organisation",
-      "title": "What real-time reporting costs the organisation",
-      "angle": "Latency requirements, operations burden and when daily refresh is a better fit.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-04",
+      "slug": "building-a-small-data-catalogue-people-will-maintain",
+      "title": "Building a small data catalogue people will maintain",
+      "angle": "Start with consequential datasets, definitions, access and change ownership rather than exhaustive tooling.",
+      "date": "2026-03-26",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 53,
       "group": "data",
-      "slug": "designing-an-integration-that-can-recover-from-a-partial-failure",
-      "title": "Designing an integration that can recover from a partial failure",
-      "angle": "Idempotency, checkpoints, reconciliation and safe replay through a hypothetical order flow.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-08",
+      "slug": "choosing-between-an-api-integration-and-a-scheduled-file",
+      "title": "Choosing between an API integration and a scheduled file",
+      "angle": "Reliability, volume, latency, failure handling and actual source-system support.",
+      "date": "2026-03-29",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 54,
       "group": "data",
-      "slug": "data-retention-is-an-operational-decision-too",
-      "title": "Data retention is an operational decision too",
-      "angle": "Retention obligations vary; ownership, backups, search indexes and deletion evidence.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-12",
+      "slug": "making-a-migration-reconcile-before-calling-it-complete",
+      "title": "Making a migration reconcile before calling it complete",
+      "angle": "Counts, keys, balances and exception resolution across staged cutovers.",
+      "date": "2026-04-02",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 55,
       "group": "data",
-      "slug": "getting-your-data-ready-for-ai-without-cleaning-everything",
-      "title": "Getting your data ready for AI without cleaning everything",
-      "angle": "Pick a bounded workflow and minimum trusted information; avoid treating a full data estate cleanup as prerequisite.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-16",
+      "slug": "who-can-see-the-data-after-you-join-it",
+      "title": "Who can see the data after you join it",
+      "angle": "Aggregation and linkage can change sensitivity; authorisation must follow the combined result.",
+      "date": "2026-04-06",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 56,
       "group": "data",
-      "slug": "buying-analytics-software-when-the-definitions-are-still-disputed",
-      "title": "Buying analytics software when the definitions are still disputed",
-      "angle": "Expose unresolved ownership, create a narrow proof and avoid a tooling-first purchase.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-20",
+      "slug": "retiring-a-legacy-report-without-surprising-its-users",
+      "title": "Retiring a legacy report without surprising its users",
+      "angle": "Usage evidence, decision dependencies, parallel run and explicit retirement signoff.",
+      "date": "2026-04-09",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 57,
       "group": "data",
-      "slug": "making-financial-and-operational-reports-tell-the-same-story",
-      "title": "Making financial and operational reports tell the same story",
-      "angle": "Timing, scope, common dimensions and agreed reconciliation, no accounting advice or invented results.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-24",
+      "slug": "what-real-time-reporting-costs-the-organisation",
+      "title": "What real-time reporting costs the organisation",
+      "angle": "Latency requirements, operations burden and when daily refresh is a better fit.",
+      "date": "2026-04-13",
       "tags": [
         "Data",
         "Integration"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 58,
-      "group": "delivery",
-      "slug": "a-project-kickoff-should-settle-what-happens-when-things-change",
-      "title": "A project kickoff should settle what happens when things change",
-      "angle": "Decision authority, scope boundaries and change costs rather than ceremony.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-04-28",
+      "group": "data",
+      "slug": "designing-an-integration-that-can-recover-from-a-partial-failure",
+      "title": "Designing an integration that can recover from a partial failure",
+      "angle": "Idempotency, checkpoints, reconciliation and safe replay through a hypothetical order flow.",
+      "date": "2026-04-17",
       "tags": [
-        "Delivery",
-        "Leadership"
-      ]
+        "Data",
+        "Integration"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 59,
-      "group": "delivery",
-      "slug": "writing-acceptance-criteria-before-the-supplier-starts-building",
-      "title": "Writing acceptance criteria before the supplier starts building",
-      "angle": "Observable outcomes, negative cases and the difference between demo and usable service.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-02",
+      "group": "data",
+      "slug": "data-retention-is-an-operational-decision-too",
+      "title": "Data retention is an operational decision too",
+      "angle": "Retention obligations vary; ownership, backups, search indexes and deletion evidence.",
+      "date": "2026-04-20",
       "tags": [
-        "Delivery",
-        "Leadership"
-      ]
+        "Data",
+        "Integration"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 60,
-      "group": "delivery",
-      "slug": "a-pilot-needs-an-exit-decision-not-just-enthusiastic-users",
-      "title": "A pilot needs an exit decision, not just enthusiastic users",
-      "angle": "Entry/exit criteria, representative participation, limitations and stop conditions.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-05",
+      "group": "data",
+      "slug": "getting-your-data-ready-for-ai-without-cleaning-everything",
+      "title": "Getting your data ready for AI without cleaning everything",
+      "angle": "Pick a bounded workflow and minimum trusted information; avoid treating a full data estate cleanup as prerequisite.",
+      "date": "2026-04-24",
       "tags": [
-        "Delivery",
-        "Leadership"
-      ]
+        "Data",
+        "Integration"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 61,
-      "group": "delivery",
-      "slug": "the-operational-work-hidden-inside-a-launch-date",
-      "title": "The operational work hidden inside a launch date",
-      "angle": "Access, monitoring, backups, support and incident ownership; a practical readiness review.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-09",
+      "group": "data",
+      "slug": "buying-analytics-software-when-the-definitions-are-still-disputed",
+      "title": "Buying analytics software when the definitions are still disputed",
+      "angle": "Expose unresolved ownership, create a narrow proof and avoid a tooling-first purchase.",
+      "date": "2026-04-28",
       "tags": [
-        "Delivery",
-        "Leadership"
-      ]
+        "Data",
+        "Integration"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 62,
-      "group": "delivery",
-      "slug": "planning-a-cutover-people-can-reverse",
-      "title": "Planning a cutover people can reverse",
-      "angle": "Reversibility constraints, data divergence and safe rollback decisions.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-13",
+      "group": "data",
+      "slug": "making-financial-and-operational-reports-tell-the-same-story",
+      "title": "Making financial and operational reports tell the same story",
+      "angle": "Timing, scope, common dimensions and agreed reconciliation, no accounting advice or invented results.",
+      "date": "2026-05-01",
       "tags": [
-        "Delivery",
-        "Leadership"
-      ]
+        "Data",
+        "Integration"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 63,
       "group": "delivery",
-      "slug": "why-user-acceptance-testing-should-include-the-awkward-cases",
-      "title": "Why user acceptance testing should include the awkward cases",
-      "angle": "Realistic roles, wrong inputs, failures and permission denial; no generic happy-path-only checklist.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-17",
+      "slug": "a-project-kickoff-should-settle-what-happens-when-things-change",
+      "title": "A project kickoff should settle what happens when things change",
+      "angle": "Decision authority, scope boundaries and change costs rather than ceremony.",
+      "date": "2026-05-05",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 64,
       "group": "delivery",
-      "slug": "measuring-adoption-without-mistaking-logins-for-value",
-      "title": "Measuring adoption without mistaking logins for value",
-      "angle": "Task completion, quality and displaced effort with explicit baseline limitations.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-21",
+      "slug": "writing-acceptance-criteria-before-the-supplier-starts-building",
+      "title": "Writing acceptance criteria before the supplier starts building",
+      "angle": "Observable outcomes, negative cases and the difference between demo and usable service.",
+      "date": "2026-05-09",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 65,
       "group": "delivery",
-      "slug": "a-change-plan-for-people-who-already-have-a-full-time-job",
-      "title": "A change plan for people who already have a full-time job",
-      "angle": "Time allocation, managers, practice and support instead of broadcast-only communications.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-25",
+      "slug": "a-pilot-needs-an-exit-decision-not-just-enthusiastic-users",
+      "title": "A pilot needs an exit decision, not just enthusiastic users",
+      "angle": "Entry/exit criteria, representative participation, limitations and stop conditions.",
+      "date": "2026-05-12",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 66,
       "group": "delivery",
-      "slug": "getting-useful-feedback-from-a-small-internal-pilot",
-      "title": "Getting useful feedback from a small internal pilot",
-      "angle": "Capture task context, severity and reproduction while protecting staff privacy.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-05-29",
+      "slug": "the-operational-work-hidden-inside-a-launch-date",
+      "title": "The operational work hidden inside a launch date",
+      "angle": "Access, monitoring, backups, support and incident ownership; a practical readiness review.",
+      "date": "2026-05-16",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 67,
       "group": "delivery",
-      "slug": "when-the-right-project-decision-is-to-stop",
-      "title": "When the right project decision is to stop",
-      "angle": "Sunk cost, changed assumptions and preserving reusable work without inventing portfolio outcomes.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-02",
+      "slug": "planning-a-cutover-people-can-reverse",
+      "title": "Planning a cutover people can reverse",
+      "angle": "Reversibility constraints, data divergence and safe rollback decisions.",
+      "date": "2026-05-20",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 68,
       "group": "delivery",
-      "slug": "a-build-versus-buy-decision-that-includes-the-next-three-years",
-      "title": "A build-versus-buy decision that includes the next three years",
-      "angle": "Support, integration, licensing, ownership and exit; illustrative costs only if necessary.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-05",
+      "slug": "why-user-acceptance-testing-should-include-the-awkward-cases",
+      "title": "Why user acceptance testing should include the awkward cases",
+      "angle": "Realistic roles, wrong inputs, failures and permission denial; no generic happy-path-only checklist.",
+      "date": "2026-05-23",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 69,
       "group": "delivery",
-      "slug": "choosing-a-managed-service-without-outsourcing-accountability",
-      "title": "Choosing a managed service without outsourcing accountability",
-      "angle": "Service boundaries, monitoring, approvals, escalation and exit evidence.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-09",
+      "slug": "measuring-adoption-without-mistaking-logins-for-value",
+      "title": "Measuring adoption without mistaking logins for value",
+      "angle": "Task completion, quality and displaced effort with explicit baseline limitations.",
+      "date": "2026-05-27",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 70,
       "group": "delivery",
-      "slug": "handing-a-project-to-support-without-handing-over-a-mystery",
-      "title": "Handing a project to support without handing over a mystery",
-      "angle": "Runbook minimum, owner rehearsal, known limitations and acceptance into service.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-13",
+      "slug": "a-change-plan-for-people-who-already-have-a-full-time-job",
+      "title": "A change plan for people who already have a full-time job",
+      "angle": "Time allocation, managers, practice and support instead of broadcast-only communications.",
+      "date": "2026-05-31",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 71,
       "group": "delivery",
-      "slug": "what-should-go-into-a-lightweight-architecture-decision-record",
-      "title": "What should go into a lightweight architecture decision record",
-      "angle": "Context, options, trade-off, reversibility and revisit triggers; provide a short original example.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-17",
+      "slug": "getting-useful-feedback-from-a-small-internal-pilot",
+      "title": "Getting useful feedback from a small internal pilot",
+      "angle": "Capture task context, severity and reproduction while protecting staff privacy.",
+      "date": "2026-06-03",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 72,
       "group": "delivery",
-      "slug": "managing-a-vendor-change-that-arrives-halfway-through-delivery",
-      "title": "Managing a vendor change that arrives halfway through delivery",
-      "angle": "Dependency impact, contractual checks and renegotiation before hidden concessions.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-21",
+      "slug": "when-the-right-project-decision-is-to-stop",
+      "title": "When the right project decision is to stop",
+      "angle": "Sunk cost, changed assumptions and preserving reusable work without inventing portfolio outcomes.",
+      "date": "2026-06-07",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 73,
       "group": "delivery",
-      "slug": "a-realistic-business-case-for-workflow-automation",
-      "title": "A realistic business case for workflow automation",
-      "angle": "Baseline hands-on time, exception costs and realised benefit; no unjustified productivity multiplier.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-25",
+      "slug": "a-build-versus-buy-decision-that-includes-the-next-three-years",
+      "title": "A build-versus-buy decision that includes the next three years",
+      "angle": "Support, integration, licensing, ownership and exit; illustrative costs only if necessary.",
+      "date": "2026-06-11",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 74,
       "group": "delivery",
-      "slug": "where-a-workflow-still-needs-a-person",
-      "title": "Where a workflow still needs a person",
-      "angle": "High-impact decisions, ambiguous input and clear authority at the handoff.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-06-29",
+      "slug": "choosing-a-managed-service-without-outsourcing-accountability",
+      "title": "Choosing a managed service without outsourcing accountability",
+      "angle": "Service boundaries, monitoring, approvals, escalation and exit evidence.",
+      "date": "2026-06-14",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 75,
       "group": "delivery",
-      "slug": "keeping-internal-tools-useful-after-their-first-enthusiastic-month",
-      "title": "Keeping internal tools useful after their first enthusiastic month",
-      "angle": "Owner feedback, operating budget, maintenance and retirement criteria.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-03",
+      "slug": "handing-a-project-to-support-without-handing-over-a-mystery",
+      "title": "Handing a project to support without handing over a mystery",
+      "angle": "Runbook minimum, owner rehearsal, known limitations and acceptance into service.",
+      "date": "2026-06-18",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 76,
       "group": "delivery",
-      "slug": "evaluating-an-ai-proposal-without-being-distracted-by-the-demo",
-      "title": "Evaluating an AI proposal without being distracted by the demo",
-      "angle": "Transition to latest AI section; assess workflow, access, evidence and operational cost.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-06",
+      "slug": "what-should-go-into-a-lightweight-architecture-decision-record",
+      "title": "What should go into a lightweight architecture decision record",
+      "angle": "Context, options, trade-off, reversibility and revisit triggers; provide a short original example.",
+      "date": "2026-06-22",
       "tags": [
         "Delivery",
         "Leadership"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 77,
-      "group": "ai",
-      "slug": "your-first-ai-use-case-should-be-easy-to-judge",
-      "title": "Your first AI use case should be easy to judge",
-      "angle": "Bounded task, observable quality and representative cases; why a broad chatbot is harder to evaluate.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-10",
+      "group": "delivery",
+      "slug": "managing-a-vendor-change-that-arrives-halfway-through-delivery",
+      "title": "Managing a vendor change that arrives halfway through delivery",
+      "angle": "Dependency impact, contractual checks and renegotiation before hidden concessions.",
+      "date": "2026-06-25",
       "tags": [
-        "AI",
-        "Governance"
-      ]
+        "Delivery",
+        "Leadership"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 78,
-      "group": "ai",
-      "slug": "buying-copilot-or-building-an-internal-ai-platform",
-      "title": "Buying Copilot or building an internal AI platform",
-      "angle": "Compare organisational needs and existing entitlements before building; distinguish products and verify current claims.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-14",
+      "group": "delivery",
+      "slug": "a-realistic-business-case-for-workflow-automation",
+      "title": "A realistic business case for workflow automation",
+      "angle": "Baseline hands-on time, exception costs and realised benefit; no unjustified productivity multiplier.",
+      "date": "2026-06-29",
       "tags": [
-        "AI",
-        "Governance"
-      ]
+        "Delivery",
+        "Leadership"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 79,
-      "group": "ai",
-      "slug": "what-retrieval-augmented-generation-can-and-cannot-fix",
-      "title": "What retrieval-augmented generation can and cannot fix",
-      "angle": "Retrieval grounding versus reasoning and source errors; it does not eliminate hallucinations or enforce access by itself.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-18",
+      "group": "delivery",
+      "slug": "where-a-workflow-still-needs-a-person",
+      "title": "Where a workflow still needs a person",
+      "angle": "High-impact decisions, ambiguous input and clear authority at the handoff.",
+      "date": "2026-07-03",
       "tags": [
-        "AI",
-        "Governance"
-      ]
+        "Delivery",
+        "Leadership"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 80,
-      "group": "ai",
-      "slug": "permissions-belong-in-the-retrieval-layer",
-      "title": "Permissions belong in the retrieval layer",
-      "angle": "Authorisation before retrieval, identity, filters and reindexing; hypothetical permission-change failure case.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-22",
+      "group": "delivery",
+      "slug": "keeping-internal-tools-useful-after-their-first-enthusiastic-month",
+      "title": "Keeping internal tools useful after their first enthusiastic month",
+      "angle": "Owner feedback, operating budget, maintenance and retirement criteria.",
+      "date": "2026-07-06",
       "tags": [
-        "AI",
-        "Governance"
-      ]
+        "Delivery",
+        "Leadership"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 81,
-      "group": "ai",
-      "slug": "an-ai-evaluation-set-that-reflects-the-work",
-      "title": "An AI evaluation set that reflects the work",
-      "angle": "Representative hard cases, expected behaviours, adjudication and holdouts; no claimed benchmark results.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-26",
+      "group": "delivery",
+      "slug": "evaluating-an-ai-proposal-without-being-distracted-by-the-demo",
+      "title": "Evaluating an AI proposal without being distracted by the demo",
+      "angle": "Transition to latest AI section; assess workflow, access, evidence and operational cost.",
+      "date": "2026-07-10",
       "tags": [
-        "AI",
-        "Governance"
-      ]
+        "Delivery",
+        "Leadership"
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 82,
       "group": "ai",
-      "slug": "measuring-ai-value-after-the-impressive-demonstration",
-      "title": "Measuring AI value after the impressive demonstration",
-      "angle": "Baseline cycle time, review, error cost, adoption and attributable benefit instead of token volume.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-07-30",
+      "slug": "your-first-ai-use-case-should-be-easy-to-judge",
+      "title": "Your first AI use case should be easy to judge",
+      "angle": "Bounded task, observable quality and representative cases; why a broad chatbot is harder to evaluate.",
+      "date": "2026-07-14",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 83,
       "group": "ai",
-      "slug": "when-an-ai-assistant-becomes-an-agent",
-      "title": "When an AI assistant becomes an agent",
-      "angle": "Action authority, tool access and transaction boundaries; practical distinction without marketing taxonomy certainty.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-03",
+      "slug": "buying-copilot-or-building-an-internal-ai-platform",
+      "title": "Buying Copilot or building an internal AI platform",
+      "angle": "Compare organisational needs and existing entitlements before building; distinguish products and verify current claims.",
+      "date": "2026-07-17",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 84,
       "group": "ai",
-      "slug": "giving-an-ai-agent-the-smallest-useful-set-of-permissions",
-      "title": "Giving an AI agent the smallest useful set of permissions",
-      "angle": "Narrow tools, scoped service identities, read versus write and per-action audit.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-06",
+      "slug": "what-retrieval-augmented-generation-can-and-cannot-fix",
+      "title": "What retrieval-augmented generation can and cannot fix",
+      "angle": "Retrieval grounding versus reasoning and source errors; it does not eliminate hallucinations or enforce access by itself.",
+      "date": "2026-07-21",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 85,
       "group": "ai",
-      "slug": "human-approval-is-only-useful-when-the-human-can-judge-the-action",
-      "title": "Human approval is only useful when the human can judge the action",
-      "angle": "Context, consequences, consent fatigue, batch changes and meaningful approve/reject interfaces.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-10",
+      "slug": "permissions-belong-in-the-retrieval-layer",
+      "title": "Permissions belong in the retrieval layer",
+      "angle": "Authorisation before retrieval, identity, filters and reindexing; hypothetical permission-change failure case.",
+      "date": "2026-07-25",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 86,
       "group": "ai",
-      "slug": "prompt-injection-is-an-application-boundary-problem",
-      "title": "Prompt injection is an application boundary problem",
-      "angle": "Untrusted retrieved content versus instructions; defence in depth, least privilege and action controls.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-14",
+      "slug": "an-ai-evaluation-set-that-reflects-the-work",
+      "title": "An AI evaluation set that reflects the work",
+      "angle": "Representative hard cases, expected behaviours, adjudication and holdouts; no claimed benchmark results.",
+      "date": "2026-07-29",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 87,
       "group": "ai",
-      "slug": "choosing-a-model-with-your-own-test-cases",
-      "title": "Choosing a model with your own test cases",
-      "angle": "Quality, latency, data terms and cost; no unsupported latest-model league table.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-18",
+      "slug": "measuring-ai-value-after-the-impressive-demonstration",
+      "title": "Measuring AI value after the impressive demonstration",
+      "angle": "Baseline cycle time, review, error cost, adoption and attributable benefit instead of token volume.",
+      "date": "2026-08-01",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 88,
       "group": "ai",
-      "slug": "what-to-log-when-an-ai-system-gives-the-wrong-answer",
-      "title": "What to log when an AI system gives the wrong answer",
-      "angle": "Inputs with privacy limits, retrieval provenance, versions, tool actions and retention ownership.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-22",
+      "slug": "when-an-ai-assistant-becomes-an-agent",
+      "title": "When an AI assistant becomes an agent",
+      "angle": "Action authority, tool access and transaction boundaries; practical distinction without marketing taxonomy certainty.",
+      "date": "2026-08-05",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 89,
       "group": "ai",
-      "slug": "the-hidden-operating-costs-of-an-internal-ai-platform",
-      "title": "The hidden operating costs of an internal AI platform",
-      "angle": "Evaluation, support, indexing, identity, abuse controls and change maintenance; no invented pricing.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-26",
+      "slug": "giving-an-ai-agent-the-smallest-useful-set-of-permissions",
+      "title": "Giving an AI agent the smallest useful set of permissions",
+      "angle": "Narrow tools, scoped service identities, read versus write and per-action audit.",
+      "date": "2026-08-09",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 90,
       "group": "ai",
-      "slug": "local-models-do-not-automatically-solve-data-governance",
-      "title": "Local models do not automatically solve data governance",
-      "angle": "Endpoint storage, logs, tools, backups, access and operational ownership; local is one boundary not a guarantee.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-08-30",
+      "slug": "human-approval-is-only-useful-when-the-human-can-judge-the-action",
+      "title": "Human approval is only useful when the human can judge the action",
+      "angle": "Context, consequences, consent fatigue, batch changes and meaningful approve/reject interfaces.",
+      "date": "2026-08-12",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 91,
       "group": "ai",
-      "slug": "testing-an-ai-coding-tool-beyond-the-code-it-produces",
-      "title": "Testing an AI coding tool beyond the code it produces",
-      "angle": "Tests, security review, dependencies, changed behaviour and deployment; no unsupported productivity study.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-09-03",
+      "slug": "prompt-injection-is-an-application-boundary-problem",
+      "title": "Prompt injection is an application boundary problem",
+      "angle": "Untrusted retrieved content versus instructions; defence in depth, least privilege and action controls.",
+      "date": "2026-08-16",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 92,
       "group": "ai",
-      "slug": "a-useful-ai-policy-fits-the-tools-people-actually-use",
-      "title": "A useful AI policy fits the tools people actually use",
-      "angle": "Approved tasks, data boundaries, review requirements and an exception route staff can follow.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-09-06",
+      "slug": "choosing-a-model-with-your-own-test-cases",
+      "title": "Choosing a model with your own test cases",
+      "angle": "Quality, latency, data terms and cost; no unsupported latest-model league table.",
+      "date": "2026-08-20",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 93,
       "group": "ai",
-      "slug": "what-happens-when-the-model-behind-your-application-changes",
-      "title": "What happens when the model behind your application changes",
-      "angle": "Versioning, canaries, regression sets, rollback and user expectations; avoid guarantees of stable behaviour.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-09-10",
+      "slug": "what-to-log-when-an-ai-system-gives-the-wrong-answer",
+      "title": "What to log when an AI system gives the wrong answer",
+      "angle": "Inputs with privacy limits, retrieval provenance, versions, tool actions and retention ownership.",
+      "date": "2026-08-23",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 94,
       "group": "ai",
-      "slug": "knowing-when-an-ai-system-should-decline-to-answer",
-      "title": "Knowing when an AI system should decline to answer",
-      "angle": "Evidence thresholds, missing context, permissions and escalation without treating confidence scores as truth.",
-      "date": "2026-09-18",
-      "retrospectiveDate": "2026-09-14",
+      "slug": "the-hidden-operating-costs-of-an-internal-ai-platform",
+      "title": "The hidden operating costs of an internal AI platform",
+      "angle": "Evaluation, support, indexing, identity, abuse controls and change maintenance; no invented pricing.",
+      "date": "2026-08-27",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     },
     {
       "index": 95,
+      "group": "ai",
+      "slug": "local-models-do-not-automatically-solve-data-governance",
+      "title": "Local models do not automatically solve data governance",
+      "angle": "Endpoint storage, logs, tools, backups, access and operational ownership; local is one boundary not a guarantee.",
+      "date": "2026-08-31",
+      "tags": [
+        "AI",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
+    },
+    {
+      "index": 96,
+      "group": "ai",
+      "slug": "testing-an-ai-coding-tool-beyond-the-code-it-produces",
+      "title": "Testing an AI coding tool beyond the code it produces",
+      "angle": "Tests, security review, dependencies, changed behaviour and deployment; no unsupported productivity study.",
+      "date": "2026-09-03",
+      "tags": [
+        "AI",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
+    },
+    {
+      "index": 97,
+      "group": "ai",
+      "slug": "a-useful-ai-policy-fits-the-tools-people-actually-use",
+      "title": "A useful AI policy fits the tools people actually use",
+      "angle": "Approved tasks, data boundaries, review requirements and an exception route staff can follow.",
+      "date": "2026-09-07",
+      "tags": [
+        "AI",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
+    },
+    {
+      "index": 98,
+      "group": "ai",
+      "slug": "what-happens-when-the-model-behind-your-application-changes",
+      "title": "What happens when the model behind your application changes",
+      "angle": "Versioning, canaries, regression sets, rollback and user expectations; avoid guarantees of stable behaviour.",
+      "date": "2026-09-11",
+      "tags": [
+        "AI",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
+    },
+    {
+      "index": 99,
+      "group": "ai",
+      "slug": "knowing-when-an-ai-system-should-decline-to-answer",
+      "title": "Knowing when an AI system should decline to answer",
+      "angle": "Evidence thresholds, missing context, permissions and escalation without treating confidence scores as truth.",
+      "date": "2026-09-14",
+      "tags": [
+        "AI",
+        "Governance"
+      ],
+      "updated": "2026-09-18"
+    },
+    {
+      "index": 100,
       "group": "ai",
       "slug": "what-i-would-ask-before-letting-an-ai-agent-act-for-the-business",
       "title": "What I would ask before letting an AI agent act for the business",
       "angle": "Latest article; consequence-oriented deployment questions, action limits, evidence, recovery and accountable owner.",
       "date": "2026-09-18",
-      "retrospectiveDate": "2026-09-18",
       "tags": [
         "AI",
         "Governance"
-      ]
+      ],
+      "updated": "2026-09-18"
     }
   ]
 }

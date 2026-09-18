@@ -1,7 +1,7 @@
 ---
 title: "Why I still build things as a CIO"
-date: "2023-11-05"
-updated: "2026-09-12"
+date: "2025-09-23"
+updated: "2026-09-18"
 summary: "Small builds keep me close to the practical work. The useful lessons are often in testing, integration and handover rather than the demo."
 tags: ["Delivery", "Leadership", "Experiments"]
 published: true

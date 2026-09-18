@@ -1,7 +1,7 @@
 ---
 title: "A build-versus-buy decision that includes the next three years"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-05"
+date: "2026-06-11"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Compare build and buy across maintenance, integration, licensing and exit rather than treating the launch price as the whole decision."
 published: true

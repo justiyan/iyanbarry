@@ -1,7 +1,7 @@
 ---
 title: "Who can see the data after you join it"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-28"
+date: "2026-04-06"
+updated: "2026-09-18"
 summary: "Joining datasets can reveal information neither source exposed alone. Review the purpose, audience and access controls for the combined result."
 tags: ["Data", "Integration"]
 published: true

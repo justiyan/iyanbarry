@@ -1,7 +1,7 @@
 ---
 title: "Hiring an IT manager without looking for a smaller version of yourself"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-04"
+date: "2025-11-21"
+updated: "2026-09-18"
 summary: "Hire an IT manager against observable role outcomes, then give complementary strengths enough authority and support to be useful."
 tags: ["Leadership", "Strategy"]
 published: true

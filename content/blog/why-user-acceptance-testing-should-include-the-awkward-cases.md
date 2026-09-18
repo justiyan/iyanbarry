@@ -1,7 +1,7 @@
 ---
 title: "Why user acceptance testing should include the awkward cases"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-17"
+date: "2026-05-23"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Test the situations users struggle to recover from: denied access, duplicate actions, missing information and interrupted work."
 published: true

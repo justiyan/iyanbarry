@@ -1,7 +1,7 @@
 ---
 title: "A change plan for people who already have a full-time job"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-25"
+date: "2026-05-31"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Give staff time to practise, managers a capacity decision and support a workable transition instead of relying on launch emails."
 published: true

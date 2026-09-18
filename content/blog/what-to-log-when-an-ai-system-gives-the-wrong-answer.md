@@ -1,7 +1,7 @@
 ---
 title: "What to log when an AI system gives the wrong answer"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-22"
+date: "2026-08-23"
+updated: "2026-09-18"
 summary: "Keep a diagnostic trail of versions, authorised sources and action outcomes without turning routine AI logs into a sensitive conversation archive."
 tags: ["AI", "Governance"]
 published: true

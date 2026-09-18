@@ -1,7 +1,7 @@
 ---
 title: "Prompt injection is an application boundary problem"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-14"
+date: "2026-08-16"
+updated: "2026-09-18"
 summary: "Treat retrieved text as untrusted input and contain what a manipulated model can disclose or execute through application-level controls."
 tags: ["AI", "Governance"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "A useful conversation about technical debt"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-12"
+date: "2025-10-29"
+updated: "2026-09-18"
 summary: "Technical debt becomes a business decision when a specific dependency is connected to maintenance effort, service exposure and credible alternatives."
 tags: ["Leadership", "Strategy"]
 published: true

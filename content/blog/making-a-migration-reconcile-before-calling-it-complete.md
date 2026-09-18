@@ -1,7 +1,7 @@
 ---
 title: "Making a migration reconcile before calling it complete"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-24"
+date: "2026-04-02"
+updated: "2026-09-18"
 summary: "A migration is complete when the destination can be explained against the source. Plan reconciliation, exceptions and cutover evidence before moving the data."
 tags: ["Data", "Integration"]
 published: true

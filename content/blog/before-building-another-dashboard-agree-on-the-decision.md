@@ -1,7 +1,7 @@
 ---
 title: "Before building another dashboard, agree on the decision"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-13"
+date: "2026-02-24"
+updated: "2026-09-18"
 summary: "A dashboard earns its place when someone can name the decision, the deadline and what they will do differently. Start there before choosing charts."
 tags: ["Data", "Integration"]
 published: true

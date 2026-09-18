@@ -1,7 +1,7 @@
 ---
 title: "The security questions to ask a SaaS vendor before signing"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-25"
+date: "2026-01-07"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "SaaS security due diligence should test the access, evidence and exit arrangements your organisation will depend on, before commercial leverage disappears."
 published: true

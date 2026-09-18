@@ -1,7 +1,7 @@
 ---
 title: "Local models do not automatically solve data governance"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-30"
+date: "2026-08-31"
+updated: "2026-09-18"
 summary: "Local inference changes one data boundary; storage, tools, backups, access and operational ownership still determine whether the system is well governed."
 tags: ["AI", "Governance"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Keeping internal tools useful after their first enthusiastic month"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-03"
+date: "2026-07-06"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Give internal tools an operating owner, a maintenance allowance and a reason to remain in service after launch enthusiasm fades."
 published: true

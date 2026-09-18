@@ -1,7 +1,7 @@
 ---
 title: "Handling security exceptions with an expiry date"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-09"
+date: "2026-01-22"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Security exceptions should record a bounded decision, tested compensating controls and a credible exit, with reviews that can end rather than automatically renew them."
 published: true

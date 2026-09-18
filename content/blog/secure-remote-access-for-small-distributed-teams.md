@@ -1,7 +1,7 @@
 ---
 title: "Secure remote access for small distributed teams"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-02"
+date: "2026-02-13"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Remote access should give a small distributed team the resources it needs, with supported devices, appropriate identity checks and a tested failure plan."
 published: true

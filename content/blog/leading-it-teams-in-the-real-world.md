@@ -1,7 +1,7 @@
 ---
 title: "Leading an IT team out of firefighting"
-date: "2023-11-10"
-updated: "2026-09-12"
+date: "2025-09-30"
+updated: "2026-09-18"
 summary: "Clear priorities, protected delivery time and knowing when you are the bottleneck. Practical ways to give an overwhelmed IT team room to move."
 tags: ["Leadership", "IT"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "What your first ninety days as an IT leader should uncover"
-date: "2026-09-18"
-retrospectiveDate: "2025-09-23"
+date: "2025-10-11"
+updated: "2026-09-18"
 summary: "The first ninety days should expose obligations, hidden dependencies and decision bottlenecks before an IT leader redraws the team."
 tags: ["Leadership", "Strategy"]
 published: true

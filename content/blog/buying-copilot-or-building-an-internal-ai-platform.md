@@ -1,7 +1,7 @@
 ---
 title: "Buying Copilot or building an internal AI platform"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-14"
+date: "2026-07-17"
+updated: "2026-09-18"
 summary: "Compare the actual Copilot experience and existing entitlements with the workflow gap a custom platform would have to justify."
 tags: ["AI", "Governance"]
 published: true
@@ -17,7 +17,7 @@ Start with the workflow rather than a feature comparison. If staff need help ins
 
 “Copilot” is too broad for a procurement decision. Record the exact experience, account type, licence or entitlement, enabled agents and data connections. Distinguish chat, assistance within productivity applications, developer tools and custom agent functionality rather than treating the name as a single package.
 
-For this publication-date comparison in September 2026, Copilot Chat outside Outlook is primarily web grounded, but can also use supplied files, supported app context and enabled agents. Eligible Copilot Chat users in Outlook can access a bounded set of organisational content, including supported email, calendar, meeting, chat and related file content, even without the full Microsoft 365 Copilot add-on. The licensed Microsoft Copilot experience provides broader organisational grounding across Microsoft 365 through Graph API, Work IQ and semantic indexing. “Chat cannot use work data” would therefore be the wrong distinction.
+For this September 2026 update, Copilot Chat outside Outlook is primarily web grounded, but can also use supplied files, supported app context and enabled agents. Eligible Copilot Chat users in Outlook can access a bounded set of organisational content, including supported email, calendar, meeting, chat and related file content, even without the full Microsoft 365 Copilot add-on. The licensed Microsoft Copilot experience provides broader organisational grounding across Microsoft 365 through Graph API, Work IQ and semantic indexing. “Chat cannot use work data” would therefore be the wrong distinction.
 
 Check the exact account, entitlement, client, mailbox requirements and configuration before assuming either behaviour. Microsoft's changing product names make the service description and contract more reliable decision inputs than a familiar logo. I would ask the licensing owner to verify what the organisation already owns and what the proposed users can actually access.
 

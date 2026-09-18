@@ -1,7 +1,7 @@
 ---
 title: "What happens when the model behind your application changes"
-date: "2026-09-18"
-retrospectiveDate: "2026-09-10"
+date: "2026-09-11"
+updated: "2026-09-18"
 summary: "Treat model changes as application releases: preserve the tested configuration, check regressions, limit exposure and plan a fallback that remains available."
 tags: ["AI", "Governance"]
 published: true

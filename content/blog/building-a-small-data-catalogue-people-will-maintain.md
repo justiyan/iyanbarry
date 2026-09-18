@@ -1,7 +1,7 @@
 ---
 title: "Building a small data catalogue people will maintain"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-16"
+date: "2026-03-26"
+updated: "2026-09-18"
 summary: "Start a catalogue with the datasets people depend on and the questions they keep asking. Make updates part of real work rather than a separate documentation campaign."
 tags: ["Data", "Integration"]
 published: true

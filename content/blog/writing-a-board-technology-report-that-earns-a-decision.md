@@ -1,7 +1,7 @@
 ---
 title: "Writing a board technology report that earns a decision"
-date: "2026-09-18"
-retrospectiveDate: "2025-09-27"
+date: "2025-10-15"
+updated: "2026-09-18"
 summary: "A board technology report should make the requested decision, changing exposure and consequences of waiting easy to understand."
 tags: ["Leadership", "Strategy"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Choosing an IT operating model for the organisation you have"
-date: "2026-09-18"
-retrospectiveDate: "2025-10-16"
+date: "2025-11-02"
+updated: "2026-09-18"
 summary: "An IT operating model should reflect real service boundaries, scarce skills and business decision authority rather than a fashionable organisation chart."
 tags: ["Leadership", "Strategy"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Turning penetration-test findings into accountable work"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-25"
+date: "2026-02-06"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "A penetration-test report creates work only when findings have owners, scoped fixes and independent closure evidence. Severity alone is not a delivery plan."
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "A practical way to review your IT strategy each quarter"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-24"
+date: "2025-12-09"
+updated: "2026-09-18"
 summary: "A quarterly IT strategy review should test changed assumptions and make explicit decisions to continue, reshape or stop work."
 tags: ["Leadership", "Strategy"]
 published: true

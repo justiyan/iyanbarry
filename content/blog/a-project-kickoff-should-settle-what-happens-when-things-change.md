@@ -1,7 +1,7 @@
 ---
 title: "A project kickoff should settle what happens when things change"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-28"
+date: "2026-05-05"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Set decision rights, scope boundaries and the cost of change before a project starts collecting promises."
 published: true

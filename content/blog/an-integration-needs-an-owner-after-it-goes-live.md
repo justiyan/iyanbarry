@@ -1,7 +1,7 @@
 ---
 title: "An integration needs an owner after it goes live"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-05"
+date: "2026-03-14"
+updated: "2026-09-18"
 summary: "Go-live is the beginning of an integration\u2019s operating life. Name the people who manage failures, credentials and safe recovery before handing it over."
 tags: ["Data", "Integration"]
 published: true

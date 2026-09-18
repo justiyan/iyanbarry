@@ -11,7 +11,7 @@ export interface BlogPost {
   title: string
   date: string
   updated?: string
-  retrospectiveDate?: string
+
   wordCount: number
   readingMinutes: number
   summary: string
@@ -22,19 +22,13 @@ export interface BlogPost {
 
 function postMetadata(slug: string, data: Record<string, any>, body: string): BlogPost {
   const wordCount = (body.match(/\b[\w’'-]+\b/g) || []).length
-  const retrospective = data.retrospectiveDate
-  const parsedRetrospective = typeof retrospective === 'string' ? new Date(retrospective) : null
-  const retrospectiveDate = typeof retrospective === 'string'
-    && /^\d{4}-\d{2}-\d{2}$/.test(retrospective)
-    && parsedRetrospective && !Number.isNaN(parsedRetrospective.getTime())
-    && parsedRetrospective.toISOString().slice(0, 10) === retrospective
-    && retrospective <= data.date ? retrospective : undefined
+
   return {
     slug,
     title: data.title,
     date: data.date,
     updated: data.updated,
-    retrospectiveDate,
+
     summary: data.summary,
     tags: data.tags || [],
     published: data.published !== false,
@@ -62,10 +56,7 @@ export function getSortedPostsData(): BlogPost[] {
     .filter((post) => post.published)
 
   return allPostsData.sort((a, b) => {
-    const latest = (b.updated || b.date).localeCompare(a.updated || a.date)
-    return latest || b.date.localeCompare(a.date)
-      || (b.retrospectiveDate || '').localeCompare(a.retrospectiveDate || '')
-      || a.slug.localeCompare(b.slug)
+    return b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug)
   })
 }
 

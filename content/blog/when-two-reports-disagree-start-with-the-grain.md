@@ -1,7 +1,7 @@
 ---
 title: "When two reports disagree, start with the grain"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-21"
+date: "2026-03-03"
+updated: "2026-09-18"
 summary: "Conflicting totals are often counting different things. Trace the row grain, joins and reporting window before deciding which report is wrong."
 tags: ["Data", "Integration"]
 published: true

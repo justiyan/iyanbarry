@@ -1,7 +1,7 @@
 ---
 title: "Privileged access without shared administrator accounts"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-21"
+date: "2026-01-04"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Replace shared administration with attributable access while preserving service identities, emergency recovery and a safe transition for the support team."
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Essential Eight maturity is not a security score"
-date: "2026-09-18"
-retrospectiveDate: "2025-12-05"
+date: "2025-12-20"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Use Essential Eight maturity to describe assessed controls within a defined scope, while keeping business risk, exclusions and broader security work visible."
 published: true

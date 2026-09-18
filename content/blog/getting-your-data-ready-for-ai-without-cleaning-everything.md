@@ -1,7 +1,7 @@
 ---
 title: "Getting your data ready for AI without cleaning everything"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-16"
+date: "2026-04-24"
+updated: "2026-09-18"
 summary: "Prepare the smallest trustworthy information set for one AI workflow. Focus on authority, access and evaluation rather than promising to clean the whole estate first."
 tags: ["Data", "Integration"]
 published: true

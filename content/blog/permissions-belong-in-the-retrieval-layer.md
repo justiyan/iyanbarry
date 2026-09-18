@@ -1,7 +1,7 @@
 ---
 title: "Permissions belong in the retrieval layer"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-22"
+date: "2026-07-25"
+updated: "2026-09-18"
 summary: "Apply access rules before restricted passages reach the model, and test what happens when source permissions change after indexing."
 tags: ["AI", "Governance"]
 published: true

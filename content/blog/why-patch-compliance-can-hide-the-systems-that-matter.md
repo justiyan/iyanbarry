@@ -1,7 +1,7 @@
 ---
 title: "Why patch compliance can hide the systems that matter"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-05"
+date: "2026-01-18"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Patch reporting needs an honest asset population and a view of exposed, unsupported and excluded systems, not just a favourable fleet percentage."
 published: true

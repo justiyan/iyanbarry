@@ -1,7 +1,7 @@
 ---
 title: "Buying analytics software when the definitions are still disputed"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-20"
+date: "2026-04-28"
+updated: "2026-09-18"
 summary: "When teams disagree on a measure, software cannot decide its meaning for them. Use a narrow proof to separate governance gaps from genuine product requirements."
 tags: ["Data", "Integration"]
 published: true

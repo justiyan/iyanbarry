@@ -1,7 +1,7 @@
 ---
 title: "Handing a project to support without handing over a mystery"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-13"
+date: "2026-06-18"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "A support handover needs usable operating notes, a rehearsal and explicit acceptance of limitations and ongoing workload."
 published: true

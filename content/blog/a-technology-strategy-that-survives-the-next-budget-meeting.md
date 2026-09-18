@@ -1,7 +1,7 @@
 ---
 title: "A technology strategy that survives the next budget meeting"
-date: "2026-09-18"
-retrospectiveDate: "2025-09-19"
+date: "2025-10-07"
+updated: "2026-09-18"
 summary: "A useful technology strategy makes funded choices, dependencies and deliberate deferrals visible before the budget is challenged."
 tags: ["Leadership", "Strategy"]
 published: true

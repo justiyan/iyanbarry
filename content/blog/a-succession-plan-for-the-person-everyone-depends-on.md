@@ -1,7 +1,7 @@
 ---
 title: "A succession plan for the person everyone depends on"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-08"
+date: "2025-11-24"
+updated: "2026-09-18"
 summary: "Reduce dependence on a single specialist by testing whether another person can perform critical work with the right access and guidance."
 tags: ["Leadership", "Strategy"]
 published: true

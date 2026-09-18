@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { useState, useMemo, useRef } from 'react'
 import { Shell } from '@/components/ui'
 import type { BlogPost } from '@/lib/blog'
-import PostDate, { formatPostDate, formatRetrospectiveMonth } from '@/components/PostDate'
+import PostDate, { formatPostMonth } from '@/components/PostDate'
 
 export default function BlogClient({ posts }: { posts: BlogPost[] }) {
   const [tag, setTag] = useState<string | null>(null)
@@ -19,21 +19,9 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
   }
   const search = query.trim().toLocaleLowerCase('en-AU')
   const hasFilters = Boolean(tag || search || month)
-  const months = useMemo(() => Array.from(new Set(posts.flatMap(p =>
-    p.retrospectiveDate ? [p.retrospectiveDate.slice(0, 7)] : []
-  ))).sort().reverse(), [posts])
+  const months = useMemo(() => Array.from(new Set(posts.map(p => p.date.slice(0, 7)))).sort().reverse(), [posts])
   const clearFilters = () => { setTag(null); setQuery(''); setMonth(''); setPage(1) }
-  const retrospectiveNote = useMemo(() => {
-    const retrospectives = posts.filter(p => p.retrospectiveDate)
-    if (!retrospectives.length) return null
-    const dates = retrospectives.map(p => p.date).sort()
-    const publication = dates[0] === dates[dates.length - 1]
-      ? formatPostDate(dates[0], true)
-      : `${formatPostDate(dates[0], true)}–${formatPostDate(dates[dates.length - 1], true)}`
-    const range = months.length === 1 ? formatRetrospectiveMonth(`${months[0]}-01`)
-      : `${formatRetrospectiveMonth(`${months[months.length - 1]}-01`)}–${formatRetrospectiveMonth(`${months[0]}-01`)}`
-    return `Retrospective articles published ${publication}. Retrospective dates group topics across ${range}, not earlier publication.`
-  }, [posts, months])
+
 
   const tags = useMemo(() => {
     const s = new Set<string>()
@@ -43,7 +31,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
 
   const filtered = useMemo(
     () => posts.filter(p => (!tag || p.tags.includes(tag))
-      && (!month || p.retrospectiveDate?.startsWith(month))
+      && (!month || p.date.startsWith(month))
       && (!search || [p.title, p.summary, ...p.tags].join(' ').toLocaleLowerCase('en-AU').includes(search))),
     [posts, tag, month, search]
   )
@@ -65,7 +53,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             better decisions about AI, security and data. The details that matter when you have
             to make something work.
           </p>
-          {retrospectiveNote && <p data-retrospective-note className="mt-s4 max-w-[72ch] text-[14px] leading-[1.6] text-ink-3">{retrospectiveNote}</p>}
+
         </Shell>
       </div>
 
@@ -80,12 +68,12 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
           </label>
           {months.length > 0 && (
             <label className="w-full md:w-auto text-[14px] text-ink-2">
-              Retrospective month
-              <select aria-label="Retrospective month" value={month}
+              Publication month
+              <select aria-label="Publication month" value={month}
                 onChange={event => { setMonth(event.target.value); setPage(1) }}
                 className="mt-s2 block min-h-[44px] w-full border border-[#788b80] bg-surface px-4 py-2 text-ink focus:border-accent focus:ring-2 focus:ring-accent">
-                <option value="">All retrospective months</option>
-                {months.map(value => <option key={value} value={value}>{formatRetrospectiveMonth(`${value}-01`)}</option>)}
+                <option value="">All months</option>
+                {months.map(value => <option key={value} value={value}>{formatPostMonth(`${value}-01`)}</option>)}
               </select>
             </label>
           )}
@@ -124,7 +112,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             </h2>
             <p className="mb-s4 max-w-[65ch] text-[17px] leading-[1.65] text-ink-2">{featured.summary}</p>
             <div className="flex flex-wrap items-end gap-s4">
-              <PostDate date={featured.date} updated={featured.updated} retrospectiveDate={featured.retrospectiveDate} />
+              <PostDate date={featured.date} />
               <span className="text-[13px] text-ink-3">{featured.readingMinutes} min read</span>
               <Link href={`/blog/${featured.slug}`} className="text-link">Read the article →</Link>
             </div>
@@ -138,7 +126,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
               href={`/blog/${p.slug}`}
               className="group grid grid-cols-[175px_1fr] items-baseline gap-7 border-b border-hairline py-8 first:border-t max-md:grid-cols-1 max-md:gap-3"
             >
-              <PostDate date={p.date} updated={p.updated} retrospectiveDate={p.retrospectiveDate} />
+              <PostDate date={p.date} />
               <div>
                 <h2 className="mb-3 font-display text-[28px] font-normal leading-[1.25] tracking-[-0.02em] transition-colors group-hover:text-accent">
                   {p.title}
@@ -169,10 +157,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
             onClick={() => goToPage(currentPage + 1)}
             className="min-h-[44px] border border-hairline px-4 py-2 text-[14px] hover:border-accent disabled:cursor-not-allowed disabled:opacity-40">Next</button>
         </nav>
-        <p className="mt-s3 max-w-[65ch] text-[13px] text-ink-3">
-          Older pieces are revisited when there’s more to say. Updated dates mark substantial
-          revisions; the original publication date stays on each article.
-        </p>
+
       </Shell>
     </>
   )

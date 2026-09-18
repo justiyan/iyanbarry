@@ -1,7 +1,7 @@
 ---
 title: "What should go into a lightweight architecture decision record"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-17"
+date: "2026-06-22"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Keep architecture decisions short enough to read, but preserve the context, rejected options and triggers for reconsidering them."
 published: true

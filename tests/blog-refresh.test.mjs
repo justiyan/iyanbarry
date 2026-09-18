@@ -12,18 +12,18 @@ require.extensions['.ts'] = (module, filename) => {
 }
 const { getSortedPostsData, getPostData, getAllPostSlugs } = require('../lib/blog.ts')
 
-test('revision dates are shown consistently and the newest article is featured', () => {
+test('publication dates are displayed consistently and the newest article is featured', () => {
   for (const path of ['app/page.tsx', 'app/blog/BlogClient.tsx', 'app/blog/[slug]/page.tsx']) {
     assert.ok(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8').includes('@/components/PostDate'), `${path} displays publication or revision dates`)
   }
   const article = readFileSync(new URL('../app/blog/[slug]/page.tsx', import.meta.url), 'utf8')
   assert.ok(article.includes('dateModified'))
-  assert.ok(article.includes('Originally published'))
+  assert.ok(!article.includes('Originally published'))
   const index = readFileSync(new URL('../app/blog/BlogClient.tsx', import.meta.url), 'utf8')
   assert.ok(index.includes('data-featured-post'))
 })
 
-test('writing refresh preserves original dates and exposes real revision dates and reading times', async () => {
+test('original articles retain their content and use the approved publication-date manifest', async () => {
   const posts = getSortedPostsData()
   const originalSlugs = [
     'building-an-internal-ai-platform', 'leading-it-teams-in-the-real-world',
@@ -34,8 +34,10 @@ test('writing refresh preserves original dates and exposes real revision dates a
   assert.equal(originals.length, 5)
   assert.equal(originals[0].slug, 'building-an-internal-ai-platform')
   const revised = posts.find(p => p.slug === 'leading-it-teams-in-the-real-world')
-  assert.equal(revised.date, '2023-11-10')
-  assert.equal(revised.updated, '2026-09-12', 'substantial revisions have a separate updated date')
+  const manifest = JSON.parse(readFileSync(new URL('../docs/writing-library/manifest.json', import.meta.url), 'utf8'))
+  const expected = manifest.articles.find(p => p.slug === revised.slug)
+  assert.equal(revised.date, expected.date)
+  assert.equal(revised.updated, expected.updated, 'actual modification dates remain in metadata')
   assert.ok(revised.readingMinutes >= 4)
   assert.ok(revised.wordCount >= 800)
   for (const post of originals) {

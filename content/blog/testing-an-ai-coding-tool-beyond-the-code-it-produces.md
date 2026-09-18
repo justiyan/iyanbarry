@@ -1,7 +1,7 @@
 ---
 title: "Testing an AI coding tool beyond the code it produces"
-date: "2026-09-18"
-retrospectiveDate: "2026-09-03"
+date: "2026-09-03"
+updated: "2026-09-18"
 summary: "Judge an AI coding tool by verified behaviour, dependencies, security and maintainability, not the volume of code it can generate."
 tags: ["AI", "Governance"]
 published: true

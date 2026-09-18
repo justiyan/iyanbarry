@@ -1,7 +1,7 @@
 ---
 title: "What a cyber insurance questionnaire does not tell you"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-05"
+date: "2026-02-17"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Use a cyber insurance questionnaire as a disclosure task with evidence, while keeping policy interpretation, response arrangements and control effectiveness separate."
 published: true

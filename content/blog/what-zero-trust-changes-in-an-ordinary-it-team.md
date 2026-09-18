@@ -1,7 +1,7 @@
 ---
 title: "What zero trust changes in an ordinary IT team"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-13"
+date: "2026-01-26"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Zero trust changes how access is justified for a resource. Start with a useful service boundary and reliable identity and device evidence before buying a new platform."
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Measuring AI value after the impressive demonstration"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-30"
+date: "2026-08-01"
+updated: "2026-09-18"
 summary: "Measure completed work, review effort and attributable outcomes so an impressive AI demonstration does not become an unsupported savings claim."
 tags: ["AI", "Governance"]
 published: true

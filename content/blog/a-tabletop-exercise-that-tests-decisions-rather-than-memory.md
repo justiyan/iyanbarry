@@ -1,7 +1,7 @@
 ---
 title: "A tabletop exercise that tests decisions rather than memory"
-date: "2026-09-18"
-retrospectiveDate: "2026-01-02"
+date: "2026-01-15"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "A useful cyber tabletop gives leaders incomplete information and tests their authority, trade-offs and follow-through, rather than their recall of the plan."
 published: true

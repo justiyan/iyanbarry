@@ -1,7 +1,7 @@
 ---
 title: "Getting useful feedback from a small internal pilot"
-date: "2026-09-18"
-retrospectiveDate: "2026-05-29"
+date: "2026-06-03"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Collect pilot feedback that explains the task and failure without turning a small staff trial into intrusive monitoring."
 published: true

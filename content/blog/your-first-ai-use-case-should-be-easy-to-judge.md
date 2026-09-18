@@ -1,7 +1,7 @@
 ---
 title: "Your first AI use case should be easy to judge"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-10"
+date: "2026-07-14"
+updated: "2026-09-18"
 summary: "Choose a first AI task with an observable finish, a credible reviewer and mistakes you can contain before funding a broad assistant."
 tags: ["AI", "Governance"]
 published: true

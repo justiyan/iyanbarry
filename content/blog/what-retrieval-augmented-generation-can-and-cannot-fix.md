@@ -1,7 +1,7 @@
 ---
 title: "What retrieval-augmented generation can and cannot fix"
-date: "2026-09-18"
-retrospectiveDate: "2026-07-18"
+date: "2026-07-21"
+updated: "2026-09-18"
 summary: "Retrieval can supply relevant evidence, but source quality, reasoning, permissions and refusal behaviour remain separate design problems."
 tags: ["AI", "Governance"]
 published: true

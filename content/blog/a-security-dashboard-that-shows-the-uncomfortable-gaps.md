@@ -1,7 +1,7 @@
 ---
 title: "A security dashboard that shows the uncomfortable gaps"
-date: "2026-09-18"
-retrospectiveDate: "2026-02-09"
+date: "2026-02-20"
+updated: "2026-09-18"
 tags: ["Cybersecurity", "Governance"]
 summary: "Report security coverage, stale evidence and unresolved service risks in a way that tells management where it must decide or intervene."
 published: true

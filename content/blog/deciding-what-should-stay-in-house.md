@@ -1,7 +1,7 @@
 ---
 title: "Deciding what should stay in-house"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-20"
+date: "2025-12-05"
+updated: "2026-09-18"
 summary: "Outsource defined delivery work only after deciding which judgement, information and transition capability the organisation must retain."
 tags: ["Leadership", "Strategy"]
 published: true

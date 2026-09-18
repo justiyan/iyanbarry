@@ -1,7 +1,7 @@
 ---
 title: "Designing a useful data-quality check"
-date: "2026-09-18"
-retrospectiveDate: "2026-03-08"
+date: "2026-03-18"
+updated: "2026-09-18"
 summary: "Tie each quality rule to a decision and an action. A useful check has a tolerance, an owner and a clear response when it fails."
 tags: ["Data", "Integration"]
 published: true

@@ -1,7 +1,7 @@
 ---
 title: "Making financial and operational reports tell the same story"
-date: "2026-09-18"
-retrospectiveDate: "2026-04-24"
+date: "2026-05-01"
+updated: "2026-09-18"
 summary: "Financial and operational views can differ legitimately. Align scope and timing, then build an agreed bridge that explains the remaining differences."
 tags: ["Data", "Integration"]
 published: true

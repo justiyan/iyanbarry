@@ -1,7 +1,7 @@
 ---
 title: "A realistic business case for workflow automation"
-date: "2026-09-18"
-retrospectiveDate: "2026-06-25"
+date: "2026-06-29"
+updated: "2026-09-18"
 tags: ["Delivery", "Leadership"]
 summary: "Build an automation case around observed effort, exception handling and a credible plan for using released capacity."
 published: true

@@ -4,7 +4,7 @@ import Layout from '@/components/Layout'
 import { Shell } from '@/components/ui'
 import { getPostData, getAllPostSlugs } from '@/lib/blog'
 import { generateMetadata as generateMeta } from '@/lib/metadata'
-import PostDate, { formatPostDate } from '@/components/PostDate'
+import PostDate from '@/components/PostDate'
 
 interface Props { params: { slug: string } }
 
@@ -54,22 +54,15 @@ export default async function BlogPostPage({ params }: Props) {
               ← All writing
             </Link>
             <div className="mb-s3 flex flex-wrap items-end gap-s3">
-              <PostDate date={post.date} updated={post.updated} retrospectiveDate={post.retrospectiveDate} />
+              <PostDate date={post.date} />
               <span className="text-[13px] text-ink-3">{post.readingMinutes} min read</span>
               {post.tags.map((t) => (
                 <span key={t} className="text-[13px] text-accent">{t}</span>
               ))}
             </div>
-            {post.updated && (
-              <p className="mb-s4 text-[14px] text-ink-3">Originally published {formatPostDate(post.date, true)}</p>
-            )}
+
             <h1 className="page-title max-w-[24ch]">{post.title}</h1>
-            {post.retrospectiveDate && (
-              <p className="mt-s3 max-w-[65ch] text-[13px] text-ink-3">
-                Part of a retrospective. The retrospective month groups the topic; it is not an earlier publication date.
-                {' '}Published {formatPostDate(post.date, true)}.
-              </p>
-            )}
+
             {post.summary && (
               <p className="mt-s4 max-w-[62ch] text-[18px] leading-[1.6] text-ink-2">{post.summary}</p>
             )}

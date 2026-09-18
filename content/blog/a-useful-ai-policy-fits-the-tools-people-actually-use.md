@@ -1,7 +1,7 @@
 ---
 title: "A useful AI policy fits the tools people actually use"
-date: "2026-09-18"
-retrospectiveDate: "2026-09-06"
+date: "2026-09-07"
+updated: "2026-09-18"
 summary: "Turn AI policy into task-specific instructions, clear data boundaries and a workable exception route rather than a list of approved brand names."
 tags: ["AI", "Governance"]
 published: true

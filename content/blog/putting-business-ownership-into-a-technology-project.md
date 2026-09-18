@@ -1,7 +1,7 @@
 ---
 title: "Putting business ownership into a technology project"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-16"
+date: "2025-12-02"
+updated: "2026-09-18"
 summary: "Business ownership works when a named owner has authority over process choices, acceptance and adoption without being asked to replace engineering judgement."
 tags: ["Leadership", "Strategy"]
 published: true

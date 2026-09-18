@@ -1,7 +1,7 @@
 ---
 title: "The hidden operating costs of an internal AI platform"
-date: "2026-09-18"
-retrospectiveDate: "2026-08-26"
+date: "2026-08-27"
+updated: "2026-09-18"
 summary: "Budget for the ongoing work of source upkeep, access control, evaluation, support and change, not just model calls and application hosting."
 tags: ["AI", "Governance"]
 published: true

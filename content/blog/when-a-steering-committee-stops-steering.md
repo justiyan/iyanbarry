@@ -1,7 +1,7 @@
 ---
 title: "When a steering committee stops steering"
-date: "2026-09-18"
-retrospectiveDate: "2025-11-01"
+date: "2025-11-17"
+updated: "2026-09-18"
 summary: "A steering committee needs defined authority, timely decisions and a reason to keep meeting that goes beyond receiving project updates."
 tags: ["Leadership", "Strategy"]
 published: true
