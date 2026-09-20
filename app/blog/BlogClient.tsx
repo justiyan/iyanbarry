@@ -35,7 +35,7 @@ export default function BlogClient({ posts }: { posts: BlogPost[] }) {
       && (!search || [p.title, p.summary, ...p.tags].join(' ').toLocaleLowerCase('en-AU').includes(search))),
     [posts, tag, month, search]
   )
-  const pageSize = 12
+  const pageSize = 20
   const pageCount = Math.max(1, Math.ceil(filtered.length / pageSize))
   const currentPage = Math.min(page, pageCount)
   const start = (currentPage - 1) * pageSize

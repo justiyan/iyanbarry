@@ -160,7 +160,7 @@ test('search, tag and publication month filters reset pagination and clear empty
   assert.equal(ui.find(n => n.props?.['aria-label'] === 'Next page').props.disabled, true)
   clear()
   assert.equal(ui.slugs()[0], 'article-0')
-  assert.equal(ui.slugs().length, 12)
+  assert.equal(ui.slugs().length, 20)
   assert.ok(ui.find(n => Object.hasOwn(n.props || {}, 'data-featured-post')))
   next()
   ui.act(() => ui.find(n => n.props?.['aria-label'] === 'Publication month').props.onChange({ target: { value: '2025-09' } }))
@@ -187,13 +187,13 @@ test('page buttons focus and scroll the results region; search does not force sc
   assert.equal(events.length, 4)
 })
 
-test('pagination covers all 100 articles exactly once, with 12 including the first-page feature', () => {
+test('pagination covers all 100 articles exactly once, with 20 including the first-page feature', () => {
   const ui = library(fixturePosts())
   const seen = []
   let page = 1
   while (true) {
     const slugs = ui.slugs()
-    assert.equal(slugs.length, page < 9 ? 12 : 4)
+    assert.equal(slugs.length, 20)
     assert.equal(Boolean(ui.find(n => Object.hasOwn(n.props || {}, 'data-featured-post'))), page === 1)
     const previous = ui.find(n => n.props?.['aria-label'] === 'Previous page')
     const next = ui.find(n => n.props?.['aria-label'] === 'Next page')
@@ -202,11 +202,30 @@ test('pagination covers all 100 articles exactly once, with 12 including the fir
     if (next.props.disabled) break
     ui.act(() => next.props.onClick())
     page++
-    assert.ok(page <= 9)
+    assert.ok(page <= 5)
   }
   assert.deepEqual(seen, fixturePosts().map(p => p.slug))
   assert.equal(new Set(seen).size, 100)
-  assert.match(ui.markup(), /97–100 of 100 articles/)
+  assert.equal(page, 5)
+  assert.match(ui.markup(), /81–100 of 100 articles/)
+})
+
+test('weekly additions create a partial final page without omissions', () => {
+  const posts = [...fixturePosts(), { ...fixturePosts()[0], slug: 'weekly-new', title: 'Weekly new article' }]
+  const ui = library(posts)
+  const seen = []
+  const counts = []
+  while (true) {
+    counts.push(ui.slugs().length)
+    seen.push(...ui.slugs())
+    const next = ui.find(n => n.props?.['aria-label'] === 'Next page')
+    if (next.props.disabled) break
+    ui.act(() => next.props.onClick())
+    assert.ok(counts.length <= 6)
+  }
+  assert.deepEqual(counts, [20, 20, 20, 20, 20, 1])
+  assert.deepEqual(seen, posts.map(p => p.slug))
+  assert.match(ui.markup(), /101–101 of 101 articles/)
 })
 
 async function withPosts(entries, run) {
