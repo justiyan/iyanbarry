@@ -14,6 +14,7 @@ export default function Footer() {
           <div className="flex flex-wrap gap-s4">
             <Link href="/contact">ask@iyanbarry.com ↗</Link>
             <a href="https://au.linkedin.com/in/iyanbarry" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            <Link href="/privacy">Privacy</Link>
           </div>
         </div>
       </Shell>
