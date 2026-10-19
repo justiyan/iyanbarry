@@ -17,7 +17,7 @@ export default function Privacy() {
           <p className="max-w-[62ch] text-[19px] leading-[1.6] text-ink-2">
             I keep this simple: I collect as little as I can, only use it for the reason you gave it to me, and don’t sell or share it for marketing.
           </p>
-          <p className="mt-s3 text-[14px] text-ink-3">Last updated 9 October 2026</p>
+          <p className="mt-s3 text-[14px] text-ink-3">Last updated 20 October 2026</p>
         </Shell>
       </div>
 
@@ -30,7 +30,13 @@ export default function Privacy() {
 
           <h2>Browsing the site</h2>
           <p>
-            The site doesn’t use analytics, advertising trackers or cookies. Like any website, the hosting provider (Vercel) processes standard technical details such as your IP address and browser type to deliver pages and protect the service. I don’t use those details to identify you.
+            Like any website, the hosting provider (Vercel) processes standard technical details such as your IP address and browser type to deliver pages and protect the service. I don’t use those details to identify you.
+          </p>
+          <p>
+            To see which articles are useful and how people find them, I use Vercel Web Analytics. It records the page you visited, the site that referred you (for example LinkedIn or Google), your approximate location, and your device type, browser and operating system. It doesn’t use cookies or advertising trackers. Visits are grouped using a temporary code that’s discarded after 24 hours, and I only see totals, not information about individual visitors.
+          </p>
+          <p>
+            I also use Google Search Console, which shows me aggregated information about how the site appears in Google search results, such as the search terms that led to a visit. It doesn’t add anything to this site or tell me who you are.
           </p>
 
           <h2>Contacting me</h2>
